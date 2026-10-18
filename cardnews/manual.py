@@ -108,8 +108,11 @@ def build_reel(d, base, send):
     v = d["video"]
     credits = list(dict.fromkeys(d.get("photo_credits", [])))
     credit = d.get("credit") or (f"영상: {credits[0]}" if credits else "")
-    out, cover = make(str(base / v["src"]), d["title"], credit, str(base / "reel.mp4"), str(base / "reel_cover.jpg"),
-                      v.get("start", 0), v.get("dur", 30), v.get("frame", 1.5), v.get("audio", True), v.get("crop"))
+    if v.get("final"):  # 채팅에서 이미 완성한 reel.mp4·reel_cover.jpg 를 그대로 쓴다(짤 릴스 등)
+        out, cover = str(base / "reel.mp4"), str(base / "reel_cover.jpg")
+    else:
+        out, cover = make(str(base / v["src"]), d["title"], credit, str(base / "reel.mp4"), str(base / "reel_cover.jpg"),
+                          v.get("start", 0), v.get("dur", 30), v.get("frame", 1.5), v.get("audio", True), v.get("crop"))
     if not send:
         return
     pid, slot = d["id"], d.get("slot", "evening")
