@@ -3,7 +3,7 @@
  "slot": "evening",
  "slot_label": "저녁",
  "status": "pending",
- "created_at": "2026-10-18T19:40:09.368378+09:00",
+ "created_at": "2026-10-18T19:43:37.380114+09:00",
  "publish_at": "2026-10-18T21:00:00+09:00",
  "topic": "동일가치노동 동일임금 로드맵",
  "category": "정치·경제",
@@ -81,5 +81,5 @@
   "media/20261018-equalpay/07.jpg",
   "media/20261018-equalpay/08.jpg"
  ],
- "tg_msg": 24
+ "tg_msg": 34
 }
