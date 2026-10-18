@@ -149,6 +149,8 @@ def prune(days=7):
 
 
 def chat_id_helper():
+    me = tg._api("getMe")
+    print("연결된 봇:", "@" + me.get("username", ""), me.get("first_name", ""))
     seen = {}
     for u in tg._api("getUpdates"):
         c = (u.get("message") or {}).get("chat") or {}
