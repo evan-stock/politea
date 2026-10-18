@@ -253,44 +253,61 @@ def follow_icon(d, cx, cy, size, color):
     d.line([px, py - size * 0.12, px, py + size * 0.12], fill=color, width=w)
 
 
+def shadow_text(c, xy, text, f, fill, blur=10, alpha=200):
+    """글자 뒤에 부드러운 그림자(사진 배경 위 가독성)."""
+    sh = Image.new("RGBA", c.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).text(xy, text, font=f, fill=(0, 0, 0, alpha))
+    c.alpha_composite(sh.filter(ImageFilter.GaussianBlur(blur)))
+    ImageDraw.Draw(c).text(xy, text, font=f, fill=fill)
+
+
 def last_slide(s, cover_img=None):
     """우파 채널 정체성 + 팔로우 유도 마지막 장.
-    s.t: 가운데 선언 문구(기본: 자유·시장·안보), s.b: 팔로우 바 둘째 줄."""
+    위: 로고 / 가운데(태극기 아래): 선언 문구 / 아래: 앱 팔로우 버튼 모양 알약 CTA.
+    s.t: 선언 문구(\\n 줄바꿈), s.b: CTA 위 한 줄."""
     c = Image.new("RGBA", (W, H), (0, 0, 0, 255))
     bg = load(str(LAST_BG)) if LAST_BG.exists() else None
     if bg is not None:
-        c.alpha_composite(cover_fit(bg, W, H).convert("RGBA"))
-        c.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 95)))
-        gradient(c, 760, 1350, 0, 225)
+        c.alpha_composite(cover_fit(bg, W, H, 0.5, 0.5).convert("RGBA"))
+        c.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 60)))
+        # 위·아래를 어둡게 덮어 배경 이미지 이음매를 가린다
+        top = Image.new("L", (1, H), 0)
+        for yy in range(380):
+            top.putpixel((0, yy), int(245 * (1 - yy / 380) ** 1.2))
+        shade = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+        shade.putalpha(top.resize((W, H)))
+        c.alpha_composite(shade)
+        gradient(c, 760, 1060, 0, 240)
     elif cover_img is not None:
         c.alpha_composite(cover_fit(cover_img, W, H).filter(ImageFilter.GaussianBlur(30)).convert("RGBA"))
         c.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 205)))
     d = ImageDraw.Draw(c)
-    # 위: 워드마크
-    logo(d, W / 2, 150, 76, (255, 255, 255, 255))
-    d.text(((W - tw(font("Bold", 30), "폴리티커")) / 2, 252), "폴리티커", font=font("Bold", 30), fill=(230, 230, 230))
-    # 가운데: 선언 문구
-    fm = font("Bold", 46)
+    logo(d, W / 2, 96, 64, (255, 255, 255, 255))
+    # 선언 문구(태극기 아래)
     lines = (s.get("t") or "자유·시장·안보\n대한민국을 지키는 시선으로\n오늘의 정치를 읽습니다").replace("\\n", "\n").split("\n")
-    y = 560
+    y = 835
     for i, l in enumerate(lines):
-        f = font("Black", 64) if i == 0 else fm
-        draw_line(d, (W - tw(f, plain(l))) / 2, y, l, f, WHITE, hl_fg=LAV)
-        y += int(f.size * 1.45) + (18 if i == 0 else 0)
-    # 공유 한 줄
-    share = "같은 생각인 친구에게 공유해주세요"
-    fs_ = font("SemiBold", 34)
-    d.text(((W - tw(fs_, share)) / 2, 1012), share, font=fs_, fill=(225, 225, 225))
-    # 아래: 팔로우 바
-    bx0, by0, bx1, by1 = 110, 1090, 970, 1250
-    d.rectangle([bx0, by0, bx1, by1], fill=(10, 10, 14))
-    d.rectangle([bx1 - 160, by0, bx1, by1], fill=VIOLET)
-    d.rectangle([bx0 + 28, by0 + 34, bx0 + 33, by1 - 34], fill=VIOLET)
-    f1, f2 = font("Black", 50), font("SemiBold", 30)
-    draw_line(d, bx0 + 56, by0 + 26, "폴리티커를 '팔로우'하고", f1, WHITE, hl_fg=(159, 123, 255))
-    second = s.get("b") or "자유대한민국의 내일을 함께 지켜주세요"
-    d.text((bx0 + 58, by0 + 100), second, font=f2, fill=(220, 220, 220))
-    follow_icon(d, bx1 - 90, (by0 + by1) / 2 - 6, 90, WHITE)
+        f = font("Black", 60) if i == 0 else font("Bold", 40)
+        shadow_text(c, ((W - tw(f, l)) / 2, y), l, f, WHITE)
+        y += int(f.size * 1.42) + (14 if i == 0 else 0)
+    d = ImageDraw.Draw(c)
+    # CTA: 한 줄 + 앱 팔로우 버튼 모양 알약
+    line = s.get("b") or "같은 생각이라면, 팔로우하고 친구에게 공유해주세요"
+    fl = font("SemiBold", 31)
+    shadow_text(c, ((W - tw(fl, line)) / 2, 1112), line, fl, (235, 235, 235))
+    d = ImageDraw.Draw(c)
+    fp = font("Black", 40)
+    label = "@politea.kr  팔로우"
+    pw = tw(fp, label) + 150
+    px0, py0 = (W - pw) / 2, 1172
+    px1, py1 = px0 + pw, py0 + 92
+    d.rounded_rectangle([px0, py0, px1, py1], radius=46, fill=VIOLET)
+    # 플러스 원
+    cx, cy, r = px0 + 58, (py0 + py1) / 2, 26
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=WHITE)
+    d.line([cx - 12, cy, cx + 12, cy], fill=VIOLET, width=6)
+    d.line([cx, cy - 12, cx, cy + 12], fill=VIOLET, width=6)
+    d.text((px0 + 104, py0 + 20), label, font=fp, fill=WHITE)
     return c
 
 
