@@ -1,2 +1,5 @@
-{"id": "20261018-chustraw", "format": "bv*[height<=720]+ba/b[height<=720]/b",
- "urls": ["https://www.dailymotion.com/video/xbo7sxu"]}
+{"id": "20261019-chairhero", "format": "bv*[height<=1080]+ba/b",
+ "urls": ["https://www.ytn.co.kr/_ln/0103_202610141239266591",
+          "https://www.ytn.co.kr/_ln/0103_202610151035348707",
+          "https://nocutnews.co.kr/news/6592182",
+          "https://www.wikitree.co.kr/articles/1165946"]}
