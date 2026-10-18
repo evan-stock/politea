@@ -162,9 +162,21 @@ def chat_id_helper():
         print("TELEGRAM_CHAT_ID 후보:\n" + tg_text)
 
 
+def check():
+    """인스타 토큰·계정 확인(게시하지 않음) 후 결과를 텔레그램으로."""
+    try:
+        me = instagram._req("GET", "me", fields="user_id,username,account_type,media_count")
+        msg = (f"✅ 인스타 연결 확인: @{me.get('username')} ({me.get('account_type')}) "
+               f"게시물 {me.get('media_count', 0)}개\nIG_USER_ID 일치: {str(me.get('user_id')) == os.environ.get('IG_USER_ID')}")
+    except Exception as e:
+        msg = f"⚠️ 인스타 연결 실패: {str(e)[:400]}"
+    print(msg)
+    tg.send_text(msg)
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["tick", "watch", "publish", "chat-id", "refresh-token", "prune", "ping"])
+    ap.add_argument("cmd", choices=["tick", "watch", "publish", "chat-id", "refresh-token", "prune", "ping", "check"])
     ap.add_argument("--id")
     a = ap.parse_args()
     if a.cmd == "watch":
@@ -180,6 +192,8 @@ def main():
         print(instagram.refresh_token())
     elif a.cmd == "prune":
         prune()
+    elif a.cmd == "check":
+        check()
     elif a.cmd == "ping":
         tg.send_text("✅ 폴리티커 자동화 연결 테스트 성공!\nGitHub Actions → 텔레그램 연결이 잘 됐어요.")
 

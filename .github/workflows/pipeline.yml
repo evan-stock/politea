@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       cmd:
-        description: "ping(연결 테스트) | chat-id | tick | watch | publish"
+        description: "ping(텔레그램 테스트) | check(인스타 연결 확인) | chat-id | tick | watch | publish"
         default: tick
       id:
         description: "게시물 ID (publish일 때, 예: 20261019-evening)"
@@ -56,6 +56,7 @@ jobs:
             publish) python -m cardnews.main publish --id "${{ steps.pick.outputs.id }}" ;;
             ping) python -m cardnews.main ping ;;
             chat-id) python -m cardnews.main chat-id ;;
+            check) python -m cardnews.main check ;;
             *) python -m cardnews.main tick ;;
           esac
 
