@@ -2,7 +2,7 @@
  "id": "20261018-macron",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "approved",
  "format": "reel",
  "created_at": "2026-10-18T22:21:52.901508+09:00",
  "publish_at": "2026-10-18T23:00:00+09:00",
@@ -29,5 +29,6 @@
   "media/20261018-macron/reel.mp4"
  ],
  "cover": "media/20261018-macron/reel_cover.jpg",
- "tg_msg": 99
+ "tg_msg": 99,
+ "decided_at": "2026-10-18T22:23:20.197409+09:00"
 }
