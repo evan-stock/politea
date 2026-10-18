@@ -189,7 +189,8 @@ def inner_slide(s, clear=False):
         c.paste(Image.new("RGBA", (W, H - region), (0, 0, 0, 255)), (0, region))
     d = ImageDraw.Draw(c)
     maxw = W - 160
-    fh, fb = font("Black", 60), font("SemiBold", 42)
+    # 사진 없는 타이포 카드는 글자를 키워 화면을 채운다
+    fh, fb = (font("Black", 60), font("SemiBold", 42)) if has_photo else (font("Black", 76), font("SemiBold", 48))
     head = wrap(s.get("t", ""), fh, maxw) if s.get("t", "").strip() else []
     body = wrap(s.get("b", ""), fb, maxw) if s.get("b", "").strip() else []
     sub = s.get("sub", "").strip()
