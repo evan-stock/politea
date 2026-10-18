@@ -13,7 +13,12 @@ jobs:
       - run: sudo apt-get install -y -qq ffmpeg && pip install -q -U "yt-dlp[default,curl-cffi]" && (curl -fsSL https://deno.land/install.sh | sh -s -- -y >/dev/null 2>&1 && echo "$HOME/.deno/bin" >> $GITHUB_PATH || true)
       - name: download
         continue-on-error: true
+        env:
+          YT_COOKIES: ${{ secrets.YT_COOKIES }}
         run: |
+          # 유튜브는 GitHub 서버 IP를 봇으로 막는다 → YT_COOKIES(cookies.txt 내용) 시크릿이 있으면 로그인 쿠키로 받는다
+          CK=""
+          if [ -n "$YT_COOKIES" ]; then printf '%s\n' "$YT_COOKIES" > "$RUNNER_TEMP/yt.txt"; CK="--cookies $RUNNER_TEMP/yt.txt"; fi
           id=$(python3 -c "import json;print(json.load(open('drafts/video.json'))['id'])")
           mkdir -p media/$id/video
           i=0
@@ -25,7 +30,7 @@ jobs:
               *download.gallery.brightcove.com*) curl -sSL -A "Mozilla/5.0" -o media/$id/video/v$i.mp4 "$u" || true ;;
               *upload.wikimedia.org*|*thumb.wikimedia.org*|*i.namu.wiki*|*bugsm.co.kr*|*foxweather.com/static*|*images.foxweather.com*|*gtv-cdn.com*|*.jpg|*.jpeg|*.png|*.webp|*.gif|*.mp3) ext="${u##*.}"; ext="${ext%%\?*}"; curl -sSL -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36" -e "https://namu.wiki/" -o media/$id/video/img$i.$ext "$u" || true ;;
               *.mp4*) curl -sSL -A "Mozilla/5.0" -o media/$id/video/v$i.mp4 "$u" || true ;;
-              *) yt-dlp -q --no-playlist -f "$(python3 -c "import json;print(json.load(open('drafts/video.json')).get('format','bv*[height<=1080]+ba/b'))")" --merge-output-format mp4 -o "media/$id/video/v$i.%(ext)s" "$u" 2>>media/$id/video/log.txt || echo "실패: $u" >> media/$id/video/log.txt ;;
+              *) yt-dlp -q --no-playlist $CK -f "$(python3 -c "import json;print(json.load(open('drafts/video.json')).get('format','bv*[height<=1080]+ba/b'))")" --merge-output-format mp4 -o "media/$id/video/v$i.%(ext)s" "$u" 2>>media/$id/video/log.txt || echo "실패: $u" >> media/$id/video/log.txt ;;
             esac
           done
           for f in media/$id/video/*; do echo "$f"; ffprobe -v error -select_streams v:0 -show_entries stream=width,height:format=duration -of csv=p=0 "$f" || true; done
