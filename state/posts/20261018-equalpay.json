@@ -2,7 +2,7 @@
  "id": "20261018-equalpay",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-18T19:52:10.482530+09:00",
  "publish_at": "2026-10-18T21:00:00+09:00",
  "topic": "동일가치노동 동일임금 로드맵",
@@ -82,5 +82,8 @@
   "media/20261018-equalpay/08.jpg"
  ],
  "tg_msg": 55,
- "decided_at": "2026-10-18T19:56:59.070956+09:00"
+ "decided_at": "2026-10-18T19:56:59.070956+09:00",
+ "ig_media_id": "17917462227462656",
+ "permalink": "https://www.instagram.com/p/DeoomE8G-R7/",
+ "published_at": "2026-10-18T21:01:39.325373+09:00"
 }
