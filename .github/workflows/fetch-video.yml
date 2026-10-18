@@ -1,0 +1,47 @@
+name: fetch-video
+# drafts/video.json 의 영상 주소(기사 mp4, X, 유튜브, 틱톡)를 내려받아 media/<id>/video/ 에 저장
+on:
+  push:
+    paths: ["drafts/video.json"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y -qq ffmpeg && pip install -q -U "yt-dlp[default,curl-cffi]" && (curl -fsSL https://deno.land/install.sh | sh -s -- -y >/dev/null 2>&1 && echo "$HOME/.deno/bin" >> $GITHUB_PATH || true)
+      - name: download
+        continue-on-error: true
+        run: |
+          id=$(python3 -c "import json;print(json.load(open('drafts/video.json'))['id'])")
+          mkdir -p media/$id/video
+          i=0
+          for u in $(python3 -c "import json;print('\n'.join(json.load(open('drafts/video.json'))['urls']))"); do
+            i=$((i+1))
+            case "$u" in
+              *wikimedia.org/w/api.php*) curl -sSL -A "politea-bot/1.0 (github.com/evan-stock/politea)" -o media/$id/video/api$i.json "$u" || true ;;
+              *googlevideo.com/videoplayback*) curl -sSL -A "Mozilla/5.0" -o media/$id/video/bgm$i.mp3 "$u" || true ;;  # 유튜브 오디오 보관함 downloadAudioUrl
+              *download.gallery.brightcove.com*) curl -sSL -A "Mozilla/5.0" -o media/$id/video/v$i.mp4 "$u" || true ;;
+              *upload.wikimedia.org*|*thumb.wikimedia.org*|*i.namu.wiki*|*bugsm.co.kr*|*foxweather.com/static*|*images.foxweather.com*|*gtv-cdn.com*|*.jpg|*.jpeg|*.png|*.webp|*.gif|*.mp3) ext="${u##*.}"; ext="${ext%%\?*}"; curl -sSL -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36" -e "https://namu.wiki/" -o media/$id/video/img$i.$ext "$u" || true ;;
+              *.mp4*) curl -sSL -A "Mozilla/5.0" -o media/$id/video/v$i.mp4 "$u" || true ;;
+              *) yt-dlp -q --no-playlist -f "$(python3 -c "import json;print(json.load(open('drafts/video.json')).get('format','bv*[height<=1080]+ba/b'))")" --merge-output-format mp4 -o "media/$id/video/v$i.%(ext)s" "$u" 2>>media/$id/video/log.txt || echo "실패: $u" >> media/$id/video/log.txt ;;
+            esac
+          done
+          for f in media/$id/video/*; do echo "$f"; ffprobe -v error -select_streams v:0 -show_entries stream=width,height:format=duration -of csv=p=0 "$f" || true; done
+          fr=$(python3 -c "import json;print(json.load(open('drafts/video.json')).get('frames',0))")
+          if [ "$fr" != "0" ]; then
+            mkdir -p media/$id/frames
+            for f in media/$id/video/v*.mp4; do
+              b=$(basename $f .mp4)
+              ffmpeg -loglevel error -i "$f" -vf "fps=1/$fr,scale=1280:-2" -q:v 3 media/$id/frames/${b}_%04d.jpg || true
+              ffmpeg -loglevel error -i "$f" -vf "fps=1/$fr,scale=320:-2,drawtext=text='%{pts\:hms}':x=4:y=4:fontcolor=yellow:fontsize=18:box=1:boxcolor=black@0.5,tile=6x10" -q:v 4 media/$id/frames/${b}_sheet_%02d.jpg || true
+            done
+            rm -f media/$id/video/*.mp4
+          fi
+          find media/$id/video -size +60M -delete
+      - if: always()
+        run: |
+          git config user.name politea-bot; git config user.email politea-bot@users.noreply.github.com
+          git add -A media
+          git diff --cached --quiet || (git commit -m "video: fetch" && git pull --rebase && git push)

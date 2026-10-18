@@ -1,0 +1,79 @@
+name: politea
+
+on:
+  schedule:
+    # GitHub cron은 UTC 기준이고 몇 분~수십 분 늦게 돌 수 있어요.
+    # 평소엔 원고 send 직후 watch가 1분마다 확인하고, 이건 예비 확인용이에요.
+    - cron: "0 0-15/3 * * *" # 09·12·15·18·21·24시 KST
+  workflow_dispatch:
+    inputs:
+      cmd:
+        description: "ping(연결 테스트) | chat-id | tick | watch | publish"
+        default: tick
+      id:
+        description: "게시물 ID (publish일 때, 예: 20261019-evening)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: politea
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      TZ: Asia/Seoul
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: 명령 결정
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "cmd=${{ inputs.cmd }}" >> $GITHUB_OUTPUT
+            echo "id=${{ inputs.id }}" >> $GITHUB_OUTPUT
+          else
+            echo "cmd=tick" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 실행
+        run: |
+          case "${{ steps.pick.outputs.cmd }}" in
+            watch) python -m cardnews.main watch ;;
+            publish) python -m cardnews.main publish --id "${{ steps.pick.outputs.id }}" ;;
+            ping) python -m cardnews.main ping ;;
+            chat-id) python -m cardnews.main chat-id ;;
+            *) python -m cardnews.main tick ;;
+          esac
+
+      - name: 실패 알림
+        if: failure() && env.TELEGRAM_BOT_TOKEN != ''
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=⚠️ 폴리티커 ${{ steps.pick.outputs.cmd }} 실행 실패. GitHub Actions 로그를 확인해주세요." > /dev/null
+
+      - name: 상태·미디어 저장
+        if: always()
+        run: |
+          git config user.name "politea-bot"
+          git config user.email "politea-bot@users.noreply.github.com"
+          git add -A state media
+          if ! git diff --cached --quiet; then
+            git commit -m "politea: ${{ steps.pick.outputs.cmd }} $(date +%F_%H%M)"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi

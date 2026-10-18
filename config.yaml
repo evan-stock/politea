@@ -1,0 +1,28 @@
+# 폴리티커(@politea.kr) 게시 자동화 설정
+timezone: Asia/Seoul
+
+brand:
+  channel_name: 폴리티커
+  handle: "@politea.kr"
+
+# 원고에 publish_at 이 없을 때 쓰는 기본 게시 시각(KST). 원고의 "slot" 값으로 고른다.
+slots:
+  lunch:
+    publish_at: "12:30"
+  evening:
+    publish_at: "21:00"
+
+approval:
+  # 게시 시각으로부터 이 시간이 지나도 승인 안 되면 만료 처리
+  expire_hours: 3
+
+images:
+  press: true          # 기사 원본 사진 후보 수집(collect)
+  commons: false
+  ai_fallback: none    # 자동 AI 이미지 생성 안 함(표지 AI 이미지는 사용자가 직접 만들어 넣음)
+  openai_model: gpt-image-1
+  openai_size: 1024x1536
+
+instagram:
+  api_host: https://graph.instagram.com
+  api_version: v25.0
