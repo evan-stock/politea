@@ -2,7 +2,7 @@
  "id": "20261018-macron",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-10-18T22:21:52.901508+09:00",
  "publish_at": "2026-10-18T23:00:00+09:00",
@@ -30,5 +30,8 @@
  ],
  "cover": "media/20261018-macron/reel_cover.jpg",
  "tg_msg": 99,
- "decided_at": "2026-10-18T22:23:20.197409+09:00"
+ "decided_at": "2026-10-18T22:23:20.197409+09:00",
+ "ig_media_id": "18118866796967231",
+ "permalink": "https://www.instagram.com/reel/Deo2ZH1AGaz/",
+ "published_at": "2026-10-18T23:01:57.532092+09:00"
 }
