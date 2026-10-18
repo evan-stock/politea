@@ -239,28 +239,58 @@ def inner_slide(s, clear=False):
     return c
 
 
+LAST_BG = ROOT / "assets" / "last_bg.jpg"  # 마지막 장 고정 배경(태극기 등). 없으면 표지 사진을 어둡게 깐다.
+
+
+def follow_icon(d, cx, cy, size, color):
+    """사람+플러스 아이콘(선)."""
+    r = size * 0.18
+    w = max(4, int(size * 0.07))
+    d.ellipse([cx - r - size * 0.08, cy - size * 0.36, cx + r - size * 0.08, cy - size * 0.36 + 2 * r], outline=color, width=w)
+    d.arc([cx - size * 0.42, cy - size * 0.02, cx + size * 0.26, cy + size * 0.62], 180, 360, fill=color, width=w)
+    px, py = cx + size * 0.40, cy + size * 0.06
+    d.line([px - size * 0.12, py, px + size * 0.12, py], fill=color, width=w)
+    d.line([px, py - size * 0.12, px, py + size * 0.12], fill=color, width=w)
+
+
 def last_slide(s, cover_img=None):
+    """우파 채널 정체성 + 팔로우 유도 마지막 장.
+    s.t: 가운데 선언 문구(기본: 자유·시장·안보), s.b: 팔로우 바 둘째 줄."""
     c = Image.new("RGBA", (W, H), (0, 0, 0, 255))
-    if cover_img is not None:  # 표지 사진을 아주 어둡게 깔아 연속감
-        bg = cover_fit(cover_img, W, H).filter(ImageFilter.GaussianBlur(30)).convert("RGBA")
-        c.alpha_composite(bg)
+    bg = load(str(LAST_BG)) if LAST_BG.exists() else None
+    if bg is not None:
+        c.alpha_composite(cover_fit(bg, W, H).convert("RGBA"))
+        c.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 95)))
+        gradient(c, 760, 1350, 0, 225)
+    elif cover_img is not None:
+        c.alpha_composite(cover_fit(cover_img, W, H).filter(ImageFilter.GaussianBlur(30)).convert("RGBA"))
         c.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 205)))
     d = ImageDraw.Draw(c)
-    ft, fb = font("Black", 66), font("Bold", 40)
-    head = wrap(s.get("t") or "이 소식, 같이 보고 싶은\n친구에게 보내주세요", ft, W - 180)
-    body = wrap(s.get("b") or "팔로우하면 매일 저녁 '정치 한 잔'", fb, W - 180)
-    total = len(head) * int(ft.size * 1.3) + 40 + len(body) * int(fb.size * 1.5) + 140
-    y = (H - total) // 2
-    for l in head:
-        draw_line(d, (W - tw(ft, plain(l))) / 2, y, l, ft, WHITE, hl_bg=VIOLET)
-        y += int(ft.size * 1.3)
-    y += 40
-    for l in body:
-        draw_line(d, (W - tw(fb, plain(l))) / 2, y, l, fb, LAV, hl_fg=WHITE)
-        y += int(fb.size * 1.5)
-    y += 70
-    logo(d, W / 2, y, 52, (255, 255, 255, 255))
-    d.text(((W - tw(font("Medium", 30), "@politea.kr")) / 2, y + 80), "@politea.kr", font=font("Medium", 30), fill=GRAY)
+    # 위: 워드마크
+    logo(d, W / 2, 150, 76, (255, 255, 255, 255))
+    d.text(((W - tw(font("Bold", 30), "폴리티커")) / 2, 252), "폴리티커", font=font("Bold", 30), fill=(230, 230, 230))
+    # 가운데: 선언 문구
+    fm = font("Bold", 46)
+    lines = (s.get("t") or "자유·시장·안보\n대한민국을 지키는 시선으로\n오늘의 정치를 읽습니다").replace("\\n", "\n").split("\n")
+    y = 560
+    for i, l in enumerate(lines):
+        f = font("Black", 64) if i == 0 else fm
+        draw_line(d, (W - tw(f, plain(l))) / 2, y, l, f, WHITE, hl_fg=LAV)
+        y += int(f.size * 1.45) + (18 if i == 0 else 0)
+    # 공유 한 줄
+    share = "같은 생각인 친구에게 공유해주세요"
+    fs_ = font("SemiBold", 34)
+    d.text(((W - tw(fs_, share)) / 2, 1012), share, font=fs_, fill=(225, 225, 225))
+    # 아래: 팔로우 바
+    bx0, by0, bx1, by1 = 110, 1090, 970, 1250
+    d.rectangle([bx0, by0, bx1, by1], fill=(10, 10, 14))
+    d.rectangle([bx1 - 160, by0, bx1, by1], fill=VIOLET)
+    d.rectangle([bx0 + 28, by0 + 34, bx0 + 33, by1 - 34], fill=VIOLET)
+    f1, f2 = font("Black", 50), font("SemiBold", 30)
+    draw_line(d, bx0 + 56, by0 + 26, "폴리티커를 '팔로우'하고", f1, WHITE, hl_fg=(159, 123, 255))
+    second = s.get("b") or "자유대한민국의 내일을 함께 지켜주세요"
+    d.text((bx0 + 58, by0 + 100), second, font=f2, fill=(220, 220, 220))
+    follow_icon(d, bx1 - 90, (by0 + by1) / 2 - 6, 90, WHITE)
     return c
 
 
