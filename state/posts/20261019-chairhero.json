@@ -2,7 +2,7 @@
  "id": "20261019-chairhero",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "approved",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-10-20T02:39:24.205932+09:00",
  "publish_at": "2026-10-20T08:00:00+09:00",
@@ -37,5 +37,8 @@
  ],
  "cover": "media/20261019-chairhero/reel_cover.jpg",
  "tg_msg": 126,
- "decided_at": "2026-10-20T02:44:00.326335+09:00"
+ "decided_at": "2026-10-20T02:44:00.326335+09:00",
+ "ig_media_id": "18102399140369205",
+ "permalink": "https://www.instagram.com/reel/DesY4cOnUfN/",
+ "published_at": "2026-10-20T08:01:37.768657+09:00"
 }
