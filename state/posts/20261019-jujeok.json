@@ -2,7 +2,7 @@
  "id": "20261019-jujeok",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-10-19T08:59:28.655282+09:00",
  "publish_at": "2026-10-19T10:00:00+09:00",
@@ -27,5 +27,8 @@
  ],
  "cover": "media/20261019-jujeok/reel_cover.jpg",
  "tg_msg": 114,
- "decided_at": "2026-10-19T09:00:53.457759+09:00"
+ "decided_at": "2026-10-19T09:00:53.457759+09:00",
+ "ig_media_id": "18114609580843282",
+ "permalink": "https://www.instagram.com/reel/DeqBxHdARZE/",
+ "published_at": "2026-10-19T10:00:41.527751+09:00"
 }
