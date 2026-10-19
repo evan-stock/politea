@@ -1,22 +1,18 @@
 {
- "id": "20261019-chairhero",
- "format": "reel",
- "slot": "lunch",
- "mode": "send",
- "publish_at": "2026-10-20T08:00:00+09:00",
- "topic": "인천 구월동 흉기 난동, 의자 들고 맞선 시민들",
- "category": "사회·사건",
- "core": "10/13 구월동 상가 흉기 난동(피해 10명)을 경찰 도착 전 시민들이 의자·우산으로 막고 5분도 안 돼 제압. 범인은 전자발찌 착용 중이던 살인미수 전과자.",
- "risk": "범행 장면 CCTV(피해자 공격 장면)는 쓰지 않고 시민 인터뷰 2개만 사용. 구속영장 발부 여부는 확인 안 돼 캡션에서 뺌. 피의자 실명 없음(최 씨, 59세).",
- "title": "칼 든 난동범에\n'의자' 들고 달려간 시민들",
- "credit": "영상: YTN",
- "video": {"src": "video/v3.mp4", "start": 0, "dur": 56, "frame": 8, "audio": true},
- "caption": "[칼 든 난동범에 '의자' 들고 달려간 시민들]\n\n10월 13일 오후 1시 48분쯤, 인천 구월동 대형 상가에서 50대 남성이 흉기를 휘둘러 10명이 다쳤습니다. 20대 여성 1명은 심정지 상태로 이송돼 아직 의식을 찾지 못했습니다.\n\n경찰이 오기 전 범인을 막은 건 시민들이었습니다. 여자친구와 밥 먹으러 왔던 31세 나현준 씨는 112에 신고하면서 의자를 들고 범인에게 달려갔고, 식당 사장과 함께 범인을 막아섰습니다. 4층 이용객들은 의자로 에스컬레이터 입구를 막았고, 우산을 들고 맞선 시민도 있었습니다. 범행 시작부터 제압까지 5분이 걸리지 않았습니다.\n\n범인은 2015년 전처 살해 시도로 복역한 뒤 전자발찌를 차고 보호관찰을 받던 중이었습니다. 범행 당일 오전에도 보호관찰관을 만났습니다. 경찰은 시민 5명에 대한 포상을 검토하고 있습니다.\n\n전자발찌 찬 강력범, 지금 관리로 충분할까요? 여러분 생각은 댓글로 남겨주세요.\n\n용감한 시민들, 친구에게도 알려주세요! 팔로우하면 매일 정치 한 잔을 받아보실 수 있습니다.",
- "hashtags": ["인천흉기난동", "구월동", "의인", "전자발찌", "사회"],
- "sources": [
-  {"publisher": "YTN", "date": "2026.10.15", "url": "https://www.ytn.co.kr/_ln/0103_202610151035348707"},
-  {"publisher": "YTN", "date": "2026.10.14", "url": "https://www.ytn.co.kr/_ln/0103_202610141239266591"},
-  {"publisher": "위키트리", "date": "2026.10.14", "url": "https://www.wikitree.co.kr/articles/1165995"}
+ "id": "20261020-tohuje",
+ "slot": "evening",
+ "mode": "collect",
+ "topic": "10·15 대책 1년, 토허제 역설(10/19 국토위 경기도 국감)",
+ "category": "경제·부동산",
+ "image_pages": [
+  "https://www.kyeonggi.com/article/20261019580462",
+  "https://www.incheonilbo.com/news/articleView.html?idxno=1334532",
+  "https://www.segye.com/newsView/20261019524876",
+  "https://m.sedaily.com/article/20103513",
+  "https://www.news1.kr/local/gyeonggi/6324901",
+  "https://www.hankookilbo.com/news/article/A2026101314120002265"
  ],
- "photo_credits": ["YTN"]
+ "images": ["press01", null],
+ "slides": [{"t": "수집"}, {"t": ""}],
+ "sources": []
 }
