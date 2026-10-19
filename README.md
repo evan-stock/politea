@@ -55,3 +55,7 @@
 - 브랜드: 검정 + 흰 굵은 제목 + 보라(#7C4DFF)·연보라(#B9A3FF) 강조, POLITEA.KR 로고
 - 글꼴: Pretendard(OFL), Archivo Black(OFL) — `assets/fonts`
 - 렌더러: `cardnews/render.py`(카드), `cardnews/reel.py`(릴스)
+
+## 텔레그램 채널 소재(@koreajjirasi) 자동 후보
+- `drafts/scan.json` push → `jjirasi-scan`이 채널 미리보기에서 반응 좋은 사진·영상 상위 4개를 `media/<날짜>-jj<번호>/`와 `state/jjirasi/candidates.json`에 모음.
+- 예약 작업(Claude, 하루 5번 08:50·11:50·14:50·17:50·20:50)이 `JJIRASI.md` 기준으로 하나를 골라 원고 push → 텔레그램 ✅ 승인 후 게시.

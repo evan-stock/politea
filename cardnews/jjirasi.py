@@ -149,7 +149,7 @@ def download(c):
             p = _get(u, str(base / "video" / f"v{k}.mp4"))
             info = _probe(p)
             sheet = str(base / "video" / f"v{k}_sheet.jpg")
-            step = max(1.0, (info.get("dur") or 10) / 12)
+            step = max(1.0, (info.get("dur") or 10) / 13)
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", p, "-vf",
                             f"fps=1/{step},scale=320:-2,drawtext=text='%{{pts\\:hms}}':x=4:y=4:fontcolor=yellow:fontsize=18:box=1:boxcolor=black@0.5,tile=4x3",
                             "-frames:v", "1", "-q:v", "4", sheet])
