@@ -2,7 +2,7 @@
  "id": "20261019-kimyojong",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-19T19:06:48.867079+09:00",
  "publish_at": "2026-10-19T21:00:00+09:00",
  "topic": "김여정 '대남 확성기 재개 검토' 담화(10/19)",
@@ -45,5 +45,6 @@
   "media/20261019-kimyojong/01.jpg",
   "media/20261019-kimyojong/02.jpg"
  ],
- "tg_msg": 120
+ "tg_msg": 120,
+ "decided_at": "2026-10-19T19:08:12.146365+09:00"
 }
