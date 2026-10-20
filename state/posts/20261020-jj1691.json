@@ -1,0 +1,40 @@
+{
+ "id": "20261020-jj1691",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "pending",
+ "format": "reel",
+ "created_at": "2026-10-20T11:55:24.055556+09:00",
+ "publish_at": "2026-10-20T12:30:00+09:00",
+ "topic": "프랑스 연금개혁 반대 시위 중 불길 옆 노천카페에서 태연히 술 마시는 커플(2023년 3월 영상)",
+ "category": "국제",
+ "core": "2023년 3월 프랑스 연금개혁 반대 시위 당시, 길 건너 불길이 치솟는데도 노천카페에서 담배 피우며 술잔을 기울이는 커플 영상. 해외 매체들은 보르도에서 찍힌 것으로 소개(CNN 자막은 파리).",
+ "risk": "텔레그램 제보 영상(koreajjirasi/1691), 원출처 CNN 보도 화면(SNS 확산). 2023년 3월 영상이라 최근 일 아님(캡션에 명시). 촬영지: The Local·The Drinks Business 등은 보르도로 보도, CNN 자막은 파리 → 캡션은 '보르도에서 찍힌 것으로 알려진'으로 씀. 앞 4.3초(CNN 로고·자막)는 잘라냄. 일반인 얼굴 노출되나 조롱 문구 없음.",
+ "sources": [
+  {
+   "publisher": "텔레그램 제보",
+   "date": "2026.10.20",
+   "url": "https://t.me/koreajjirasi/1691"
+  },
+  {
+   "publisher": "The Local",
+   "date": "2023.03.27",
+   "url": "https://www.thelocal.fr/20230327/factcheck-is-the-video-of-french-people-sipping-wine-as-their-city-burns-real"
+  },
+  {
+   "publisher": "The Drinks Business",
+   "date": "2023.03",
+   "url": "https://www.thedrinksbusiness.com/2023/03/bordeaux-diners-drink-wine-as-protest-fire-rages-in-background/"
+  }
+ ],
+ "caption_full": "[도시가 불타는데 와인 한 잔, 프랑스 커플의 '불멍']\n\n2023년 3월, 프랑스 연금개혁 반대 시위가 한창이던 밤. 길 건너에선 불길이 치솟고 사람들이 오가는데, 노천카페의 한 커플은 담배를 피우며 태연하게 술잔을 기울입니다.\n외신에도 소개돼 화제가 된 이 영상은 보르도에서 찍힌 것으로 알려졌습니다. 시위가 일상이 된 프랑스의 단면이라는 반응이 나왔죠.\n\n여러분은 이 상황에서 자리를 지킬 수 있나요?\n\n오늘의 정치·사회 한 잔, 팔로우하고 받아보세요 ☕ @politea.kr\n\n출처: 텔레그램 제보 2026.10.20, The Local 2023.03.27, The Drinks Business 2023.03\n사진·영상: CNN\n\n#프랑스시위 #연금개혁 #보르도 #해외이슈 #폴리티커",
+ "credits": [
+  "CNN"
+ ],
+ "manual": true,
+ "files": [
+  "media/20261020-jj1691/reel.mp4"
+ ],
+ "cover": "media/20261020-jj1691/reel_cover.jpg",
+ "tg_msg": 161
+}
