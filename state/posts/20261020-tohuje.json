@@ -2,7 +2,7 @@
  "id": "20261020-tohuje",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "created_at": "2026-10-20T08:33:52.270227+09:00",
  "publish_at": "2026-10-20T19:30:00+09:00",
  "topic": "10·15 대책 1년, 토허제 역설(10/19 국토위 경기도 국감)",
@@ -52,5 +52,8 @@
   "media/20261020-tohuje/03.jpg"
  ],
  "tg_msg": 148,
- "decided_at": "2026-10-20T08:37:24.246518+09:00"
+ "decided_at": "2026-10-20T08:37:24.246518+09:00",
+ "ig_media_id": "18118528402942200",
+ "permalink": "https://www.instagram.com/p/Detn-JnFooi/",
+ "published_at": "2026-10-20T19:32:25.971002+09:00"
 }
