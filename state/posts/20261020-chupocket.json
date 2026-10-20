@@ -2,7 +2,7 @@
  "id": "20261020-chupocket",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-10-20T21:41:04.764964+09:00",
  "publish_at": "2026-10-20T22:30:00+09:00",
@@ -37,5 +37,8 @@
  ],
  "cover": "media/20261020-chupocket/reel_cover.jpg",
  "tg_msg": 200,
- "decided_at": "2026-10-20T21:41:56.593276+09:00"
+ "decided_at": "2026-10-20T21:41:56.593276+09:00",
+ "ig_media_id": "18098170154387847",
+ "permalink": "https://www.instagram.com/reel/DeuUycklWOm/",
+ "published_at": "2026-10-21T02:04:05.702943+09:00"
 }
