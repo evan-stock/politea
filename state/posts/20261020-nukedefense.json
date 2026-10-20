@@ -1,10 +1,10 @@
 {
  "id": "20261020-nukedefense",
- "slot": "lunch",
- "slot_label": "점심",
- "status": "pending",
- "created_at": "2026-10-20T21:48:46.247229+09:00",
- "publish_at": "2026-10-21T12:30:00+09:00",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "approved",
+ "created_at": "2026-10-20T21:50:35.667424+09:00",
+ "publish_at": "2026-10-20T22:00:00+09:00",
  "topic": "대통령 '북핵은 최후의 방어무기' 발언",
  "category": "안보",
  "core": "이 대통령이 10/19 춘추관 간담회에서 전작권 조기 환수를 설명하며 '핵무기로 실전을 치를 것인가, 그건 최후의 방어무기'라고 했다. 같은 날 김여정은 전술적 타격수단 증강 배치를 예고했고, 북한은 2022년 핵 선제 사용 조건을 법으로 정했다.",
@@ -80,6 +80,7 @@
   "세계일보"
  ],
  "manual": true,
+ "decided_at": "2026-10-20T21:50:35.667498+09:00",
  "files": [
   "media/20261020-nukedefense/01.jpg",
   "media/20261020-nukedefense/02.jpg",
@@ -91,5 +92,5 @@
   "media/20261020-nukedefense/08.jpg",
   "media/20261020-nukedefense/09.jpg"
  ],
- "tg_msg": 223
+ "tg_msg": 235
 }
