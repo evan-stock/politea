@@ -1,58 +1,67 @@
 {
- "scanned_at": "2026-10-20T17:52:08.521581+09:00",
+ "scanned_at": "2026-10-20T20:52:51.176719+09:00",
  "channel": "koreajjirasi",
- "total_posts": 46,
+ "total_posts": 44,
  "candidates": [
   {
-   "num": 1748,
-   "url": "https://t.me/koreajjirasi/1748",
-   "date": "2026-10-20T07:23:09+00:00",
-   "text": "받으라슈)\n“미군 박살내자” 오산기지 침입 대진연 3명 ‘집유’…구속 풀려나\n이게 씨발 왜 집유야? 이걸 풀어주네 ㅅㅂ\nhttps://n.news.naver.com/article/666/0000128319",
-   "views": 662,
-   "reactions": {
-    "🔥": 4
-   },
-   "photos": [
-    "https://cdn5.telesco.pe/file/BtlJ74IcMQYEGQx4thKJS_nkizvq_WGJX2RiYsg10LJAP06FqKbp2arXgFkQXnMIyXNoJ4y0ag_duKgmsEzbqoZUO2tOPBGcQE80JSBEUI2sNUeJQALY5WGGfF_XBqIRRMxWIG2grw3xdJioZyQP3yGAnDxqz6aKhAv08okyr5ljuzmI9QLJkbxB2J9uGyJ1cJmTWbSaZEqit22VjZGVg3p4bApTvfRYqZfhLenkVi0vtyRA33XXIHDcDBEKbwMajuszrGcCoSPcHYq8-B_P9fzdDSmqvC0aCOe9K7-A0yrwq9MEVp0C8P4eNbHrcxlpnhVdfs0S0zWjQ-k7EOXnTw.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    1748
-   ],
-   "score": 440.7,
-   "id": "20261020-jj1748",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 1749,
-   "url": "https://t.me/koreajjirasi/1749",
-   "date": "2026-10-20T07:45:09+00:00",
+   "num": 1762,
+   "url": "https://t.me/koreajjirasi/1762",
+   "date": "2026-10-20T09:57:14+00:00",
    "text": "받으라슈)",
-   "views": 325,
+   "views": 449,
    "reactions": {
-    "👍": 6,
-    "🤗": 3
+    "👍": 5,
+    "💩": 2
+   },
+   "photos": [],
+   "videos": [
+    "https://cdn5.telesco.pe/file/64724066fc.mp4?token=VizONLSkyji-Wp9Qyq1gYYPkOWNZv4GKvifQcx-E334Mhp5_Mkq5TUH6jRjgQAH5CtiUbn1KH5FNWmGw4TbkBwV9kF9ofvoIdRieOEXYGIBqBqGPBCenNwgnVn1jWndUwHBvK7t6ehIHE3zAlhEwNqPZDaam9ax58wKpWYgoWUOqV9Tzn5R400iV1KepGt_7cyAWYSe5tFWKvwuSDT16nNj0nwd45y7iAWFslZ_dhfiHUZojLR1v38SIfSE1smA2f5u85wrbAUBKkNCjP0cvrNGZhtZlz0JI82qUHL1foS62_j-FkYcvT_VmF82pQAdgV0NIG5SNCqAg9kiFvTt_aw"
+   ],
+   "durations": [
+    45
+   ],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    1762
+   ],
+   "score": 368.0,
+   "id": "20261020-jj1762",
+   "files": {
+    "photos": [],
+    "videos": [
+     {
+      "src": "video/v1.mp4",
+      "w": 720,
+      "h": 900,
+      "dur": 45.5,
+      "sheet": "video/v1_sheet.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "num": 1764,
+   "url": "https://t.me/koreajjirasi/1764",
+   "date": "2026-10-20T10:04:12+00:00",
+   "text": "받으라슈)\n모든 군 장병은 철저한 보안유지를 위해 부대 출입간 별도의 어플을 설치하고 켜야 한다. 또한 영내에서 사진과 동영상 촬영은 엄격하게 금지되어 있다.\n그런데 우리 군의 최고지휘부대인 육군본부 안에서 ’나 국정감사 하러 왔어요~‘, ’계룡대 2층이에요~‘라며 신나게 동영상을 찍고, 건물 내부모습까지 친절하게 SNS에 올린 군 출신 국회의원(국방위 민주당 간사)이자 이재명 대통령 국방정책특보의 언행에 많은 군인들이 분노하고 있다.\n”꼬투리가 아니라 진짜 궁금한 건데, 육본 내부 돌아다니면서 뭘로 찍은걸까?“\n”촬영 승인받은건가? 국회의원은 규정과 법 위에 있나?“\n”그러게 ㅅㅂ 보안어플 안 키마“\n현역 군인들이 이렇게 반응하고 있는데, 이 사람은 뭐에 그리 취해서 신난건지 모르겠다. 이런 교양없는 사람들 때문에 군 보안이 취약해지는 것이다. 군인들을 위하는 척하며 능멸하지 말고, 최소한의 법과 규정을 지켜야 한다. 정신 좀 차리시라.",
+   "views": 497,
+   "reactions": {
+    "💩": 3,
+    "🤬": 1
    },
    "photos": [
-    "https://cdn5.telesco.pe/file/AtVpCPnddis7fR-otz_muWK1kQ8xE7bDyifiXksljWfxQHO-Cw40x6eyJb4O-LMoT-2ImA3tTbiGHzUWSoweE2XAEX520D2BRZIkGnnVIDnimUNqWO9csxMxTXK6KpM0V9rgNScSJhnO2SZaWIofY-629snAVVvaojDRcHmQTqlXKug_P1yy6IJg6-gkp42HpCjThuD6ZUuMO54af4MvWDaCAo6A-Vg0vvH3TKQPdmHfalzH3ZPHdhqUJQF8qAf3ahfFSdtaPajiih4ONatfdTExYMO_bKOiQgkuiYs4x1Bb-PZiboP_NGPOnkDU_knNILRm_9t50aHPi3KIP0XbHQ.jpg"
+    "https://cdn5.telesco.pe/file/vBHy4BH6ZIHZ2XzoeUA1Xoei53Hasbl6d_6aUuB42xRQmsMpfJWsmhpD2gZFbafnC1mN3CjjtWuTsDFzXVYW9aMGixJ1DQoAi2LRnRtuZS9nNm1KLBHxOvy7cJZDyg6eVmVrxKH9JYnTA5tXLubEPmu3AX0t8GyATdOyqSox00B1O8qkqIotZBNT3i8RQvfXGlwzkz-8bCc-2lAPu3lPgyftcKDvMDZIKSOJykJX4WOeTY4qY6Rquw08JGlJNnHSc2ID4wPE5dHdOsnvUIgiOyD0LKo3Ge5CzKPhWVF0kDKisuYUwa3LIv6Kpta49e2JZ_xtvwfqXT22l9lkFGoM7g.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    1749
+    1764
    ],
-   "score": 388.3,
-   "id": "20261020-jj1749",
+   "score": 336.7,
+   "id": "20261020-jj1764",
    "files": {
     "photos": [
      "cand/tg01.jpg"
@@ -61,26 +70,26 @@
    }
   },
   {
-   "num": 1720,
-   "url": "https://t.me/koreajjirasi/1720",
-   "date": "2026-10-20T05:39:41+00:00",
-   "text": "받으라슈)\n리얼 잼데믹... 이걸 어떤 다른 말로 표현할 수 있을 것인가...\n와중에 잼데믹 창시자 누구임?\n진짜 입에 착 달라붙네",
-   "views": 815,
+   "num": 1754,
+   "url": "https://t.me/koreajjirasi/1754",
+   "date": "2026-10-20T08:51:51+00:00",
+   "text": "받으라슈)\nㅋㅋㅋㅋㅋㅋㅋㅋㅋ 얼마나 싫었으면",
+   "views": 393,
    "reactions": {
-    "😁": 1
+    "😁": 5
    },
    "photos": [
-    "https://cdn5.telesco.pe/file/F1aFP1eMEd4FfyJ4-ec5XHtM1YUdGvOG2mRPDW_OSwwXW1aRZhriii_dhlT1VNH_QUiBZx9APWV5MJ3sql8caBYeK_CXjw9Tsyzxptl4fPcEla0bq-FJBm3zgePQUMKVixSCyEx78z1eJa3SzimDzYrSBOwzo4znj4y5N6REOWctGMlA1B8aAufkOknqM2gS3qfOsLXhLVtG3FQJX9p2lCOVghTpic6nEg9j_4JB4dYsxgurzeurMPVK7VOYzTa2dQF0LdY5riL_SEuJJrbpkK5KdCD1OJSNXs_M__s-p0IcFRUruhlvVAeWCSxiXfC1_9DBTN674d-TPv6BbATqlA.jpg"
+    "https://cdn5.telesco.pe/file/dCqhpm-H596HA5xi3uZNxidfECURKYYRcRfzdX-RbpJm_DIFst8n7A4ODrVt-EhvQfE51IZXaJ0Vv-i1dqVoBJjDahNU0S19Z-ZXwyDiBEZbRoiozcCBhakfIpycQOCSqZkV2p0JrW8oCqwXMR61xW3YZpYE8itlMDSUK3CuK4wlx7DbiAOllOaSPJo3jxvfKs4ymj2nYu2Z_lMWfVsaMP5ldr9gjciDdBKc0fFtYyWYyuEPuqraT-9H3QcmAOqp0Fa5DJjWXAdTuEFEi6bIcoqHWl3wEnoQUE1C6ScS0HtNPns-eubWPkuKWdg0tvp5y_clpoif8Lb2brRb6x9CDg.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    1720
+    1754
    ],
-   "score": 374.8,
-   "id": "20261020-jj1720",
+   "score": 264.8,
+   "id": "20261020-jj1754",
    "files": {
     "photos": [
      "cand/tg01.jpg"
@@ -89,50 +98,29 @@
    }
   },
   {
-   "num": 1731,
-   "url": "https://t.me/koreajjirasi/1731",
-   "date": "2026-10-20T06:35:41+00:00",
-   "text": "받으라슈)\n서비스연맹 동지 여러분,\n미선효순 기록관 건립 기금 모금에 함께 해주세요.\n미선효순평화공원 조성 이후 많은 청년, 청소년들의 방문이 이어지고 있습니다. 사업회는 흩어져있는 기록들을 모아내어 촛불의 역사를 미래로 내보내는 기록관 건립을 추진 중입니다.\n민주노총도 ’미선효순 기념관 건립 기금 모금‘에 함께 하고자 합니다.\n○ 시기 : 2026년 10월 20일(화)~11월 15일(일)\n○ 계좌 : 하나은행 159-910024-81104 전국민주노동조합총연맹\n○ 방식\n- 가맹노조 전 조직 참가\n- 조합원 개인 1만원 / 노조·지부 10만원 기준\n- 입금 후 온라인 신청\n※ 위 링크로 모금 참여명단(조직 또는 개인)을 취합하여 기록관 기둥에 각인, 영수증 발급",
-   "views": 370,
+   "num": 1760,
+   "url": "https://t.me/koreajjirasi/1760",
+   "date": "2026-10-20T09:22:52+00:00",
+   "text": "받으라슈)\n피떡바게트",
+   "views": 347,
    "reactions": {
-    "🖕": 10,
-    "🤮": 4,
-    "🤬": 1,
-    "💩": 1
+    "🤣": 5
    },
    "photos": [
-    "https://cdn5.telesco.pe/file/hFdZhbRBm4Z5F6SpqKGz4oz7hdVmBQ2TueatkeC8x_P9AGP18jlb34LKBNaH92T86ajAinkGC5XJWA0d_0wl3uEj4fL93DiWD-9DYfwkGbBudsU7AmdDGGd3C7g4Ab5xnrxGMAd1pkpaJWnyRQDR7JW8f-lMiw2IWx6haPS3xp68ispXqjUaIJ0djIttwPSJwBOWnDMwwx0sWKS597no2jbiKl1jGV20GvvQur8lwW_m4DMpWEo9S4uSOt5fvHt8U3XDOjYtOtaK1OKRT0GjCDyGZNFbOtYAzq_ILVo7LdG4WphMM2HmJRmJP7RwamgNybNYSrttnW45YO8-oujdqQ.jpg",
-    "https://cdn5.telesco.pe/file/fN85NuGMBWyRNaVATkqRuzae5kfFzoSC94vhCP7Mym5Y0QzMG5vaYo8lHUMwdm2wmg40BuReeqp2lSAIO4NfBC2UdrMJ4nQh0Ek16kxd1mmBg49hqDoS0NvsEFl9Xsx9xn1pcIXRDGMxVLlGMxzaPmm1mcI3n6ytfcwN2OYQNIqDIYmJH6POM0C5vYjZiiTMkBEhqsEGaBtS5Po2xN_LI8EUdjyfNLOn3K9cEKPTip-TWC95BVkbkV3xkSDwwuEkICLuebph7p0_OW5xGRHHAikztGIc_Q79lMu4c2kbTF469zlKnFv0dNFu-vQuk8PFGjTzY2QNrNK60zq9Tyo1GQ.jpg",
-    "https://cdn5.telesco.pe/file/aN_6lRW7OjDT0oN0qz6VWCeBPuXTL371jhSiB_qdXhsNI8aVsvjgUN49aPeFnNwfw8YzAxHVfGQOhQYgMhZ2GbddxI4MXPSmF6xab3zgYgAPPGtYUV9T640bolmrxDE-mGy1nTsz-k3Pu4fsEA3mOolKYbO1ucaClTT5RdXjKQ6rkVuOcCQm36w0gFE15xvmsejt2nipsSWW9W1QD-Yt_9uHJ00V29qMLUsjLPZ-2yGhFwjKvYQiRp5wSsA_QOAuH6mri1ysnDYrGo3ItDRFv9sw0FUxqn3UJwM7HIxafVyNqS2PXfedgL7dieLljLOu7im1I159vGhebhOvPo8Pew.jpg",
-    "https://cdn5.telesco.pe/file/NjnViPbGLJel0PZNYfdUo6ug7Gwktn-Mk8xLAf9TXnvCteGw0l-96Dloj91JEIJT6rPla55eq5THP9saU8YywYdgOHCP54qXrPfCO0xzU5lBYUO3JD55udyCQIKRC66H_rB9oDVksI5DyfNF6Ht4Y60E8TCGPXE5tstDdSEQU0rHkNqpYYiyfGGpycnhtRa_HmUDoApO7nISCf2dizTg3gL6T3sy6qnZvdz5zNgz2BbyPtFr6TkkRneaT1lj4JYi9Z81fnD4woLi225Qcq0BKoo7uXfwq3lth9hFYy71wjjRhdRWEiSiaBPgOy4bUIFCWIw-V6RfhdJtm5q8zHfxJA.jpg",
-    "https://cdn5.telesco.pe/file/oUKHjvq1mXnDZrtrkjwRpdhN-C30yK1HXzhERpzjIN3dinIVtjl78IR6iH2ycFttClY030lBSO8OnhxtiYsfV6_ywdIaapDkdNEmNIL627Do0h9XqtBQ9nzyEQMWcZfayyhRz_oGv4wQ4n4GDlDIMrjq3Na8YnjWJU65hkl8XCv_N9JFurm_EEz-aF2NOpZK7Ei0hXsScAJqcP0SwiAgTGwMBIsUD44WoHwooAjtiLu0GmFgNpI_bDlwjWJ1TkCnLd_KWMJeEPiTcO5b_p94t6BfUrVdbTWph6MBLGyVspuLOsVtUHEbY7R64nAuxroHSH0FZ4yWjvlza8JUlLfFww.jpg",
-    "https://cdn5.telesco.pe/file/eVeF51_OpLF9gsCqSGh_Se2w1XmsVxISaIPHTcxmYH8S1fSvBqte5AxXqw4VVjykxsiE7GC4tn84RKAiu7YCbZribWAJ1yf1daS910MevWwZwXzvx_MI6L57af77JoQlatMHcJijoAaW845A6d3cXqqDimekFdo8iTdy5BbP4dUfa0Gp2krQmSpgIAvG2Xoh9IHQq71CxYd_GaaqjzH7IfmjLwyw8eubPNy2n5-hZ7GmEy_dkkUA6hd2WrTI1cH9lU2bygG5-OS9GxhzRGmRdEMZmzTPsibP8dF_Ov0OAZ0H1TA8ADzE5XhyQrLzDZNa-ZEcb-K-Ac1wODTmptMnxw.jpg",
-    "https://cdn5.telesco.pe/file/JHbwVtgOarm6rgnaC77AFqh0l6O3SaAFaQQnTRmbGplanLwdtdu_YvlradkpnVexKonp1O2dhg5ciQIljnxaw8woGRxsMqyvC9BwAKFWeKsBcSDauqHPBOM-MhyRJsI6uNckkGZASLOw-cX-is5nfMScDvSZYKM2e1i_9kNL9Ylzo9kiHvenjyHifg27-UKU8hP0_gkfC3NEX7X_Tf1se6jjej851hPlq4RCx6wmZsg5LOlpWlayQb14taVx_K6O36G1PK_WZ-0I-4OLlSvKHPP5KO_P2mfE-wpNAawoMFtIo6_6zMEwY77-oH3SepBkUUilGkjyt0JIOkKWUnPaOQ.jpg",
-    "https://cdn5.telesco.pe/file/UDtkYdj1biQfxkX3vFrQVYlDxeUuydJ0PhnmymJBxWg-IlaZhM4d9P9leS5bToL1sDGcY6M151vDSJjedDHXJWo8C2QcwjKs7YDXz-TuvIvUR5IGchQsS7MCug9p7xNy5qP5a-I5CiiwLlXjcmXsFSTm57KSVMSdIK_iqsc3PkvWKt52oiAea7wFyTqQ-I-pGqzsoP1xqibI40Cw6FnG9im7F6qf_NW7oJkH-u5T9OBOjXxR-68h-gZMGc6SPtvn9uteKkOwuHuE8NOF777dLulzEbIln28pfUb6bXIfG9dTGREr4ZvE07YBDyvuv0jrSqt-OD80QO0UYAPY0vauBA.jpg",
-    "https://cdn5.telesco.pe/file/iFVuZPqumfKW3RQZj5qQL-8fwr0xzlPqg2Yb2gYtZPiHO_WqkKr5D8D-vfT8HiQ9BF9oWbLxSDfVdgRwrFoZY8yIg-ly8H0oZRkIBm7_PRhD1WPHhlVmTHvDYuEg553UIabzv8FGdookiGZ5Z4K2GSvEz0FzevdUuqDUAU2dQx3R3pnbg7fLePcXftBv47AI28cjkEK6WFGeceCZ7-ElNxX7F8sp1xDqo0gA-XDZc2YRWrr-gz7thde_-MptHHSA3S1lVX2DEe3mswQDi-vIfE5vZkdWAN1C_BzcqmI4xY_YWCqYvVyk0EbzUgdIseCeSOwHdy1S3CyvYKeOjGG4Bw.jpg",
-    "https://cdn5.telesco.pe/file/LqRRo5cV3cFYRrsv_LQTWTSt-rMD1aWszJmFnoUxgI0aqe6ZcuHkdWAvpPZ_fYEHx-4MYW6ShpxqUGyTydu_cKaFj8zdhaPuUww_EepjquQgQxVExDBP7VD3YXQWodZlu4l5E9MhUlo5zqiurpn__K4h-AwElUS8nFmOoIcTpYymLzkZk79MyDjvuVHhsSw_Yz5lxZH05Ns98n9xCzLymdTfJ0FiKVXTFHhvEIdjLqWRrPVJhtLTbI_ZqmuyKwsbyZCU45eDLRTD1mUYYt7_RHmjfztWYlXASk4DuAuLcXKcNjriuSnlZIfT3wc7q0RB-7xLpWHa-Ojez_TGSCziqA.jpg"
+    "https://cdn1.telesco.pe/file/HDqiXSUSy09-EjevcD_mSKeOD7kQy5ZuCpLf4h6sp46QrKOZGbSWD1YNlXrZnKBGIxMKzWeQ9iiIHjUiz1irrLRJ9-mzg44MuR0p8O8AYnORubWOfsv7NOmif3npWFS5_W55ZJUwDV4hjL547x6_GarvZIcI8iUn5JCmzKuELgFwynULW8_hFaH5ph-Kw91F9M2roTeQUvODU514EJkWCQ1mNdlZkRIp4oKKt7SBeMp20GLXNPj726vwAV0OR78g3OYsQBVm1fGAuKaCNvpmUQwLPzZeR6klYeME-gp9EBZ4mCARqp_xjsedab8ywQBZTF-7mnOW7ONAxFhenWHqpA.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    1731
+    1760
    ],
-   "score": 295.2,
-   "id": "20261020-jj1731",
+   "score": 257.9,
+   "id": "20261020-jj1760",
    "files": {
     "photos": [
-     "cand/tg01.jpg",
-     "cand/tg02.jpg",
-     "cand/tg03.jpg",
-     "cand/tg04.jpg",
-     "cand/tg05.jpg",
-     "cand/tg06.jpg",
-     "cand/tg07.jpg",
-     "cand/tg08.jpg",
-     "cand/tg09.jpg",
-     "cand/tg10.jpg"
+     "cand/tg01.jpg"
     ],
     "videos": []
    }
