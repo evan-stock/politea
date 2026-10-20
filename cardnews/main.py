@@ -60,7 +60,45 @@ def push_media(post):
         time.sleep(20)
 
 
-def do_publish(post):
+def _remote_status(pid):
+    """GitHub 최신 main에 기록된 이 게시물의 상태(오래된 체크아웃으로 중복 게시하는 것 방지)."""
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return None
+    import json
+    br = os.environ.get("GITHUB_REF_NAME", "main")
+    _git("fetch", "-q", "origin", br)
+    r = _git("show", f"origin/{br}:state/posts/{pid}.json")
+    try:
+        return json.loads(r.stdout).get("status") if r.returncode == 0 else None
+    except Exception:
+        return None
+
+
+def _claim(post):
+    """게시 직전에 '게시 중'으로 표시해 올린다. 다른 실행이 먼저 잡았으면 False."""
+    st = _remote_status(post["id"])
+    if st in ("publishing", "published"):
+        print(f"{post['id']}: 이미 {st} 상태라 건너뜀(중복 게시 방지)")
+        post["status"] = st
+        return False
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return True
+    post["status"] = "publishing"
+    save_post(post)
+    _git("add", f"state/posts/{post['id']}.json")
+    _git("-c", "user.name=politea-bot", "-c", "user.email=politea-bot@users.noreply.github.com",
+         "commit", "-m", f"politea: publishing {post['id']}")
+    _git("pull", "--rebase", "--autostash", "origin", os.environ.get("GITHUB_REF_NAME", "main"))
+    if _git("push").returncode != 0:
+        print(f"{post['id']}: 게시 중 표시를 올리지 못해 이번엔 건너뜀")
+        _git("rebase", "--abort")
+        return False
+    return True
+
+
+def do_publish(post, force=False):
+    if not force and not _claim(post):
+        return
     push_media(post)
     urls = [media_url(post["id"], os.path.basename(f)) for f in post["files"]]
     try:
@@ -182,10 +220,11 @@ def main():
     if a.cmd == "watch":
         watch()
     elif a.cmd == "tick":
+        sync_repo()  # 예약 실행은 예전 커밋으로 시작할 수 있어서 최신 상태부터 받는다
         tick()
         prune()
     elif a.cmd == "publish":
-        do_publish(load_post(a.id))
+        do_publish(load_post(a.id), force=True)
     elif a.cmd == "chat-id":
         chat_id_helper()
     elif a.cmd == "refresh-token":

@@ -33,6 +33,8 @@ jobs:
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}  # 예약·대기 실행도 만들어진 때가 아닌 최신 커밋으로
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
