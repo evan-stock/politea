@@ -132,12 +132,13 @@ def logo(d, cx, y, size=30, color=(255, 255, 255, 190)):
     d.text((x + tw(f, a), y), b, font=f, fill=VIOLET + (color[3] if len(color) == 4 else 255,))
 
 
-def bubble(d, x, y, text):
+def bubble(d, x, y, text, tail=True):
     f = font("Bold", 36)
     w = tw(f, text)
     bx0, by0, bx1, by1 = x, y, x + w + 40, y + 66
     d.rounded_rectangle([bx0, by0, bx1, by1], radius=10, fill=WHITE)
-    d.polygon([(bx0 + 22, by1 - 2), (bx0 + 44, by1 - 2), (bx0 + 20, by1 + 18)], fill=WHITE)
+    if tail:
+        d.polygon([(bx0 + 22, by1 - 2), (bx0 + 44, by1 - 2), (bx0 + 20, by1 + 18)], fill=WHITE)
     d.text((bx0 + 20, by0 + 11), text, font=f, fill=BLACK)
 
 
@@ -174,7 +175,7 @@ def cover_slide(s, clear=False):
         d.text((72, bottom + 18), s["sub"], font=font("Medium", 34), fill=GRAY)
     if s.get("bubble") and s["bubble"].get("text"):
         b = s["bubble"]
-        bubble(d, int(W * b.get("x", 0.58)), int(H * b.get("y", 0.42)), b["text"])
+        bubble(d, int(W * b.get("x", 0.58)), int(H * b.get("y", 0.42)), b["text"], b.get("tail", True))
     return c
 
 
