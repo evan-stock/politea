@@ -2,7 +2,7 @@
  "id": "20261020-jj1748",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "created_at": "2026-10-20T18:19:39.179553+09:00",
  "publish_at": "2026-10-20T19:00:00+09:00",
  "topic": "\"미7공군 박살내자\" 오산기지 무단침입 대진연 3명 1심 집행유예·석방",
@@ -66,5 +66,8 @@
   "media/20261020-jj1748/05.jpg"
  ],
  "tg_msg": 187,
- "decided_at": "2026-10-20T18:23:39.851341+09:00"
+ "decided_at": "2026-10-20T18:23:39.851341+09:00",
+ "ig_media_id": "18039045971837729",
+ "permalink": "https://www.instagram.com/p/DetkbBzG20q/",
+ "published_at": "2026-10-20T19:01:24.288145+09:00"
 }
