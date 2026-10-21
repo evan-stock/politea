@@ -103,11 +103,11 @@ def build_reel(d, base, send):
     """릴스: 검정 9:16 + 위쪽 제목 + 가운데 원본 영상 + 아래 로고·출처, 커버 이미지 함께.
     d["video"] = {"src":"video/v1.mp4","start":0,"dur":30,"frame":1.5,"audio":true,"crop":[x,y,w,h]}
     d["title"] = "줄1\\n줄2 '강조'", d["credit"] = "영상: KBS" (없으면 photo_credits 첫 항목)"""
-    from .main import SLOT_LABEL, build_caption
+    from .main import SLOT_LABEL, build_caption, clean_credit
     from .reel import make
     v = d["video"]
     credits = list(dict.fromkeys(d.get("photo_credits", [])))
-    credit = d.get("credit") or (f"영상: {credits[0]}" if credits else "")
+    credit = clean_credit(d.get("credit") or (f"영상: {credits[0]}" if credits else ""))
     if v.get("final"):  # 채팅에서 이미 완성한 reel.mp4·reel_cover.jpg 를 그대로 쓴다(짤 릴스 등)
         out, cover = str(base / "reel.mp4"), str(base / "reel_cover.jpg")
     else:

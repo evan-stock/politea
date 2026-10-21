@@ -12,6 +12,7 @@ import datetime as dt
 import os
 import shutil
 import subprocess
+import re
 import time
 import traceback
 
@@ -21,9 +22,19 @@ from .common import CFG, MEDIA, all_posts, load_post, now, save_post
 SLOT_LABEL = {"lunch": "점심", "evening": "저녁"}
 
 
+TIP_RE = re.compile(r"\s*[(\[]?[^()\[\],]*텔레그램[^()\[\],]*[)\]]?")
+
+
+def clean_credit(c):
+    """캡션·화면 출처에서 '텔레그램 제보' 표기를 뺀다(사용자 결정 2026-10-21)."""
+    return TIP_RE.sub("", c or "").strip(" ,·:")
+
+
 def build_caption(d, credits):
     parts = [d["caption"].strip()]
-    src = ", ".join(f"{s.get('publisher', '')} {s.get('date', '')}".strip() for s in d.get("sources", [])[:3])
+    credits = [c for c in (clean_credit(c) for c in credits) if c]
+    srcs = [s for s in d.get("sources", []) if "텔레그램" not in s.get("publisher", "") and "t.me/" not in s.get("url", "")]
+    src = ", ".join(f"{s.get('publisher', '')} {s.get('date', '')}".strip() for s in srcs[:3])
     notes = ([f"출처: {src}"] if src else []) + (["사진·영상: " + ", ".join(credits[:6])] if credits else [])
     if notes:
         parts.append("\n".join(notes))
