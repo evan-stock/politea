@@ -2,7 +2,7 @@
  "id": "20261021-jj1797",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "published",
  "created_at": "2026-10-21T11:59:29.329872+09:00",
  "publish_at": "2026-10-21T12:30:00+09:00",
  "topic": "이 대통령, 공소·중수청장 국무회의 배석 논란에 '제미나이 답변' 올려 반박",
@@ -66,5 +66,8 @@
   "media/20261021-jj1797/05.jpg"
  ],
  "tg_msg": 254,
- "decided_at": "2026-10-21T14:59:53.826200+09:00"
+ "decided_at": "2026-10-21T14:59:53.826200+09:00",
+ "ig_media_id": "18122460892934267",
+ "permalink": "https://www.instagram.com/p/DevtwkCFKTN/",
+ "published_at": "2026-10-21T15:01:26.398407+09:00"
 }
