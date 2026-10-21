@@ -2,7 +2,7 @@
  "id": "20261021-jj1861",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "created_at": "2026-10-21T20:56:25.950494+09:00",
  "publish_at": "2026-10-21T21:30:00+09:00",
  "topic": "한동훈, 이 대통령 '제미나이 답변'에 \"제미나이 할애비 데려와도 수사지휘 안 돼\" 반박(10/21 페이스북)",
@@ -61,5 +61,8 @@
   "media/20261021-jj1861/04.jpg"
  ],
  "tg_msg": 278,
- "decided_at": "2026-10-21T21:02:59.126279+09:00"
+ "decided_at": "2026-10-21T21:02:59.126279+09:00",
+ "ig_media_id": "18099960821542067",
+ "permalink": "https://www.instagram.com/p/DewadDboPzp/",
+ "published_at": "2026-10-21T21:32:02.525167+09:00"
 }
