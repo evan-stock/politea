@@ -43,7 +43,7 @@ def window(vw, vh):
     return (W - w) // 2, y, w, h, y + h + 70
 
 
-def overlay(title, credit, vw, vh, path, with_frame=None):
+def overlay(title, credit, vw, vh, path, with_frame=None, note=""):
     """제목·로고·출처를 그린 PNG. with_frame(이미지)이 있으면 영상 자리에 그 프레임을 넣은 커버 JPG를 만든다."""
     x, y, w, h, logo_y = window(vw, vh)
     c = Image.new("RGBA", (W, H), (0, 0, 0, 0 if with_frame is None else 255))
@@ -63,6 +63,17 @@ def overlay(title, credit, vw, vh, path, with_frame=None):
         for t, hl in segs(l):
             d.text((xx, ty + i * lh), t, font=f, fill=SOFT_LAV if hl else WHITE)
             xx += tw(f, t)
+    if note:  # 영상 아래 맥락 한 줄(작은 흰 글씨, 여러 줄 가능)
+        fn = font("SemiBold", 34)
+        nl = [l for l in note.replace("\\n", "\n").split("\n") if l.strip()]
+        ny = y + h + 40
+        for l in nl:
+            xx = (W - tw(fn, plain(l))) / 2
+            for t, hl in segs(l):
+                d.text((xx, ny), t, font=fn, fill=SOFT_LAV if hl else (225, 225, 225))
+                xx += tw(fn, t)
+            ny += int(fn.size * 1.4)
+        logo_y = ny + 40
     fl = font("Logo", 54)
     a, b = "POLITEA", ".KR"
     lw = tw(fl, a) + tw(fl, b)
@@ -79,12 +90,28 @@ def overlay(title, credit, vw, vh, path, with_frame=None):
     return path, (x, y, w, h)
 
 
-def make(src, title, credit, out, cover_out, start=0.0, dur=30.0, frame=1.5, keep_audio=True, crop=None):
+def still_clip(img, out, dur=12.0, zoom=0.08):
+    """사진 한 장을 천천히 확대되는 영상으로(사진 릴스용, 소리 없음). 가로 1280 기준."""
+    im = Image.open(img).convert("RGB")
+    w = 1280
+    h = round(w * im.height / im.width / 2) * 2
+    h = min(h, 1600)
+    fr = round(dur * 30)
+    src = out.rsplit(".", 1)[0] + "_src.jpg"
+    im.resize((w * 2, h * 2), Image.LANCZOS).save(src, quality=95)
+    vf = (f"zoompan=z='1+{zoom}*on/{fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s={w}x{h}:fps=30,"
+          "format=yuv420p")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", src, "-vf", vf, "-frames:v", str(fr),
+                    "-c:v", "libx264", "-crf", "18", out], check=True)
+    return out
+
+
+def make(src, title, credit, out, cover_out, start=0.0, dur=30.0, frame=1.5, keep_audio=True, crop=None, note=""):
     """crop: 원본에서 잘라낼 영역 [x,y,w,h](로고·자막 제거용, 픽셀). 없으면 전체."""
     vw, vh = probe(src)
     if crop:
         vw, vh = crop[2], crop[3]
-    ov, (x, y, w, h) = overlay(title, credit, vw, vh, out.rsplit(".", 1)[0] + "_overlay.png")
+    ov, (x, y, w, h) = overlay(title, credit, vw, vh, out.rsplit(".", 1)[0] + "_overlay.png", note=note)
     pre = f"crop={crop[2]}:{crop[3]}:{crop[0]}:{crop[1]}," if crop else ""
     fc = (f"color=c=black:s={W}x{H}:r=30:d={dur}[bg];"
           f"[0:v]{pre}scale={w}:{h}:flags=lanczos,setsar=1,unsharp=5:5:0.5,fps=30[v];"
@@ -105,5 +132,5 @@ def make(src, title, credit, out, cover_out, start=0.0, dur=30.0, frame=1.5, kee
     tmp = out.rsplit(".", 1)[0] + "_frame.jpg"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(start + frame), "-i", src, "-frames:v", "1",
                     *(["-vf", pre.rstrip(",")] if crop else []), "-q:v", "2", tmp], check=True)
-    overlay(title, credit, vw, vh, cover_out, with_frame=Image.open(tmp))
+    overlay(title, credit, vw, vh, cover_out, with_frame=Image.open(tmp), note=note)
     return out, cover_out
