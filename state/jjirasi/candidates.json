@@ -1,61 +1,62 @@
 {
- "scanned_at": "2026-10-23T08:52:20.849542+09:00",
+ "scanned_at": "2026-10-23T11:51:52.060425+09:00",
  "channel": "koreajjirasi",
- "total_posts": 52,
+ "total_posts": 55,
  "candidates": [
   {
-   "num": 1995,
-   "url": "https://t.me/koreajjirasi/1995",
-   "date": "2026-10-22T12:09:42+00:00",
-   "text": "받으라슈)",
-   "views": 4070,
-   "reactions": {},
+   "num": 2018,
+   "url": "https://t.me/koreajjirasi/2018",
+   "date": "2026-10-23T01:44:58+00:00",
+   "text": "받으라슈)\n아이온2 패치 후 외국 유저들 근황\nㅇㄱㄴㅈ",
+   "views": 1380,
+   "reactions": {
+    "🍌": 1
+   },
    "photos": [
-    "https://cdn5.telesco.pe/file/YoiOm2VPA9ZUB6RbpXeST_lRBw8iwG_OQSxp0BZgZK2u96hu1piiGz4JjWHIEYyh_jiQKRqrn100oXErofjC3lCQiliJ2ooPyZzQIq4k9HK6pXe_Sf-OIoAoBxS8ZTqWDsdHnB4medYo8B-nxHz6dkJRvBDtMghOM4000S1mvfCponwLHFyH4youMOKLyyy8JSSKjRYhypArAVw9NUp7-JZGC0H7IXFgpd9Ke0dDNnaY4TjJSmG9hiF7C5LVKA9z3CU73esvP8qMs2bJwuu4T55GPsOxA587F2XP58fM8J_rPVliIsDygJX1L59zIzoCKoHPlfvB0raA5JLZT0C9GA.jpg",
-    "https://cdn5.telesco.pe/file/IXguEZfhkq0lI8ODJL9JRnb62s8Tm2onQtjFHrBL1BvNCygY7qiqZBIcxeL4rdRo7oqn-RMbuToTa24V8wnLq3gqavji-R5buAKXxn_5BwK4mhuowO2Rht_5W1DRpOhvI4Fml-AXUVM5FcaJezA8S_G7WZIh6Qc0AMLbfv0ATYdxGHJ4zmjN2k8TcyOuRQv7Y6U-B-Kri0JZVnpkHceF9krCDFQIeBXMiC2xTM44YuKXBRS8uVPJubBUQ-5XtOE4dbWGsisxQtdPezt1ZfWIDPAhUDM778M4UWWxrC1SyQ4vD82z45vYAeZR7aFLGRVoUKLCWK-4EnDzyuc6E6Nq_w.jpg",
-    "https://cdn5.telesco.pe/file/lY6V1dgMZ0g3gn7TA0n4ZLNqK_afy0ae6GevY5a3dte_qvJ2B8-4vr04DC4-OT1gNQ7jZ7H7WNRqa-3vekOrIwLVKvXHRbTHezqnURwYtlckSgHnbA7ddyExv4IwZMYAIA5u46Q2pjaI77vSSRBUSIBd4q-V3HmMRG53QUkyIEKMWRc92Vw0kIAPc1_VcVC1NUvscEzcUWOD59gMNrOVMRCTCGmBEfbg_B8VM_9r6wlhAaIsZhoHkfKvnLRFv1NKEZyd-HOaDdm_uGhlQvehFjd3yW19ff7dce9NXToz8l5JE6Olqj-uKBGbFxMsVMuiefiO5En0d5lQuO0G7VzsEQ.jpg"
+    "https://cdn5.telesco.pe/file/aHCyRNCiWr4csQJ89W9QmFdaSqDstRGzX3eW0qSKrlFZN9FEyA2oGaErfqtwPi7XK7dbuCcy7vogyzmO8zCukaEk-WgkfMygzKKn65wK402HOvWRGJzy617QWMjhGNGc9Di0sj8HRL4HPvn9D_jbcBDbBncPw-bKieFQFZhttJroWm9sA3mMkrUWxN195ozlC_3E6qbxOcrxQBho0VHpbTs9AbfAbIsorJEW8Fq2WATfD_hKGlpDxhROQoe8zJw0b3StG4HIg9zb_ArzCVsS8zymFnCMqughvp97SJKoOY0jystqmkG48_bvajLsB3fBULVuWXKZ5en-9V4XLYAiJA.jpg",
+    "https://cdn5.telesco.pe/file/BfxGUi55f34AC5TPzZoxvr6ZebU87K50M4Zc0QhtxrreMuBgxapfbe-SrRVGZJQIuaMUgViNCXaGNrgoXdICvlMtNOrL3yJYbGliGe2iHb231gb34sOEy9Tn5z9LUX_w3_qHfsb4a-6pGvtalBYULKwnmhsS_X69G-4oMybWUs93wQ6wr0NuHRgCm4jQt4pk2QmDtrks6DNN-lnmiMxZubuuk5hjqPq1j8pR7HJMDkIg_O2-dVum2Gl_M2yjRf0YdpkyxQoRxULgylXNbUsVQHWYfDY3SvlxIRBD0oBcBGv6prozfMhdWKiPLti2sFZzF6o4Jq5XiiyqOsmmSjr7DA.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    1995
+    2018
    ],
-   "score": 1099.3,
-   "id": "20261023-jj1995",
+   "score": 804.9,
+   "id": "20261023-jj2018",
    "files": {
     "photos": [
      "cand/tg01.jpg",
-     "cand/tg02.jpg",
-     "cand/tg03.jpg"
+     "cand/tg02.jpg"
     ],
     "videos": []
    }
   },
   {
-   "num": 2001,
-   "url": "https://t.me/koreajjirasi/2001",
-   "date": "2026-10-22T12:19:31+00:00",
-   "text": "받으라슈)\n스프빠뜨린거 자랑이라고 페북올릴 정신머리로 뭐???? 서울시장?????",
-   "views": 424,
+   "num": 2020,
+   "url": "https://t.me/koreajjirasi/2020",
+   "date": "2026-10-23T02:16:19+00:00",
+   "text": "받으라슈)",
+   "views": 237,
    "reactions": {
-    "🤮": 8,
-    "💩": 4,
-    "🤬": 3
+    "🤮": 11,
+    "👎": 2,
+    "🖕": 2,
+    "🤓": 1
    },
    "photos": [
-    "https://cdn5.telesco.pe/file/qgCbpntjtVJXVPt5uaBvcxJM3-na-nlNlaNlCyVLrl56JamjjHveJ_mzUoXKbuG9r6VkbHXz7debkBmo3TsNIVA-72JY_OjgMPILnEuHCzAq18dfQ5ctfLD584ht3Bn8fH_mjQk9BTOyTd97-XjM-5ewBCwFT6sjr5B40es8pdjgIR0EE1Q__xDWVFYGAefN9rA9hXk9Af8ZAL3QuSwbikNfEdRjBfmoYv2SLsF8Oaj5LsN6GrizfSEllRr1ECNUhWtR23Z07u4LxAKWNWeZwPIIut4IzNz21NBpfu03meCDBEAQ_CA33qJvAQ2d8IHhiVJbb8Re7mYdPgpbdfRV4w.jpg"
+    "https://cdn5.telesco.pe/file/opmpwSe0GCamEGHPhtkx2H0_ZiOj6MOdy9NVfYyb2QAw__fHdrTX3OlHgYqirQVnWZRh_rRyIr7nZXVw3NYw-hI7WgPFsU1DKeFS_6VKahhXQat_pJ9qcgz-O-fDNAY9qyb8apFt3H7EiNdXqGva0BrNuOeGu_yY50Avja1lEqoySmKTx0pneCapm67dSLuFpe6G3S8iOMPf2seu6TsKY97AHEEPvZAa0AaiVIwDPNrVm_cU2fp4WKUzRUurarVp4O-Wwv2w_DkDVvyamCP99gEjDVLnDIawI52OT1dysf8ufri4aQaDZuuLvoU4fq-at8lAvuwjCK55wLXXjkcIlA.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    2001
+    2020
    ],
-   "score": 278.2,
-   "id": "20261023-jj2001",
+   "score": 460.1,
+   "id": "20261023-jj2020",
    "files": {
     "photos": [
      "cand/tg01.jpg"
@@ -64,59 +65,31 @@
    }
   },
   {
-   "num": 2007,
-   "url": "https://t.me/koreajjirasi/2007",
-   "date": "2026-10-22T14:38:03+00:00",
-   "text": "받으라슈)\n드디어 오피셜뜬 마운자로 막는 이유 밝힌 관세청장\nQ : 잡고있는 기준이 궁금한데 한국에서 사서 쓰고있던걸 외국에 가지고나갔다가 들어와도 안되나?\n관세청장 : 일단 국내로 들어오는건 전부 잡는다.\nQ : 한국에서 사서 가는건데 그걸 왜 잡는가?\n관세청장 : 우리가 그걸 어떻게 아는가? 가기전에 미리 신고절차를 밟으면 그건 된다.\nQ : 그걸 일반인에게 통보했고 알고있나?\n관세청장 : .......... 그건 우리가 안내하거나 하진 않았다\nQ : 세계적으로 마운자로는 이미 2형 당뇨치료제다 그럼 마운자로를 맞고있는 일본 여행객이 당뇨 치료를 위해 사용중이여서 가지고있었는데 한국에 관광오면 이건 어떻게 할건가?\n관세청장 : 식약청에서 유해의약품이라고 지정했기때문에 잡는것 뿐이다\n근거없이 계속 막는거 공식 오피셜로 식약청 때문이라고 관세청장 입에서 직접 발언 나옴\n하지만 식약처에서는 막을 법적 근거가 없음\n그래서 식약처는 “제한요청”을 했더니 관세청이 받아줬다 이렇게 돌려가면서 책임 회피하는 중\n그냥...한미약품에서 뽀찌 좀 줬수다. 하고 시원하게 불어",
-   "views": 425,
+   "num": 2005,
+   "url": "https://t.me/koreajjirasi/2005",
+   "date": "2026-10-22T13:30:51+00:00",
+   "text": "받으라슈)\n진짜 더 늦기전에 끌어내려야한다",
+   "views": 543,
    "reactions": {
-    "🤮": 5,
-    "❤": 2,
-    "🤷‍♂": 1
-   },
-   "photos": [
-    "https://cdn5.telesco.pe/file/Mpd7v1suPY4uT3Gh__zwmF8MT45HS-Kzpp9BB0zKGlxTYQ3wVuO-7WFyW9p3rZbRpEJmsSXJKfoHQ5nUdcsRO97QiqoTx0QoWY-jcDsLAuSdq3GtcjufCkncpmwSX0WaDg7T6aGnFKnSgXOJ-Lhte2P6Yqoc7uRHhK0JR2cpYMVmxyzNc273pHo_9y9USMvuZ8CvF7iSB54P7313ckQ0MDovLGQ3yZV80SrMJV57y2frQljrGkq_ykt1Z62s-81aNZ4XZBO-S6xXZ_XWpEKvS9zVWKrCPdodN3uzBQhUHS1eUilLy50-EatsvtYWDb7oNcHetHeYzmTwVkQMLpHe5w.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2007
-   ],
-   "score": 222.3,
-   "id": "20261023-jj2007",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 2004,
-   "url": "https://t.me/koreajjirasi/2004",
-   "date": "2026-10-22T12:47:18+00:00",
-   "text": "받으라슈)\n이거 게임은 좌파도 못참지 ㅋㅋㅋㅋ\n한규 아재도 집가서 하실듯",
-   "views": 475,
-   "reactions": {
-    "👏": 8
+    "🤬": 6,
+    "🤷‍♂": 1,
+    "🤓": 1
    },
    "photos": [],
    "videos": [
-    "https://cdn1.telesco.pe/file/9ddb824313.mp4?token=u0nCVy-mTZt6yTfkoY_MdWnODO4XCZIYUJ7otPnXKDbzJ5JFwalD6fKAfSz9SYr8c_6xc4_AYskYnNipZI01Kb7wlTOrwJSf3cAt21HbqRl0RzNcCeOdLrEPPnQ05HmkeadDsTcC8ydqhjB3O1aSBun0MFOLcOvxr-nXlbzdEG36zmr_qEmAqDbE1bJGUbB28_L3_kvSBtLb06T890S9UQJqMt7HlFPwvrjt6YSUrrzIl2ct4aX4e6_4BdI6VWldug99Wnc19nYanUgN9BU_mhUG4HNOkOCeRv4J9htZuqK1H5djFDgaWfTBtUHKWPfwNoq7mUCvZWt7XLdk6TorOQ",
-    "https://cdn1.telesco.pe/file/9ddb824313.mp4?token=u0nCVy-mTZt6yTfkoY_MdWnODO4XCZIYUJ7otPnXKDbzJ5JFwalD6fKAfSz9SYr8c_6xc4_AYskYnNipZI01Kb7wlTOrwJSf3cAt21HbqRl0RzNcCeOdLrEPPnQ05HmkeadDsTcC8ydqhjB3O1aSBun0MFOLcOvxr-nXlbzdEG36zmr_qEmAqDbE1bJGUbB28_L3_kvSBtLb06T890S9UQJqMt7HlFPwvrjt6YSUrrzIl2ct4aX4e6_4BdI6VWldug99Wnc19nYanUgN9BU_mhUG4HNOkOCeRv4J9htZuqK1H5djFDgaWfTBtUHKWPfwNoq7mUCvZWt7XLdk6TorOQ"
+    "https://cdn1.telesco.pe/file/5b1c1061e3.mp4?token=Jr4gZdw5i7g1bCLQY4ZmjtfVSO5XjBJ_rXmClviF-GNE2MqD4zTM5NexeIfvUtz_PphuAseIs8vA75qjDsXUtyfvd5ict12hfqACr8s7g-BP3Q2sTLRx48EdA0pNb_7os6isMiCG5H7IGlQLZinUNYeu-xK9x7Zt8WU_fD2RQ9cv560EIVOSMTryMOKEairuDar7W5WeV_cUAdPB8ucwgN_T_nlZAyvOlfoIdYjQT_MMrWLpjgXQtQ8bwfjnVgWrMavju48kMCDijmjYo2oglLoyrqW6Fu7L2Ay_dSR6LmLxUOJdxlEpC3T0HolSRh2DZdZSihionZUlp17Knxh04A",
+    "https://cdn1.telesco.pe/file/5b1c1061e3.mp4?token=Jr4gZdw5i7g1bCLQY4ZmjtfVSO5XjBJ_rXmClviF-GNE2MqD4zTM5NexeIfvUtz_PphuAseIs8vA75qjDsXUtyfvd5ict12hfqACr8s7g-BP3Q2sTLRx48EdA0pNb_7os6isMiCG5H7IGlQLZinUNYeu-xK9x7Zt8WU_fD2RQ9cv560EIVOSMTryMOKEairuDar7W5WeV_cUAdPB8ucwgN_T_nlZAyvOlfoIdYjQT_MMrWLpjgXQtQ8bwfjnVgWrMavju48kMCDijmjYo2oglLoyrqW6Fu7L2Ay_dSR6LmLxUOJdxlEpC3T0HolSRh2DZdZSihionZUlp17Knxh04A"
    ],
    "durations": [
-    41
+    85
    ],
    "too_big": false,
    "link": null,
    "nums": [
-    2004
+    2005
    ],
-   "score": 219.8,
-   "id": "20261023-jj2004",
+   "score": 220.3,
+   "id": "20261023-jj2005",
    "files": {
     "photos": [],
     "videos": [
@@ -124,17 +97,46 @@
       "src": "video/v1.mp4",
       "w": 720,
       "h": 1280,
-      "dur": 41.8,
+      "dur": 85.3,
       "sheet": "video/v1_sheet.jpg"
      },
      {
       "src": "video/v2.mp4",
       "w": 720,
       "h": 1280,
-      "dur": 41.8,
+      "dur": 85.3,
       "sheet": "video/v2_sheet.jpg"
      }
     ]
+   }
+  },
+  {
+   "num": 2011,
+   "url": "https://t.me/koreajjirasi/2011",
+   "date": "2026-10-22T22:36:47+00:00",
+   "text": "받으라슈)",
+   "views": 411,
+   "reactions": {
+    "👍": 2,
+    "🤓": 1
+   },
+   "photos": [
+    "https://cdn5.telesco.pe/file/QgOX60kAuKE5ubDgAgu7lemSybvsbX2SfNLReHcC6BJaVj_1BsKLiSenQyKBGmU8rFrj6KQ6Dh22B5KmfybXBBHSjAVg5GN4uwwLYsAVOa7LGiP_xQ5hUF9caKVddth0WEx6SNnAB3kaokWXWunRNjE9t3fv_goVG9_-MAgGBiL4vCxd2IOJ4TOZB2CzIPeiYmzhhd9KcBYj4rMhMKRhRbueyEvmCJ8eUPJK8Hf2Jy0mcdqgZTBQ_MFsTWs8fWNzYrFQvL7YvEVLe9x-1Sf477d0jzi0Q0pYbxZAVP3pK09gA2l19Pfeg-2kxABCmhqnh1np-86F3ZgeDIopGIBVAA.jpg"
+   ],
+   "videos": [],
+   "durations": [],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2011
+   ],
+   "score": 212.4,
+   "id": "20261023-jj2011",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg"
+    ],
+    "videos": []
    }
   }
  ]
