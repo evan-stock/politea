@@ -25,7 +25,9 @@ import requests
 
 def collect(d, base):
     cand = base / "cand"
-    shutil.rmtree(cand, ignore_errors=True)
+    # 기사 사진(press*·url*)만 새로 받는다. 텔레그램 후보(tg*)·다른 파일은 지우지 않는다(표지 사진 추가 수집용).
+    for f in glob.glob(str(cand / "press*.jpg")) + glob.glob(str(cand / "url*.jpg")):
+        os.remove(f)
     pool = press_images(d.get("image_pages", []) + [s["url"] for s in d.get("sources", []) if s.get("url")],
                         str(cand), limit=int(d.get("limit", 24)))
     os.makedirs(cand, exist_ok=True)
@@ -122,6 +124,8 @@ def build_reel(d, base, send):
         out, cover = make(str(base / v["src"]), d["title"], credit, str(base / "reel.mp4"), str(base / "reel_cover.jpg"),
                           v.get("start", 0), v.get("dur", 30), v.get("frame", 1.5), v.get("audio", True), v.get("crop"),
                           d.get("note", ""))
+    if d.get("cover_image") and not v.get("final"):  # 표지(커버)만 정치인 실제 사진으로
+        _photo_cover(d, base, v, credit, cover)
     if not send:
         return
     pid, slot = d["id"], d.get("slot", "evening")
@@ -138,9 +142,42 @@ def build_reel(d, base, send):
     save_post(post)
 
 
+def _photo_cover(d, base, v, credit, cover):
+    """릴스 커버의 영상 자리에 영상 프레임 대신 사진(후보 번호 또는 주소)을 넣는다.
+    사진은 영상 비율에 맞춰 가운데(세로는 위쪽 35% 기준, 얼굴 보존)로 자른다."""
+    from PIL import Image
+    from .reel import overlay, probe
+    img = get_image(d["cover_image"], base, 90)
+    if not img:
+        raise SystemExit("릴스 표지 사진을 받지 못함: " + str(d["cover_image"])[:80])
+    vw, vh = probe(str(base / v["src"]))
+    if v.get("crop"):
+        vw, vh = v["crop"][2], v["crop"][3]
+    im = Image.open(img).convert("RGB")
+    r = vw / vh
+    if im.width / im.height > r:
+        nw = int(im.height * r)
+        im = im.crop(((im.width - nw) // 2, 0, (im.width - nw) // 2 + nw, im.height))
+    else:
+        nh = int(im.width / r)
+        top = max(0, min(im.height - nh, int(im.height * 0.35 - nh / 2)))
+        im = im.crop((0, top, im.width, top + nh))
+    overlay(d["title"], credit, vw, vh, cover, with_frame=im, note=d.get("note", ""))
+
+
+def _check_cover(d):
+    """텔레그램 소재(-jj) 캐러셀은 표지에 텔레그램 이미지(캡처)를 쓰지 않는다(사용자 결정 2026-10-24)."""
+    imgs = d.get("images", [])
+    first = str(imgs[0]) if imgs and imgs[0] else ""
+    if "-jj" in d["id"] and first.startswith("tg") and not d.get("cover_exception"):
+        raise SystemExit("표지 규칙 위반: 텔레그램 이미지(" + first + ")를 표지로 쓸 수 없음. "
+                         "관련 정치인 실제 사진(press·주소)을 images[0]에 넣을 것.")
+
+
 def build(d, base, send):
     from .main import SLOT_LABEL, build_caption
     from .render import render
+    _check_cover(d)
     imgs = d.get("images", [])
     slides = []
     for k, s0 in enumerate(d["slides"]):
