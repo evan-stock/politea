@@ -2,7 +2,7 @@
  "id": "20261024-jj2087",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "failed",
  "created_at": "2026-10-24T09:23:35.931721+09:00",
  "publish_at": "2026-10-24T21:00:00+09:00",
  "topic": "조국 혁신정책연구원장, 오세훈 항소심 무죄(10/23 서울고법)에 '조희대 탄핵 등 사법개혁 안 한 후과' 페이스북 글 — 조국혁신당 대법원장 탄핵 요구",
@@ -68,5 +68,6 @@
   "media/20261024-jj2087/06.jpg"
  ],
  "tg_msg": 449,
- "note": "13:15 수동 게시 인스타 활동 제한(2207051)으로 실패 → 21시 1회 재시도"
+ "note": "13:15 수동 게시 인스타 활동 제한(2207051)으로 실패 → 21시 1회 재시도",
+ "error": "인스타 API 오류 403: {'error': {'message': 'Application request limit reached', 'type': 'OAuthException', 'is_transient': False, 'code': 4, 'error_subcode': 2207051, 'error_user_title': 'action is blocked', 'error_user_msg': 'We restrict certain activity to protect our community. Tell us if you think we made a mistake.', 'fbtrace_id': 'AKLoogzDRYcmVnA3lfp2suy'}}"
 }
