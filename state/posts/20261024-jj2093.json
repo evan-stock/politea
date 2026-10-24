@@ -2,7 +2,7 @@
  "id": "20261024-jj2093",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-10-24T12:05:38.838176+09:00",
  "publish_at": "2026-10-24T13:00:00+09:00",
@@ -30,5 +30,8 @@
  ],
  "cover": "media/20261024-jj2093/reel_cover.jpg",
  "tg_msg": 453,
- "decided_at": "2026-10-24T13:04:34.988412+09:00"
+ "decided_at": "2026-10-24T13:04:34.988412+09:00",
+ "ig_media_id": "18114174647147760",
+ "permalink": "https://www.instagram.com/reel/De3O3gujgUL/",
+ "published_at": "2026-10-24T13:05:16.872967+09:00"
 }
