@@ -2,7 +2,7 @@
  "id": "20261023-jj2061",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "failed",
  "created_at": "2026-10-24T03:17:25.824257+09:00",
  "publish_at": "2026-10-24T12:30:00+09:00",
  "topic": "국방부, 북한에 남북군사당국회담 공식 제안(10/23 김홍철 국방정책실장 담화) — 작년 11월 제안 1년 무응답, 9/21 북한 지뢰로 장병 3명 부상 이후",
@@ -56,5 +56,6 @@
   "media/20261023-jj2061/05.jpg"
  ],
  "tg_msg": 440,
- "decided_at": "2026-10-24T03:21:06.394416+09:00"
+ "decided_at": "2026-10-24T03:21:06.394416+09:00",
+ "error": "인스타 API 오류 403: {'error': {'message': 'Application request limit reached', 'type': 'OAuthException', 'is_transient': False, 'code': 4, 'error_subcode': 2207051, 'error_user_title': 'action is blocked', 'error_user_msg': 'We restrict certain activity to protect our community. Tell us if you think we made a mistake.', 'fbtrace_id': 'AzLZZ372bwywrV9l6dINTJk'}}"
 }
