@@ -1,116 +1,13 @@
-[
- {
-  "id": "20261026-lula",
-  "slot": "evening",
-  "mode": "send",
-  "topic": "브라질 대선 결선(10.25): 마감 무렵 투표 2시간 연장, 1차에서 졌던 룰라가 플라비우 보우소나루를 약 440만 표 차로 뒤집고 4선",
-  "category": "국제",
-  "core": "마감 무렵 2시간 연장 → 룰라 51.8% 4선. 플라비우 측 '사법 쿠데타' 반발, 부정 증거는 미제시",
-  "risk": "'부정선거' 단정 안 함, 연장과 승패 인과 단정 안 함(표지는 사실 나열), 룰라 측 입장 병기, 증거 미제시 명시, 플라비우 승복 여부 미확인 명시. 표지는 AP 보도사진(지지자가 룰라 판넬에 뽀뽀), 2장 영상은 원출처·촬영 시점 미확인. 같은 날 jj2206(최민희 룰라 축하글)과 소재 겹침 주의.",
-  "slides": [
-   {
-    "t": "투표 갑자기 2시간 연장\n그리고 룰라 '4선'",
-    "fx": 0.5,
-    "fy": 0.3
-   },
-   {
-    "video": {
-     "src": "video/src.mp4",
-     "start": 0,
-     "dur": 18,
-     "x": 0.5,
-     "y": 0.15,
-     "audio": true
-    },
-    "sub": "개표 끝난 날 밤",
-    "t": "별 선글라스 끼고 '샤카'",
-    "b": "80세 룰라가 지지자들과 포옹하며 승리를 즐기는 장면입니다."
-   },
-   {
-    "sub": "결과",
-    "t": "1차에선 졌는데 결선 '역전'",
-    "b": "결선 51.8% 대 48.2%, 약 440만 표 차입니다.\n1차(4일)는 플라비우 47%, 룰라 45%였습니다.\n1차에서 지고 결선에서 뒤집은 건 브라질 현대사 처음입니다."
-   },
-   {
-    "sub": "마감 무렵 무슨 일이",
-    "t": "대법관이 '2시간 연장'",
-    "b": "버스 운행 차질과 남부 폭우로 두 캠프 모두 연장을 요청했습니다.\n자닌 대법관이 19시까지 2시간 늘렸고, 이미 닫은 투표소는 빠졌습니다.\n결정 시각은 마감 3분 전(CBS)과 17시 11분쯤(블룸버그 리네아)으로 보도가 엇갈립니다."
-   },
-   {
-    "sub": "살바도르에선",
-    "t": "버스가 차고에… 교통국장 '체포 명령'",
-    "b": "선거일 시내버스가 차고에 묶이자 선거법원이 시 교통국장 체포를 명령했습니다.\n주지사는 그 국장이 파리 출장 중이라고 말했습니다."
-   },
-   {
-    "sub": "개표 중엔",
-    "t": "한때 플라비우 앞섰다 '재역전'",
-    "b": "19시 46분~20시 20분 플라비우가 앞섰습니다(최고 50.44%).\n개표율 48%이던 20시 26분 룰라가 다시 앞질러 끝까지 지켰습니다."
-   },
-   {
-    "sub": "양쪽 입장",
-    "t": "'사법 쿠데타' vs '투표권 지킨 것'",
-    "b": "플라비우 측 인사들은 대법관 탄핵 추진을 예고했습니다.\n룰라 측은 유권자가 투표 못 하는 일을 막은 결정이라고 반박했습니다.\n부정의 증거는 제시되지 않았고, 플라비우 본인 승복 여부는 아직입니다."
-   },
-   {
-    "sub": "시장은",
-    "t": "브라질 ETF 개장 '11% 급락'",
-    "b": "도쿄 상장 브라질 ETF가 개장 직후 약 11% 떨어졌고 달러 선물은 급등했습니다.\n브라질 국채·펀드 투자자라면 눈여겨볼 대목입니다."
-   },
-   {
-    "t": "",
-    "b": ""
-   }
-  ],
-  "images": [
-   "ap01",
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null
-  ],
-  "hashtags": [
-   "룰라",
-   "브라질대선",
-   "플라비우보우소나루",
-   "부정선거논란",
-   "국제정치"
-  ],
-  "photo_credits": [
-   "AP/Silvia Izquierdo(룰라 지지자, 10.25)",
-   "영상: 룰라 SNS(원출처·촬영 시점 미확인)"
-  ],
-  "sources": [
-   {
-    "publisher": "Al Jazeera",
-    "date": "2026.10.26",
-    "url": "https://www.aljazeera.com/news/2026/10/26/lula-holds-off-far-right-with-victory-in-brazil-presidential-election"
-   },
-   {
-    "publisher": "CBS News",
-    "date": "2026.10.25",
-    "url": "https://www.cbsnews.com/news/brazil-presidential-runoff-lula-flavio-bolsonaro/"
-   },
-   {
-    "publisher": "Bloomberg Línea",
-    "date": "2026.10.25",
-    "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/"
-   },
-   {
-    "publisher": "CartaCapital",
-    "date": "2026.10.25",
-    "url": "https://www.cartacapital.com.br/politica/pt-defende-decisao-de-zanin-sobre-extensao-da-votacao-aliados-de-flavio-bolsonaro-falam-em-fraude/"
-   },
-   {
-    "publisher": "Exame",
-    "date": "2026.10.25",
-    "url": "https://exame.com/brasil/justica-manda-prender-secretario-de-salvador-por-retencao-de-onibus-no-2o-turno/"
-   }
-  ],
-  "caption": "[투표 갑자기 2시간 연장, 그리고 룰라 4선]\n\n브라질 대선 결선(10.25 현지)에서 마감 무렵 대법관이 투표를 19시까지 2시간 늘렸고, 룰라가 51.8%로 플라비우 보우소나루를 약 440만 표 차로 꺾고 4선에 성공했습니다. 1차에서는 45% 대 47%로 졌던 룰라가 결선에서 뒤집은 건 브라질 현대사 처음입니다. 연장은 버스 운행 차질(살바도르 등)과 남부 폭우로 두 캠프 모두 요청한 것이고, 개표 중엔 플라비우가 한때 앞서다 20시 26분 룰라가 재역전했습니다.\n\n플라비우 측 인사들은 '사법 쿠데타'라며 대법관 탄핵 추진을 예고했고, 룰라 측은 투표권을 지킨 결정이라고 맞섰습니다. 부정의 증거는 제시되지 않았고, 플라비우 본인의 승복 여부는 26일 오전 기준 확인되지 않았습니다. 도쿄 상장 브라질 ETF는 개장 직후 약 11% 급락했습니다(※ 투자 권유 아님).\n\n마감 무렵 2시간 연장, 여러분은 '당연한 조치' vs '찜찜하다' 어느 쪽인가요?\n\n팔로우하고 오늘의 정치 한 잔 받아보세요 ☕",
-  "publish_at": "2026-10-26T21:00:00+09:00"
- }
-]
+{
+ "id": "20261026-jj2212",
+ "mode": "collect",
+ "slot": "evening",
+ "topic": "주진우 '김혜경 여사 황제 골프' 의혹 제기 → 민주당 '사이버렉카' 반박, 청와대는 언론에 '따옴표 보도' 경고",
+ "image_pages": [
+  "https://www.segye.com/newsView/20261026506696",
+  "https://www.sisajournal.com/news/articleView.html?idxno=391665",
+  "https://www.mt.co.kr/politics/2026/10/26/2026102613200895989",
+  "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003278762&PAGE_CD=N0002&CMPT_CD=M0111"
+ ],
+ "images": []
+}
