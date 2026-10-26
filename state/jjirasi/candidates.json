@@ -1,137 +1,129 @@
 {
- "scanned_at": "2026-10-26T08:52:11.320361+09:00",
+ "scanned_at": "2026-10-26T11:51:58.945304+09:00",
  "channel": "koreajjirasi",
- "total_posts": 39,
+ "total_posts": 46,
  "candidates": [
   {
-   "num": 2190,
-   "url": "https://t.me/koreajjirasi/2190",
-   "date": "2026-10-25T14:08:23+00:00",
-   "text": "받으라슈)\n좌파는 참사를 기회로 여기는것같아 소름끼침",
-   "views": 369,
+   "num": 2206,
+   "url": "https://t.me/koreajjirasi/2206",
+   "date": "2026-10-26T01:26:40+00:00",
+   "text": "받으라슈)\n병신년ㅋㅋㅋㅋㅋ",
+   "views": 1530,
    "reactions": {
-    "🤮": 13,
-    "🥴": 1
+    "👍": 9,
+    "🤮": 6,
+    "🤬": 2,
+    "💩": 2,
+    "🖕": 2
+   },
+   "photos": [
+    "https://cdn5.telesco.pe/file/RkZAVz12_GrhM2xaId7vm71voRrgRkgnXEig8UL7bXpBzllFQ1zIkjP4wGE6AT8ROjj0AIC96Rc1pgTxpDqjRQ75TnUQpIgDuN-4CnKnZt0UMoZgQGdMHDIhSoKb2lc6JIkOVEK_hwpAu-BjIhWhkr2uzLcSoG5Mwa_CF00aqHKpKdxVS73CWhN5-1fNG6yNJlvz0He4bhCrMnFHvLH_-8qrEyDsooWp9NU-V1JNV_AAU5b7YLpd7KheQ9yeSaefPhk3kgIiiwhi_oTTeiNuNGXVi9HylPApczLoDSiSq2Zw09omXGWaWfVucE-tN16pDCyZiJ-ZHZxZ9U4cZXqr8A.jpg"
+   ],
+   "videos": [],
+   "durations": [],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2206
+   ],
+   "score": 1238.3,
+   "id": "20261026-jj2206",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg"
+    ],
+    "videos": []
+   }
+  },
+  {
+   "num": 2202,
+   "url": "https://t.me/koreajjirasi/2202",
+   "date": "2026-10-26T00:35:24+00:00",
+   "text": "받으라슈)\n브라질 관련 이야기 58,000% 한다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ\n룰라 대통령님의 4번째 임기를 축하한다~~~ 같은 소년공으로써 민주주의 ㅋㅋㅋㅋㅋㅋ~~~ 백퍼",
+   "views": 434,
+   "reactions": {
+    "🤮": 20,
+    "💩": 6,
+    "👍": 4
+   },
+   "photos": [
+    "https://cdn1.telesco.pe/file/JZqHcnU9KXFrPUoo0sOSHwoSuYU-NLAa6RU2t6uReRviie_PV1EaC5Wm1EQk81arN5UiEKUfK_sR1Kd_4FjXOHK0vh_A3CEYVKgVGECrFVL7WQtZ0mHrHDxM5XlcfeR1h0ieffJ2qMcblTekE18MSgAyFQvudqMbvJID43BXaoa-G4eHE7T_mwusPRUG8iD5cqfhgvNmJ0pNVBMt-yxuhjV73LpU3m163uwy_O2WfWthyfQb7HoplllAMy-zIplNt7x9k7vbBrhKTds_1atFB9ffPpE_KflLRCaPahduv6dG4Tp9qMHcjGdIHF3phiIOjwyv63bI0JnhMekUqRLZHQ.jpg"
+   ],
+   "videos": [],
+   "durations": [],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2202
+   ],
+   "score": 790.3,
+   "id": "20261026-jj2202",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg"
+    ],
+    "videos": []
+   }
+  },
+  {
+   "num": 2209,
+   "url": "https://t.me/koreajjirasi/2209",
+   "date": "2026-10-26T01:43:47+00:00",
+   "text": "받으라슈)\n50대 김여사가 억울하다며 한문철에 셀프 제보한 역주행 사망사고 영상\n면허 뺏자.",
+   "views": 624,
+   "reactions": {
+    "🤬": 15,
+    "💊": 1
    },
    "photos": [],
    "videos": [
-    "https://cdn1.telesco.pe/file/4a92b20256.mp4?token=Q8l8pr4JGrnxHHjgW03L3CLgPwWmEStIN-IZvz-yUCPLfTLTVnwfkDIdyAa3im7S2k1Oiui1MQRGtlGY5SJWQjCxGi_jCrJcVh8dtiZzDZY9w_v0kggdIGCGRGyUGtnFk40TY1FU5UvyBLXEgpyRNrEZdnNj4iMKWMZfUdFckQRhYxYCiZpqvnBt73f2q7_Jivhd0nQCesFGEP5dZg69Aoj6GM9nxoHXRsEPue5QwUV_JNSFwOpdGizuKzar2x1_pywgNae6wzlE6UkiNiy12mf2kYJoR9C4chdFxWToQqL8Y9tG-V-hYjhq6IetOfS4Lb-oe8QkKyq5SiiVveKIzQ",
-    "https://cdn1.telesco.pe/file/4a92b20256.mp4?token=Q8l8pr4JGrnxHHjgW03L3CLgPwWmEStIN-IZvz-yUCPLfTLTVnwfkDIdyAa3im7S2k1Oiui1MQRGtlGY5SJWQjCxGi_jCrJcVh8dtiZzDZY9w_v0kggdIGCGRGyUGtnFk40TY1FU5UvyBLXEgpyRNrEZdnNj4iMKWMZfUdFckQRhYxYCiZpqvnBt73f2q7_Jivhd0nQCesFGEP5dZg69Aoj6GM9nxoHXRsEPue5QwUV_JNSFwOpdGizuKzar2x1_pywgNae6wzlE6UkiNiy12mf2kYJoR9C4chdFxWToQqL8Y9tG-V-hYjhq6IetOfS4Lb-oe8QkKyq5SiiVveKIzQ"
+    "https://cdn5.telesco.pe/file/1e2efe120f.mp4?token=U_E53Kv83lNAp764dDIi2jzquFmykuiQK0sgonN4GGUa9E3C88rb2jcHLeJeH6DFqQUllxQeYtkj_wmWQMy7qmrfflGGkYI_rFQNV8VCwDCmjPVDZTnGELcec-DO08QnYeJcdBexO8IOuJDAmSLwdsEGgMoGsnMsZdHDl_4ZZRZB-HNdhOp7LvupohYqywv4pQfWOsctNHHy_WwaK9kZPKyfU6ct3ykFZ5ZWv0pvPK3nlamzw-o8Q5MfJ5ltYZpz6kf9gxl8slrQffYfY8bIbDqZnP_7F_9i4DD7WwDDRLrMsijZpZ6UBKT8FERIOgwMxPb7yumGVeg9tjF1dxxiJTij4xS_7sENd83kjn7lKNsn4YI3JHk7JznRhZvfl5K4YwurVdfOXVpoRqpyc3A3crZNt3I7eDvJyLCkPa4egvEDAczfGL5Ys8YqwxTZNtik3P9scZxbT8lK22ZaisEJwx66V1B76ejxGaR_yZ1n3hGWbEXO7O7Dd1LyNkafkNx9deROctC_UYysOYW26gFpRPhBWyqMhd858HUzsa-e_WhLK22pFkUDCixPj3Ce8fywr2HiDJgO30vOMcLfqkpiWdtRfqDcHUGyhR-BuX1e0RE8kk28b0ga6RaCuyeV4JM7EndcHOUW7GJpvaVuyfqlLAm_2s8gY1bMUZPttwrg0ug"
    ],
    "durations": [
-    37
+    33
    ],
    "too_big": false,
    "link": null,
    "nums": [
-    2190
+    2209
    ],
-   "score": 271.3,
-   "id": "20261026-jj2190",
+   "score": 713.9,
+   "id": "20261026-jj2209",
    "files": {
     "photos": [],
     "videos": [
      {
       "src": "video/v1.mp4",
-      "w": 720,
-      "h": 1280,
-      "dur": 37.0,
+      "w": 1280,
+      "h": 714,
+      "dur": 33.8,
       "sheet": "video/v1_sheet.jpg"
-     },
-     {
-      "src": "video/v2.mp4",
-      "w": 720,
-      "h": 1280,
-      "dur": 37.0,
-      "sheet": "video/v2_sheet.jpg"
      }
     ]
    }
   },
   {
-   "num": 2188,
-   "url": "https://t.me/koreajjirasi/2188",
-   "date": "2026-10-25T13:25:21+00:00",
-   "text": "받으라슈)\n1) 작성자 - 최소 60대 어르신(누군지 몰라서 가림)\n- 철학책 운운하며 지하철에서 본 젊은 여성 떠올리며 개수작 포스팅\n2) 좋아요 때린 사람 - 조국 전 조국혁신당 평택을 재선거 후보",
-   "views": 409,
+   "num": 2197,
+   "url": "https://t.me/koreajjirasi/2197",
+   "date": "2026-10-26T00:20:20+00:00",
+   "text": "받으라슈)\n@주진우\n[김혜경의 프로골퍼 대동한 황제 레슨, 이 정권 골프로 끝날 것]\n10월 20일 김혜경 여사는 유명 프로골퍼를 대동하고 황제 골프를 쳤다.\n태릉CC에서 프로 골퍼로부터 황제 레슨을 받으며 3인 골프를 즐기고, 대통령 전용 황제 클럽하우스도 열었다.\n영상과 증거를 확보했다.\n세계적인 프로 골퍼와의 필드 레슨은 수천만 원의 비용이 든다. 누가 그 비용을 댔나? 이상한 골프TF 만들었던 이유가 이것인가?\n남성 1명도 함께 골프를 쳤다. 이재명 가족의 군 시설 사적 이용은 범죄다.\n그날은 역삼동 화재로 19명의 인명 피해가 났다. 부천 소방관 영결식 바로 다음 날이다.\n사진 일부를 공개한다. 동영상은 오늘 국정감사에서 공개하겠다.",
+   "views": 396,
    "reactions": {
-    "🤮": 8,
-    "❤": 1
+    "👏": 6,
+    "🔥": 4
    },
    "photos": [
-    "https://cdn5.telesco.pe/file/jxx1-9AnVQpgrzRl2KvK4M2lk_-uiZLM0RwHymsXeP6WkBzAuO1m4-1wQEoZVY0q_xVGoGRfYI4dp_XfheGqBkV-11x_b5wz86tN25uIRC2YdZhc4mImJCdmbKucmNchR3FCIOwMKFqmkMGXKk_XlCkX3FuacRlRTsr4TsFkvfol-ornOeEfG7iT0hAoWjUwTVNtyKdQqKFs3mFzDzGM22szRUufUBU-9GgfDR-UQaQmEYGd1U1LBt2N6tSuUFqc1ruthlwJujqEiyJh1AKpcZHSK48PsXL0qH2pptu4gGkbUdv1XYYyiy2xFoul9EudsKfyaUdnn4VKRB6wRP565w.jpg",
-    "https://cdn5.telesco.pe/file/fCc7sICuYJbA-Cmm-tIKEjpwAQ3d60TioBdD07MTL7DRH4sACnGvCdOHnPxksGpPbdYxBtvBJtnHwQmBZeKX-aspAxKDOQs59myMBNzCNkleuU-dqLCzl6xmbYYoNvcbiwlKOUtQYgJJbgvRtK2qC4yVT_tC071Y8cZ_73u9AlATnw2dAECy-3nHYesQS5YJU8GOU0HsXKkCikG2EnbpIAZjvb3uo0RIzlQsjDQrn7DozSRUJMHzNT_-wwKcqlnAqNJRrSI4OpgbNknQaAtEHDNkJomRWG95iUHuRsqAaNpGKLoctkuE5C4mBEmhqjp7gAvnudOVozMNNYFTiVwIkA.jpg"
+    "https://cdn1.telesco.pe/file/gqBn12X4Nias21s2hjukmEq3sCLZWRW2xk9v44cu1OIv5nwwXUY6WLIoG1hOzBjfYxwvHMHSjaLCNcv0LpzEjmFE9xdlXW4FHxTjztZ3jMPIGFGLlA3E7ZHQ87Qka_ZPPKOt7cDo_CHtEYwnmMA-n7wSmGVgeczjU_Zf3RrFlGL-yJrc5hUhiUaOnMx8YSGxLQwHbDue79DppZbN0Avcsx2VYfaemqCdgjJhNUIoksIayoZX-mw5tfFTjvbR5pryTu5e6-CKhT4tJeVSYCG9BKNoi8nyCcT2Gsbl_qMmUdYmZ2c0grq3s7tDiuw6QmPFghIn1DtO6NUqC_ohdDL-3Q.jpg"
    ],
    "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    2188
+    2197
    ],
-   "score": 218.0,
-   "id": "20261026-jj2188",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg",
-     "cand/tg02.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 2184,
-   "url": "https://t.me/koreajjirasi/2184",
-   "date": "2026-10-25T08:53:28+00:00",
-   "text": "받으라슈)",
-   "views": 502,
-   "reactions": {
-    "👍": 6,
-    "❤": 3
-   },
-   "photos": [
-    "https://cdn1.telesco.pe/file/CR2-C6B2Zegfxmy_oR_sg_Om1E_2MpFA2L50CHD6VpOGu8g9w5kpxtl1uwwLLuiO7VG-OA2hecgyFPWHvTWi5q0UFv4zx56sdAA04o7m4q_F-9ZooK1UTBuFpfUXW2IVC3w353t9HUmyN5Ds8R1fnE6nx2qDQOS1h-19MSSAOR-2Iw8TpYasbIUCDOzeo1rNTgkxdKhCPiJoX2i8-tpCVvA1D1o0PaItla6kItAIBl5v2vHMl9duuzlu1pfpvd4O3ybdOVvwDgyzXo1XXvQZlp6gT8aWDrgyuuA6HwSmogiFJ9sUiJdmNFT7Yqc0W0NLKF9Elc_8VjfQ76kTg5DGSg.jpg",
-    "https://cdn1.telesco.pe/file/M7_vf9qzG876eLyGW2o44zyN_FUhNoFXuUn31gJlahuNx6kv6JsN3wo0Xz_MAMZx2z50x4VoIf8EPru2sMLeeY7ApzwEGH2QdOze32uD0t6fHQVV-thwknFCzTLIotHdE-SuPV743W4FvSsz8aqhqIxMCEvhAX-8En1Q4NlxPNKoghXPm4lOO7cp6Tey6jYqarug-b3vxJ6CsVkTHYWzDpHqpzXUAyQr9bU1pZlY_ZwnwmaoCYRCut6Rh-RcMU3UtEV30LmPNkDynh5o08JG3JnaAgVpgs605i52Ywm8jrJedP4-OrWFhthIxa8KvOMVp059xzObYAwWpSlwO3YPrQ.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2184
-   ],
-   "score": 209.2,
-   "id": "20261026-jj2184",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg",
-     "cand/tg02.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 2167,
-   "url": "https://t.me/koreajjirasi/2167",
-   "date": "2026-10-25T06:55:08+00:00",
-   "text": "받으라슈)\n잼데믹을 이을 단어\n줴메이야",
-   "views": 525,
-   "reactions": {
-    "❤": 5,
-    "🤣": 3
-   },
-   "photos": [
-    "https://cdn1.telesco.pe/file/nCPqk2soCF-6ZmqhGMIrrQuvuFdzFTNYFxYJLZDAZVxuO_zKk_sHq4qpaANBI1CCno5hOCzxe_EQZF6fP7P18Qhv886D086QuCxPRLY9l5cSk-dMiIc-dS3xT1fHP3GdF_EsFQOMy8MPTkxSB9UhQjf-1WCZWE1VZvSWTr45BzpYtmyfAtEs5kmcOs6RdRXjMMI4-wZZOTNiMtqwiiTnzYnLFKVgyBK64YfV3vPEC7hMXauYLIIy8rimSSmxnPQ--c3sHJoA6DYM-CJ5602KKSqydC_Secva2UtZwh89niHRgq_lcZb-QjnBSnSsTsJ6eS3D0WDiAdLEISu5vmRbvA.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2167
-   ],
-   "score": 194.1,
-   "id": "20261026-jj2167",
+   "score": 374.2,
+   "id": "20261026-jj2197",
    "files": {
     "photos": [
      "cand/tg01.jpg"
