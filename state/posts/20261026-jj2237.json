@@ -2,7 +2,7 @@
  "id": "20261026-jj2237",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "failed",
  "created_at": "2026-10-26T17:58:43.828703+09:00",
  "publish_at": "2026-10-26T18:30:00+09:00",
  "topic": "김혜경 여사 골프 의혹 영상, 법사위 국감(10/26)서 서영교 위원장 재생 불허 → 민주당 고발 예고 vs 주진우 무고 맞고발·공수처 수사 촉구",
@@ -68,5 +68,6 @@
   "media/20261026-jj2237/06.jpg"
  ],
  "tg_msg": 510,
- "decided_at": "2026-10-26T17:59:28.175913+09:00"
+ "decided_at": "2026-10-26T17:59:28.175913+09:00",
+ "error": "인스타 API 오류 403: {'error': {'message': 'Application request limit reached', 'type': 'OAuthException', 'is_transient': False, 'code': 4, 'error_subcode': 2207051, 'error_user_title': 'action is blocked', 'error_user_msg': 'We restrict certain activity to protect our community. Tell us if you think we made a mistake.', 'fbtrace_id': 'AVjT9jyHd35G60yWWzk8C82'}}"
 }
