@@ -62,8 +62,54 @@ def _publish(cid, tries=6):
             time.sleep(20)
 
 
+def _norm(s):
+    return " ".join((s or "").split())[:80]
+
+
+def _find_recent(caption, since):
+    """최근 게시물 중 같은 캡션으로 since(유닉스 초) 이후 올라간 것을 찾는다. (id, permalink) 또는 None."""
+    import datetime as _dt
+    ig = env("IG_USER_ID" + _sfx())
+    want = _norm(caption[:2200])
+    for wait in (15, 45, 90):
+        time.sleep(wait)
+        try:
+            items = _req("GET", f"{ig}/media", fields="id,caption,timestamp,permalink", limit=5).get("data", [])
+        except Exception as e:
+            print("게시 확인 조회 실패:", str(e)[:200])
+            continue
+        for m in items:
+            try:
+                ts = _dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp()
+            except Exception:
+                ts = since
+            if ts >= since - 300 and _norm(m.get("caption")) == want:
+                return m["id"], m.get("permalink", "")
+    return None
+
+
+def _publish_checked(cid, caption, since):
+    """media_publish 후 오류가 나도 실제로 올라갔으면 성공으로 본다.
+    인스타가 게시는 해 놓고 403(code 4, 2207051 'action is blocked')을 돌려주는 경우가 있어서."""
+    try:
+        mid = _publish(cid)
+    except RuntimeError as e:
+        found = _find_recent(caption, since)
+        if found:
+            print(f"media_publish 오류가 났지만 실제로 게시됨({found[0]}): {str(e)[:200]}")
+            return found
+        raise
+    link = ""
+    try:
+        link = _req("GET", mid, fields="permalink").get("permalink", "")
+    except Exception:
+        pass
+    return mid, link
+
+
 def publish_carousel(image_urls, caption):
     ig = env("IG_USER_ID" + _sfx())
+    since = time.time()
     children = []
     for u in image_urls[:10]:
         if u.lower().endswith(".mp4"):
@@ -75,29 +121,18 @@ def publish_carousel(image_urls, caption):
     car = _req("POST", f"{ig}/media", media_type="CAROUSEL", children=",".join(children), caption=caption[:2200])["id"]
     _wait_ready(car)
     time.sleep(10)
-    mid = _publish(car)
-    link = ""
-    try:
-        link = _req("GET", mid, fields="permalink").get("permalink", "")
-    except Exception:
-        pass
-    return mid, link
+    return _publish_checked(car, caption, since)
 
 
 def publish_reel(video_url, caption, share_to_feed=False, cover_url=None):
     """9:16 mp4 를 릴스로 게시. cover_url 이 있으면 그 이미지를 커버로."""
     ig = env("IG_USER_ID" + _sfx())
     extra = {"cover_url": cover_url} if cover_url else {}
+    since = time.time()
     cid = _req("POST", f"{ig}/media", media_type="REELS", video_url=video_url,
                caption=caption[:2200], share_to_feed=share_to_feed, **extra)["id"]
     _wait_ready(cid, tries=20)
-    mid = _publish(cid)
-    link = ""
-    try:
-        link = _req("GET", mid, fields="permalink").get("permalink", "")
-    except Exception:
-        pass
-    return mid, link
+    return _publish_checked(cid, caption, since)
 
 
 def publish_story(image_url):

@@ -124,7 +124,11 @@ def do_publish(post, force=False):
             tg.send_text(f"🎉 게시 완료: {post['topic']}\n{link}\n\n📲 스토리 공유: 링크 열기 → 종이비행기 → '스토리에 추가'")
     except Exception as e:
         post.update(status="failed", error=str(e)[:500])
-        tg.send_text(f"⚠️ 게시 실패: {post['topic']}\n{str(e)[:500]}\n\nGitHub Actions 로그를 확인해주세요.")
+        if "2207051" in str(e):
+            tg.send_text(f"⚠️ 게시 확인 필요: {post['topic']}\n인스타가 '차단' 응답(2207051)을 보냈고, 최근 게시물에서도 찾지 못했어요. "
+                         "앱에서 실제로 올라갔는지 확인해주세요. 다시 올리면 중복될 수 있어요.")
+        else:
+            tg.send_text(f"⚠️ 게시 실패: {post['topic']}\n{str(e)[:500]}\n\nGitHub Actions 로그를 확인해주세요.")
     save_post(post)
 
 
