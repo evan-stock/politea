@@ -7,7 +7,7 @@
  "topic": "국방부, 예체능 병역특례 감축하고 '30대 후반 현역 복무' 추진(조선일보 단독 10/27)",
  "category": "안보",
  "core": "아시안게임 축구 대표팀 발언 논란 뒤 국방부가 예체능 특례를 줄이고, 입영 연기를 30대 후반까지 늘려 현역 복무시키는 방안을 추진",
- "risk": "단독 세부(30대 후반 현역·현재 최장 27~30세 연기·내년 상반기 방안)는 조선일보 10/27 제목·부제 기준(본문 미확인). 제도 수치 문화일보 10/13, 장관 발언 SBS Biz 10/7, 병무청장 파이낸셜뉴스 10/12, 유승민 위키트리 10/21. 표지=박승수 SNS 전역모 사진(MHN스포츠 10/4 게재, 사용자 지정 — 정치인 사진 규칙 예외), 4장 press06(YTN).",
+ "risk": "단독 세부(30대 후반 현역·현재 최장 27~30세 연기·내년 상반기 방안)는 조선일보 10/27 제목·부제 기준(본문 미확인). 제도 수치 문화일보 10/13, 장관 발언 SBS Biz 10/7, 병무청장 파이낸셜뉴스 10/12, 유승민 위키트리 10/21. 표지 press13=박승수 전역모 경례(머니투데이, 사용자 지정 — 정치인 사진 규칙 예외), 3장 press01=박승수 SNS(MHN), 5장 press15=강신철(YTN), ",
  "image_pages": [
   "https://biz.sbs.co.kr/article/20000338268",
   "https://mhnse.com/news/articleView.html?idxno=1574695",
@@ -16,11 +16,11 @@
   "https://www.ytn.co.kr/_ln/0101_202610071200159894"
  ],
  "images": [
-  "https://cdn.mhnse.com/mhnsports/2026/10/04201004/1574695_0.jpg",
+  "press13",
   null,
+  "press01",
   null,
-  null,
-  "press06",
+  "press15",
   null,
   null,
   null
@@ -104,9 +104,15 @@
    "publisher": "MHN스포츠",
    "date": "2026.10.04",
    "url": "https://mhnse.com/news/articleView.html?idxno=1574695"
+  },
+  {
+   "publisher": "머니투데이",
+   "date": "2026.10.07",
+   "url": "https://www.mt.co.kr/sports/2026/10/07/2026100710483960621"
   }
  ],
  "photo_credits": [
+  "머니투데이",
   "박승수 SNS(MHN스포츠)",
   "YTN"
  ],
