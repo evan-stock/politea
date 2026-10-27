@@ -2,7 +2,7 @@
  "id": "20261026-jj2258",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "failed",
  "created_at": "2026-10-27T09:04:36.367738+09:00",
  "publish_at": "2026-10-27T08:45:00+09:00",
  "topic": "한국갤럽 정계 인물 호감도(10/13~15): 오세훈 30% 1위, 한동훈 23%, 장동혁·이준석 14%",
@@ -62,5 +62,6 @@
   "media/20261026-jj2258/06.jpg"
  ],
  "tg_msg": 530,
- "decided_at": "2026-10-27T09:05:05.493353+09:00"
+ "decided_at": "2026-10-27T09:05:05.493353+09:00",
+ "error": "인스타 API 오류 403: {'error': {'message': 'Application request limit reached', 'type': 'OAuthException', 'is_transient': False, 'code': 4, 'error_subcode': 2207051, 'error_user_title': 'action is blocked', 'error_user_msg': 'We restrict certain activity to protect our community. Tell us if you think we made a mistake.', 'fbtrace_id': 'A-5k87Iy4Wng8CYSqSFMkUU'}}"
 }
