@@ -1,133 +1,167 @@
 {
- "scanned_at": "2026-10-26T20:54:19.059512+09:00",
+ "scanned_at": "2026-10-27T09:01:05.590508+09:00",
  "channel": "koreajjirasi",
- "total_posts": 37,
+ "total_posts": 41,
  "candidates": [
   {
-   "num": 2253,
-   "url": "https://t.me/koreajjirasi/2253",
-   "date": "2026-10-26T09:02:38+00:00",
+   "num": 2279,
+   "url": "https://t.me/koreajjirasi/2279",
+   "date": "2026-10-26T11:40:16+00:00",
    "text": "받으라슈)",
-   "views": 421,
+   "views": 514,
    "reactions": {
-    "💩": 5,
-    "😈": 2
+    "🤮": 17,
+    "😱": 2,
+    "💩": 2,
+    "🤣": 2,
+    "👍": 1
    },
-   "photos": [],
-   "videos": [
-    "https://cdn5.telesco.pe/file/da8d6161d1.mp4?token=FN9PzfNjcKPztzqe89rqQb1fD8yaohp7OMKrWsCO40odxLcKZhtdjT9fhcaRg3e8y16PogdOqI5WxPEsaUIZx5cM1YrzxmAR0WeuRkBpvg0TcW1F9xmIrOYy51rqOmUR7ARchY9yR7YuJ04pyvqbZtxMbQX4V-HK5Cwj6URPH4tBj_6SMuTpAEOf9BS_Gk69yaIlGNEj-yukWkEUY4IxYHyzYErZSzbu5rU5E9A8zvOOvO_RNHnAeVCJjvMSTj_K9D-SoaaSRro124AQOstIgIghw5dX4OpgzSJhMT5xnBrsrdWJpPnWJCg-Vuip_VWAJpntCLHtegzdCyRAVt3IpA"
+   "photos": [
+    "https://cdn1.telesco.pe/file/lD0YMqloXZTyhwV-Lao2WTWuaPYhwNx-fUjQB8YbuGm0k9B2aPyWa1WbOrTVGGC5QvfO3dnDgopjL0yDMYTALCBmZpSYFgSUtN4ua59miE0ZwP2q70Pfifn33MjKhL-MMpuV9zyhR_Ipli3U2o3FfwCrFF8vUmFCuhckCSBfFc6eLpk5mAF0jTrRa0TQ3qdB1A1G18nZrOmJ_itLSgeRMRYdHVwyta1Ad_6mOkywAJis7OpKPVw760C4UWkn-T5ONDslF3II51OAjWeQyWqXy89LIEluL4dmzR2dczXmnwf2C7BYkIgjvf9fOK6dYelK6IYcgI3Wb_k7VazpevcKGw.jpg",
+    "https://cdn1.telesco.pe/file/ZT2gdCmDFcN5f1efRJANb0wFxIRmDBQKblvH6RfB-p-_SZODAqGFFoSJtPQUKj6otctG_LEE9hrG4oQYRAtVPTdvR9DiFy0jhID49pTheeBN_gJTZl9m9PDiMoPmNxceqvqFM-WuCp6abLC9hkTP6f7UOr1GMdZjNRt7Gd7m3YbP_uTV4R_XuHHXaViOBX6TYgAJ2rPOW67blHDZI8dMGMQXOlW15m5NyAfg1bGXFVjHAieIeRjkhyfj-i3OLrWWLGX5mNwE_nRMjnv40r4DjQTj-rPvaqqBulBeqdPx2CbRcbXgI4JMmTlSVFc3On--R1nm71IVV9AwHvJMCeSY-w.jpg",
+    "https://cdn1.telesco.pe/file/t7RKv4ecoJCkBXonS-0UW27jTmfhrpmwXpW2k9xxycFhXcjanLq7zQeIvuTZPcWlRDcKd2dlawjBLyA7RzkhBFLHyoMj-4zZaaDU_gU3Z3e3ebdBABUcpaQrt0WFuhghZyMMg9QNUvo5wmT9IblyilLosqlGtSc2ehYQh2qolmtML173kcxaZFvzLiTbBfUcvGHYzwq2CFS3zZcIDCUx7tGMl9qfITPbbDQCkszOG42GEZaNKTHQdJDzzrNmUkC5KIfPwQzaDSmYAM_i6zHLExv5x_x5BQX1kJnOqmxIHaZbEkDVeY_cjtBSqgs2t8r5CIUD7RVmIcwq82P0T0h7gQ.jpg",
+    "https://cdn1.telesco.pe/file/acHAY7bUotrgo5Grz1p2zeSxfZRaMwIdkE7jGrwlrnBqM64vXPVnmQOLqyprXfvj4Q1HwYwedDZw1QmTkQoYLILDS_xXWiIgXi0Ki9XVHK3CVEryyrn4SL_gakptsvye-Z0xBWEvgDvWo5uvubtrregVU0F049T7SffWMKwNi-9ycbACLleo1bLlBQDf-Fwn2Qr-AT-ai5RaEwVEZXwliccuE_oAhWuvnTSJQiP5eu6W_zptsscea0g67mZDqTxYHFpRaaYbvwRjETfMTFFQxCnJnL6RsPw7c67wilh4gZVDbcPTlxWEkNagLPOosVExGHHPXqjqq_57TDReG1mitQ.jpg",
+    "https://cdn1.telesco.pe/file/kBjW26oQSMHpis-kXeNGHpKUmM3wcHo8FCh00gUlQ-_WfyqGsgkRiJFCcLItuXIGge7LRUrEav94OpUGZ01SBrOWYbKtoepJWC8ZrvXEwCQvvYFkVIIgosGAE19OW4AV6ygbB13D5-a0pDeCgnW5kgEa27I3KrvvXPFu4ahPtnJ-Xb3q-tJpnO8aMdgaRiIcxjV6DYznTGkkBIaN8MDFRQYfKi0xs83SPVEfDlxWlztePfOteM3-A6Lsu5vEZsf9qDoM_oHIJ5P8dgMRLbwydzlzkRkfrUTdih3ZBCmvEwi3PP18kYE8IbRKvsLL8Qu9s_ntWVn-20l389pl5_2ANw.jpg",
+    "https://cdn1.telesco.pe/file/T4Wuq4AozGIcUNzUOkJ6K5OXKhnK6ocCCPi23jXCl-GMhmYfRDNpWXQ35LJliDtwkMLn11C8f5RasV048D4h2HN3moiNMF3noABWN53-9uGctwp8Lwf0fLSmh9AAAl_xf-Oay0VgLv8O1jollw1ZrVB2nYSOZNMXWEnJbUZguJsN2mht2VIVK6FwRG6Oauovystih2cbhubF4DX9lkKPB83OtPBFJq9-PDHN3HPkp_h9LGfEvNx-nHFN7pwVhgoykmzkjFLuiPNJyre_6Wl3t78KrMcFc8S47hrsPHjrvwkX8Pq19H5sqsQQ2pZ-sDamx-WoQfk8-sTTnS7olxwGCw.jpg",
+    "https://cdn1.telesco.pe/file/mkSuseLLfw0eJoToDvl69Bujf9617TUHy3uBYbZF8cmz-tAaF-09xqwE9PxRQ8K1m9fLQJD3oFhP7nuH0VkVbGujspCK8DaHYoDqBPRgiZqKP0V-_nFuPilj9XMOOm-TIcsbtJGKZ39ll5n_NYsyBcojOPbQV9vF-Ope769g8FpIy5Oq0xB_fANA4048_Q1kUXmWU9UZ7HUxx62Bzuu97_T1eMJg_6itraXunjgOZSzXtBo6U1aGLjdvdrcxZVKsp_wyP5Ml58XralzF8QwwYrijzZMcADIWx6eZ6GmSsaRTU-Ix3U0rIIVexEkItnwinO6Ps5eBNaTfOGGXk1nNwA.jpg",
+    "https://cdn1.telesco.pe/file/qKv5SEyazr5JWaQHBP58UbBfii1LmEYtwot-ePLh9ZyVlLUOR2DdT7Q8v365s_lNjWtqxcaszWCXGoNr6tm9EiggnGtQWcnTnM2KD2_B67VcXdy7vg-VKVrVn47vSk2m4j9rP4QTogSaUOjJpKUd77AzmxtV85Ggdn_RbYCKUmyzC-ubOAhKipaLvdbu7eYL40edUUodh_9mNN_6wHBLv67GvcmdB1S_N_C7PZl2baYe9qyLB3i1P0Cv-6bSNnQQJolpaoW4OzIQiaJU2fByTDbaEwfrfA4WlRVZZGyAiAHEn84Zv5kA80QeyIL4mJQ9gad6sVaON5K1eAhVN3zNoQ.jpg"
    ],
+   "videos": [],
    "durations": [],
    "too_big": false,
    "link": null,
    "nums": [
-    2253
+    2279
    ],
-   "score": 318.0,
-   "id": "20261026-jj2253",
+   "score": 389.2,
+   "id": "20261027-jj2279",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg",
+     "cand/tg02.jpg",
+     "cand/tg03.jpg",
+     "cand/tg04.jpg",
+     "cand/tg05.jpg",
+     "cand/tg06.jpg",
+     "cand/tg07.jpg",
+     "cand/tg08.jpg"
+    ],
+    "videos": []
+   }
+  },
+  {
+   "num": 2271,
+   "url": "https://t.me/koreajjirasi/2271",
+   "date": "2026-10-26T11:40:09+00:00",
+   "text": "받으라슈)\n유정이 좌파였노 ㅋㅋ",
+   "views": 451,
+   "reactions": {
+    "🤮": 13,
+    "🤣": 1
+   },
+   "photos": [
+    "https://cdn1.telesco.pe/file/TtDBttaFIGLk6gymYBOLRNHYOV-Bkh-gB3kvzRQ25TCz2qQczvboe2yKkqTWC2Nfsmif6DzIf5I-e52ixF8djwRacx_5VgSuLwttiTusIn-MrZpDS0AdK_3CXFjWXVm3VLXmyGlAS2Ppw0M7JBN_KV7HGHOCAKCjlJjXgmtF5LANHiTBwguzps_BHiiZ4Hp4G48H2zHdDNBm3XoEJrBvziLsXdOYu49B8ctGurNKYvBbvKcwBJ954KljK6O7DjyNf_LfhMgG4yLpuNDFvvVwDquL2Pj2IulhcBfagULagxBAxHmmJEBT7jInOg4foY1GzZjEOvP7dt_fdODgNUpnVw.jpg",
+    "https://cdn1.telesco.pe/file/S4IFpUrvUe0mnhBTqX25Vm0ELj2fFocPkNnCkVaxvEraxER9muMvAGCOU9QPy5ka-24gonaWtaUB6I8o6HeXitFyuyuq7ZuRAUWWTPCKZQ2IhLd_Ve9ICQe2pZLP7XsBz2GI13UGfgFI5zTAjZ5nu4Ypb-yfqTmyqsyAhIWNWhGL_Ki5N1fjlMBGOgQSPzHDT_HCJ-3Ei071H1DoVgxb-NgIbQgNZEgtp9iMPTMFIq6UgBMJQWMOp8r_GOw41kFoNYSoYO2oXc7Ux6iR6TDhdckJ5cOjyH_6NAisZKuKGadMfWvchbVH4UJdkVYF_CUu3kHCnXyYwzvqISv1w9_MYg.jpg",
+    "https://cdn1.telesco.pe/file/rLNtEa0lmzK-xs-Oqf0OH8QQ4VqD72syWDmnso_14Dt89CwKHiv61bgIkiakjLiQ7moCzthkPqT9V20eXVrp6BJ44CgWf4YMeG1QuT4KCKbgQ1uUhsVnc-e7JzVtMjjhqomY4J8mtIvDRvarIA3gAx3qHUwHGMLSuqrQY8oE7Z741yq2sB0KqY-JVHsZw_13g5PinKwb68ddvYW53ixNKV1GOtSYWkB-NP9EnMMUh3g1NTdva_wg8Nlv9mTbxH_hL3UC2z9HxRjhgduXglv7pFpDQg5ND-Q_lmLCzynJYTa4LInXgxO1rkK2yZ7_S9euO66hUH9yJBEAZv9O9prHug.jpg",
+    "https://cdn1.telesco.pe/file/FtyXzyp9vCiEDfxzcvKKvNtqeuMQLQhwlAenotDFFwq9Y7moHpwR-rqnxxGPDRDjNcpCyhnwPaEWpg0As0RnFMoIxDbblLpLzTLxtht2mXUtP-X46Z3_o2Fq_A247eTF8uBs2C6FYW-L1QS_ZecesCpUG3vfJbkjpi-2SpohvurBhD4smF1WyhQnON2JWPTnApEMJaL3aUlpmsgqpgST_JOzm9WeSoOhXPlDtdABUfMA1UNIQ2hgnIFT1MXO6YcXFE2LUsdU5XmbxHH4wZbPoMnqTm2zdMETYNzo8uAHrToZDqZkXBuDXZZY220v9QwI1wIZlcll1qJ0rN7da-6PLA.jpg",
+    "https://cdn1.telesco.pe/file/CnWqIq3YQk3DYerCsBuGaBB-cniwAzgwilFRXcnXxe2aDJO6z2v5L4c9ik_AnhRScpl1JFiu2PXlH8mBB8pOk62oO7ZDjVkPlCwM_UFe7Ag2Yh1HNamwTuuYNA9ULCUvYpO-qbicDYgjR-3nHp58agla8meqiJTxKrgBdjRpXFuC93z86Cj83eCrcVgqAojNmKjhP0o8g1A45MHautFXPRbriLRS6tXY9pJ-G3aTGa5_Nz5AzhWSkWmzmFTs2Jn0xi_1Z2tTpkP7mnwgCd7ee1EJljWR6yMCQzg5j4G23X1ZxnxNJrcv6KZAcCCUjgsx4XW8OtZTHVinsa8Y50VdaA.jpg",
+    "https://cdn1.telesco.pe/file/NkLaCiNvrnfcQT-cRr1ezPM1R1GVT5sqv7bIqrNa7A_p9VfHCb3vyxp3gjagqzlGaB7n_byNjkhADa2bFuzmg9UfMdKuFJd_j3evqkXZdpzBgH4Ykyn_UqXJpJcUtvHDxMoIxTuRqhMJInmeY2L44nhImBygZn39USCkR2Apt4RlquE7qRp7fhw-Q6r79dnomBdhETDvfa0l2FfgFPwu4QVLrDMcsXc-U83HPqQygr8jPuHPFHOPJsc9rznhepmt3awoK0PZI1t80zOdeayf4sYrMRGo1d7sP9BVtwCh4642YbZcwWNXIMxyoZWg3eE0lnvamPTGl4kOsW4yLVbW8g.jpg",
+    "https://cdn1.telesco.pe/file/oizhou-syOfEMmpmaVhcSrWGbWY58ZXI1_NMq-1u7bM1KsA8voJoAA01Bj7Z2yFmArUX0gl5z6b_ua10Qd70DNWnEcw780zGKR3gr-QOPMLALLNqtNX-g6F6IjYq43c6ykXzXtJ8YBxbk0Vzl-X1Ewnx5FdfWgMQLQgT1nIfFY6X0xaCFm5RjTFU5GEIcJR-h_ivvaiUELWt0ZWC9bJD_07caJAmlJb7SBGHMeR6dSP7mghHFhiG1Kn3bpeSrbbtrwOQqnIgDCtKPm4Xd1XZmyuiJ5P-YumzxCAs1MgkcYh5GgyZ81eXmpC_Nl5R8HcyVWgxomIf0oAGb1G-eNaCuw.jpg",
+    "https://cdn1.telesco.pe/file/cP1Tzfrze01A4jmVqfm-cao5uyTqDzrt_79tXyUwVAAF670XsD2dRXPu8STcOySOkoS2O6IB882mC2tIAj5jODWmsxa0UOidF8yImlHb2aLv7UGOAfe1SN88g1yA8wbN2YQlK42FZpiJ6liqogskzcDctXD80NPlfH4_B7l3UphtvrFD-eHJ0WBtoiO4cbtOpHzjtlGHg7H7Gw8wiD6lwXprBAYH_8IuXzKVwnQyArEd1IgLvDta5WlcJJCpA-JNOUkSHIm9d7kpy2R8e1Vt5BUtZJH126FGkpr8tK-b7ArSNfcce-KQIN4iPfbcq50brbrvJjJLJvDK_M4Tx2l2XA.jpg"
+   ],
+   "videos": [],
+   "durations": [],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2271
+   ],
+   "score": 266.9,
+   "id": "20261027-jj2271",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg",
+     "cand/tg02.jpg",
+     "cand/tg03.jpg",
+     "cand/tg04.jpg",
+     "cand/tg05.jpg",
+     "cand/tg06.jpg",
+     "cand/tg07.jpg",
+     "cand/tg08.jpg"
+    ],
+    "videos": []
+   }
+  },
+  {
+   "num": 2288,
+   "url": "https://t.me/koreajjirasi/2288",
+   "date": "2026-10-26T12:43:28+00:00",
+   "text": "받으라슈)\n세계 최대 닭고기 수출국인 브라질에서 전염성이 매우 강한 조류 바이러스인 뉴캐슬병의 두 번째 감염 사례 확인.\n브라질 당국은 일요일 늦게 산타카타리나주에 위치한 상업용 칠면조 사육시설에서 신규 감염 사례를 확인했다고 발표.",
+   "views": 555,
+   "reactions": {
+    "🥰": 7
+   },
+   "photos": [
+    "https://cdn1.telesco.pe/file/gXSpwT-xov14FXauH2ZXEDvzwbhFh31cNF5FynhM3Qdi8Hbf2u5DwegfYqMpPAZ2b73wEVp8qMhHiYcwYDvlhn01Eijlhv0VGYL7NxhpEM9xQ5Uk1CbarPCvbKKkqapwQpKCtBxSYM51M2BtknLUP7LiXvMidPnkCEsrttaqRyNwiE3kxsmK-dr91u8WL0HNz-Mq9jy1FQD60k5G6ywyno9c2Lw7ctgK7TMVbK1JkdKKHMSbaO1Ok_qbMLoRt6gLiUQ4NbcDbvBDIKLNoyAc1D60WmSVAyiNUIoofYVEsNnxzlLF8iEHrP5pSAIPcsvmMKQFIkcsPLz2wdus36MINQ.jpg"
+   ],
+   "videos": [],
+   "durations": [],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2288
+   ],
+   "score": 229.0,
+   "id": "20261027-jj2288",
+   "files": {
+    "photos": [
+     "cand/tg01.jpg"
+    ],
+    "videos": []
+   }
+  },
+  {
+   "num": 2287,
+   "url": "https://t.me/koreajjirasi/2287",
+   "date": "2026-10-26T12:25:53+00:00",
+   "text": "받으라슈)",
+   "views": 558,
+   "reactions": {
+    "😁": 6
+   },
+   "photos": [],
+   "videos": [
+    "https://cdn1.telesco.pe/file/7c68b76bfa.mp4?token=WMERYZKU7Gc0w_liluKehrl6-1sIoSYORhmG2mMWSavcz9SV03ivSPIHilwvL_aUyBWXIr9oyq5m_1IylDJFsrKUuzbHs_3FwPHjUhhd3u6etBNAnGcGJzn8KKyCRPItQMk4BgZ_x4AZHrikL4OiJsaNJqi9PB-uCOXO04Cib5u71eOwWjZF__7oYKhO8ty_ql9UZWZyZpWOjWKzugDbGpjdJ9n3f5Tg2Ju-GzWkqY3aDJ26-z3WUB8sE-4G3H1Veg1IWWqY-Kdmfh8J8Xakg3fen-pUyih9gY5cgTqp8xU5obxHPxYIvgVOcsEceTeBmebhBFV-RqKM3F3crOzvGw",
+    "https://cdn1.telesco.pe/file/7c68b76bfa.mp4?token=WMERYZKU7Gc0w_liluKehrl6-1sIoSYORhmG2mMWSavcz9SV03ivSPIHilwvL_aUyBWXIr9oyq5m_1IylDJFsrKUuzbHs_3FwPHjUhhd3u6etBNAnGcGJzn8KKyCRPItQMk4BgZ_x4AZHrikL4OiJsaNJqi9PB-uCOXO04Cib5u71eOwWjZF__7oYKhO8ty_ql9UZWZyZpWOjWKzugDbGpjdJ9n3f5Tg2Ju-GzWkqY3aDJ26-z3WUB8sE-4G3H1Veg1IWWqY-Kdmfh8J8Xakg3fen-pUyih9gY5cgTqp8xU5obxHPxYIvgVOcsEceTeBmebhBFV-RqKM3F3crOzvGw"
+   ],
+   "durations": [
+    7
+   ],
+   "too_big": false,
+   "link": null,
+   "nums": [
+    2287
+   ],
+   "score": 216.5,
+   "id": "20261027-jj2287",
    "files": {
     "photos": [],
     "videos": [
      {
       "src": "video/v1.mp4",
-      "w": 1094,
-      "h": 720,
-      "dur": 30.8,
+      "w": 720,
+      "h": 1280,
+      "dur": 7.7,
       "sheet": "video/v1_sheet.jpg"
+     },
+     {
+      "src": "video/v2.mp4",
+      "w": 720,
+      "h": 1280,
+      "dur": 7.7,
+      "sheet": "video/v2_sheet.jpg"
      }
     ]
-   }
-  },
-  {
-   "num": 2258,
-   "url": "https://t.me/koreajjirasi/2258",
-   "date": "2026-10-26T09:49:05+00:00",
-   "text": "받으라슈)",
-   "views": 305,
-   "reactions": {
-    "⚡": 3,
-    "❤": 1,
-    "👍": 1,
-    "🤔": 1,
-    "🤮": 1,
-    "💩": 1
-   },
-   "photos": [
-    "https://cdn5.telesco.pe/file/nJgNirkfWP9h0H8DY-KfCSFtMkIKDdcqY3wNppS4FEVQ-QlrX88xiOLWPRZCg5W9Mm3XVrJguG-IkV1EKCvn5JGqqPYGzoaOzF4AnLR2PqdOfUrqVFeQsFIiWBBAvI98naC5b88M4e84E8lz5YReocLaatwlZsEVphxK37rzy1-Y-zCaMlbH5358ZcYDzZcGcsEKf21jc-QRQ0EaNW1LXlnmGEL6dAJxdLKrmMXjUWCatFsX0b479dVLJTqNpZ1zoDM6ei7hi-6sWpkw7C8ABthFfehhIGndTSFnYxIl1Nlkmi7RYm3w9mmch8vi-LMAwyKkdyI5xSGQ2AxBoFFFlw.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2258
-   ],
-   "score": 309.2,
-   "id": "20261026-jj2258",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 2268,
-   "url": "https://t.me/koreajjirasi/2268",
-   "date": "2026-10-26T10:45:24+00:00",
-   "text": "받으라슈)\n시발 나라 꼬라지 ㅋㅋㅋ",
-   "views": 265,
-   "reactions": {
-    "👍": 4,
-    "🤮": 2,
-    "💩": 1
-   },
-   "photos": [
-    "https://cdn1.telesco.pe/file/PhMqJZvlecQblQrMt8GuggON8n3HfjGswFGmO6YH0yErLqZTCK8UDQUOyTzz5uGJFFLHRACOvFg9J82Wh2_8ZRtSd0uNC9Eo8W-0QjPwo0k6-uaT-pEx_lu9Kt8-mpI6EU-PE5JzuG5M2dPR3bG5f5F7M1rV-fnQsBTi5JMnTWaOVlU5_Wx87Enxb6-Rn1Kl0alL57g2JKyhFMBOZJPFnHZhzooLnMXVhNX20wZcf8HrLAZEgPufRB9I633VZxH6dNf9JIF3Z8jnIhmwmTWorxcjzoXhgeh4vOioH3x6NRQyhtO8aTV-7DxabOkACadi0W87iS8wL7Ncrw-ug2Hb4A.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2268
-   ],
-   "score": 307.2,
-   "id": "20261026-jj2268",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg"
-    ],
-    "videos": []
-   }
-  },
-  {
-   "num": 2248,
-   "url": "https://t.me/koreajjirasi/2248",
-   "date": "2026-10-26T08:00:19+00:00",
-   "text": "받으라슈)",
-   "views": 445,
-   "reactions": {
-    "🫡": 6,
-    "🖕": 5
-   },
-   "photos": [
-    "https://cdn5.telesco.pe/file/bnHT0bVuBA3vvpvJIc2QmU8rmPPu5eMAeUTYcB_lrG-rD9wK4vEvLg2yIWzZa0K8q2BgmxiHMijgi9BtLugN-eXHchoUHKdPNLj4V7TZ1GaLUAcc9-ZguH27v-E8os4uaKV79BhV0eRaKsfWbEeqMxxmAcPO1u2sJ4Q_Bjwtf-AmFm9zr-FmuvniFSJ5xam1fUP0CZ5ttUch_wHqV_EYPFKzSgYBo6oX2icfZdK0oyhm1POzD90DIQgR3vnbHbRa7TRpfE6F7kescSMe75RIVvOLjZhyTJUkp3h886cGBKVCoZsHIRruDpGRPq8BxqnJnBuF74zEqMeLw8L6Baz5wA.jpg"
-   ],
-   "videos": [],
-   "durations": [],
-   "too_big": false,
-   "link": null,
-   "nums": [
-    2248
-   ],
-   "score": 282.1,
-   "id": "20261026-jj2248",
-   "files": {
-    "photos": [
-     "cand/tg01.jpg"
-    ],
-    "videos": []
    }
   }
  ]
