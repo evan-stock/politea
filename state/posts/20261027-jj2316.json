@@ -2,7 +2,7 @@
  "id": "20261027-jj2316",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "failed",
  "created_at": "2026-10-27T17:58:31.258097+09:00",
  "publish_at": "2026-10-27T18:30:00+09:00",
  "topic": "김포 애기봉 맞은편 개풍군 해안에 북한 122mm 추정 자주포 남향 배치(10/25~26 연합뉴스 포착) + '애기봉 스타벅스 북한 자주포 뷰' 커뮤니티 화제",
@@ -67,5 +67,6 @@
   "media/20261027-jj2316/06.jpg"
  ],
  "tg_msg": 560,
- "decided_at": "2026-10-27T18:01:03.316981+09:00"
+ "decided_at": "2026-10-27T18:01:03.316981+09:00",
+ "error": "인스타 API 오류 403: {'error': {'message': 'Application request limit reached', 'type': 'OAuthException', 'is_transient': False, 'code': 4, 'error_subcode': 2207051, 'error_user_title': 'action is blocked', 'error_user_msg': 'We restrict certain activity to protect our community. Tell us if you think we made a mistake.', 'fbtrace_id': 'Ai-N5UnHaXyTqu7LC2NeOZ6'}}"
 }
