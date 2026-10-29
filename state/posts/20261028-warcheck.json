@@ -2,7 +2,7 @@
  "id": "20261028-warcheck",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "published",
  "created_at": "2026-10-28T22:21:49.773146+09:00",
  "publish_at": "2026-10-29T12:30:00+09:00",
  "topic": "전쟁 뉴스 3개 팩트체크 — 러·우 올레시키 국지 휴전(10/27), 김정은 중대장 대회 '싸움준비 완성'(10/27), 美 걸프국에 '중간선거 후 이란 단기·고강도 작전 대비' 통보(WSJ 10/27)",
@@ -107,5 +107,8 @@
  ],
  "tg_msg": 627,
  "decided_at": "2026-10-29T00:15:58+09:00",
- "decided_via": "app"
+ "decided_via": "app",
+ "ig_media_id": "18106156220330200",
+ "permalink": "https://www.instagram.com/p/DfEGnXqlB0P/",
+ "published_at": "2026-10-29T13:03:41.763542+09:00"
 }
