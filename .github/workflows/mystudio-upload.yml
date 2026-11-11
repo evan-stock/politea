@@ -1,0 +1,39 @@
+name: mystudio-upload
+# 내 크리에이터 도구(mystudio)에서 예약한 인스타·유튜브 업로드를 처리한다.
+# 업로드할 파일과 예약 정보는 mystudio-media 브랜치에 있고, 이 파일 말고는 기본 브랜치를 건드리지 않는다.
+#  - 15분마다 예약 시각이 된 작업을 게시 (GitHub 예약 실행은 몇~수십 분 늦을 수 있음)
+#  - '지금 올리기'는 앱이 바로 실행시킨다
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mystudio-upload
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mystudio-media
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: 업로드
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: node mystudio/upload.mjs
+      - name: 결과 저장
+        if: always()
+        run: |
+          git config user.name mystudio-bot; git config user.email mystudio-bot@users.noreply.github.com
+          git add -A mystudio
+          git diff --cached --quiet && exit 0
+          git commit -m "mystudio: 업로드 결과"
+          for i in 1 2 3 4 5; do git pull --rebase origin mystudio-media && git push origin HEAD:mystudio-media && break; sleep $((i*5)); done
