@@ -2,7 +2,7 @@
  "id": "20261115-feed-nola",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-15T04:15:50.737476+09:00",
  "publish_at": "2026-11-15T04:15:50.737539+09:00",
@@ -38,5 +38,8 @@
  ],
  "cover": "media/20261115-feed-nola/reel_cover.jpg",
  "decided_at": "2026-11-15T04:15:50.737541+09:00",
- "tg_msg": 633
+ "tg_msg": 633,
+ "ig_media_id": "18046015760828138",
+ "permalink": "https://www.instagram.com/reel/Dfu75iZgerX/",
+ "published_at": "2026-11-15T04:17:28.702232+09:00"
 }
