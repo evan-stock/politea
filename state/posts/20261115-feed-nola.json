@@ -1,0 +1,42 @@
+{
+ "id": "20261115-feed-nola",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "approved",
+ "format": "reel",
+ "created_at": "2026-11-15T04:15:50.737476+09:00",
+ "publish_at": "2026-11-15T04:15:50.737539+09:00",
+ "topic": "[더피드 첫 릴스] 뉴올리언스 유조선, 정박 유람선 충돌·전복, 32명 병원, 전원 구조",
+ "category": "해외 사건·사고",
+ "core": "물에 빠진 승객이 직접 찍은 영상",
+ "risk": "오늘의쓸모 20261115-nola-reel2 소재 재활용(영상·편집·문구 새로)",
+ "sources": [
+  {
+   "publisher": "CNN",
+   "date": "2026.11.13",
+   "url": "https://www.cnn.com/2026/11/13/us/new-orleans-tanker-crash"
+  },
+  {
+   "publisher": "NBC News",
+   "date": "2026.11.13",
+   "url": "https://www.nbcnews.com/news/us-news/rescue-underway-oil-tanker-collides-new-orleans-river-boat-rcna609235"
+  },
+  {
+   "publisher": "Fox News",
+   "date": "2026.11.13",
+   "url": "https://www.foxnews.com/us/tanker-slams-docked-new-orleans-river-cruiser-carrying-129-passengers-sparking-rescue"
+  }
+ ],
+ "caption_full": "미국 뉴올리언스 항구에 정박해 있던 유람선 '아메리칸 헤리티지'를 길이 160m 유조선이 그대로 들이받았습니다.\n\n유람선은 옆으로 뒤집혔고 승객들은 구명조끼를 입고 강물로 뛰어들었습니다. 129명 중 32명이 병원으로 옮겨졌지만 위독한 사람은 없었고, 탑승자는 전원 구조됐습니다. 해안경비대는 유조선이 조종 능력을 잃은 것으로 보고 원인을 조사 중입니다.\n\n강물 위에서 바로 뒤에 저 배가 있었다면 어땠을까요?\n\n출처: CNN 2026.11.13, NBC News 2026.11.13, Fox News 2026.11.13\n사진·영상: @I_amMukhtar, @WingsSoon\n\n#뉴올리언스 #유람선 #유조선충돌 #해외사건 #이슈",
+ "credits": [
+  "@I_amMukhtar",
+  "@WingsSoon"
+ ],
+ "manual": true,
+ "files": [
+  "media/20261115-feed-nola/reel.mp4"
+ ],
+ "cover": "media/20261115-feed-nola/reel_cover.jpg",
+ "decided_at": "2026-11-15T04:15:50.737541+09:00",
+ "tg_msg": 633
+}
