@@ -83,8 +83,9 @@ for i, (_, sc) in enumerate(SC):
     out = f'{T}/s{i:02d}.mp4'; d = seg[i] + 0.05
     if sc[0] == 'vid':
         crop = 'crop=563:770:78:375' if sc[2] == 'wide' else 'crop=430:588:145:400'
-        vf = f'{crop},scale={W}:{VH}:flags=lanczos,fps=30,{PUNCH.format(W=W, VH=VH)}'
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(sc[1]), '-t', f'{d:.3f}', '-i', f'{SRC}/v1.mp4', '-vf', vf, *ENC, out], check=True)
+        vf = (f'{crop},scale={W}:{VH}:flags=lanczos,fps=30,split[m][b];[b]crop={W}:290:0:885,boxblur=22:2[bl];[m][bl]overlay=0:885,'
+              f'{PUNCH.format(W=W, VH=VH)}')
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(sc[1]), '-t', f'{d:.3f}', '-i', f'{SRC}/v1.mp4', '-filter_complex', vf, *ENC, out], check=True)
     else:
         img = (f'{SRC}/{sc[1]}' if sc[0] == 'img' else quote_card(sc[1], i) if sc[0] == 'quote'
                else card(sc[1], sc[2], i) if sc[0] == 'card' else comment_card(sc[1], i))
@@ -101,16 +102,15 @@ subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i
 
 # 겹칠 그림: 제목 띠(기울임) + 문장별 자막 띠
 sr.overlay(["세무사 수석 부정행위 방법", "[펨코에 이미 있었다] ㄷㄷ"], f'{T}/top.png', size=72)
-fb = ImageFont.truetype(fl.F, 62); caps = []
+fb = ImageFont.truetype(fl.F, 80); caps = []
 for i, (rows, sc) in enumerate(SC):
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    d.rectangle((0, 1330, W, 1612), fill=(6, 6, 8, 255))
     if sc[0] == 'vid':
         d.text((W - 40, 500), "영상: 유튜브 '이돈호 변호사'", font=ImageFont.truetype(fl.FM, 28), fill=(235, 235, 235, 255),
                anchor='rs', stroke_width=2, stroke_fill=(0, 0, 0, 255))
-    y = 1471 - 80 * (len(rows) - 1) / 2 + 22
+    y = 1471 - 100 * (len(rows) - 1) / 2 + 28
     for k, r in enumerate(rows):
-        fl.line(d, r, y + 80 * k, fb)
+        fl.line(d, r, y + 100 * k, fb, stroke=9, sf=(0, 0, 0))
     p = f'{T}/cap{i}.png'; im.save(p); caps.append(p)
 
 inputs = ['-i', f'{T}/body.mp4', '-i', f'{T}/top.png'] + sum((['-i', p] for p in caps), [])
