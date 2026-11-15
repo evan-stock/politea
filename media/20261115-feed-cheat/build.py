@@ -1,12 +1,12 @@
 """더피드 숏츠형 릴스: '구라라던 펨코 부정행위 댓글, 진짜였다' (개드립 734860151 내용 + 이돈호 변호사 유튜브 자수 영상 + edge-tts 내레이션).
-소스: /tmp/taxsrc/fm_comment.png(커뮤니티 댓글 캡처, 가격·장치 연결 부분은 흐림), /tmp/taxsrc/v1.mp4(오늘의쓸모 media/20261115-brk/video/v1.mp4)."""
+소스: /tmp/taxsrc/fm_comment.png(커뮤니티 댓글 캡처, 흐림 없음(사용자 요청)), /tmp/taxsrc/v1.mp4(오늘의쓸모 media/20261115-brk/video/v1.mp4)."""
 import os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'scripts', 'feed_reel'))
 import feedlib as fl, shorts_reel as sr
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.18
+W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.12
 T = '/tmp/cheat'; os.makedirs(T, exist_ok=True)
 LINES = ["얼마 전 한 커뮤니티에 이런 댓글이 올라왔습니다.",
          "절대 안 걸리는 부정행위 방법이라며, 초소형 카메라로 문제를 찍으면 AI가 풀고, 귀에 숨긴 이어폰으로 답이 들어온다는 내용이었죠.",
@@ -36,11 +36,10 @@ CUT = starts[3]  # 4번째 문장부터 자수 영상
 
 # 1) 댓글 캡처 장면(1080x1480): 어두운 바탕 + 흰 카드, 가격·장치 연결 줄은 흐리게, 천천히 확대
 c = Image.open('/tmp/taxsrc/fm_comment.png').convert('RGB').crop((18, 18, 630, 478))
-blur = c.crop((0, 118, c.width, 285)).filter(ImageFilter.GaussianBlur(9)); c.paste(blur, (0, 118))
 s = 1000 / c.width; c = c.resize((1000, int(c.height * s)), Image.LANCZOS)
 bg = Image.new('RGB', (W, VH), (24, 24, 28)); bg.paste(c, ((W - c.width) // 2, 110))
 dd = ImageDraw.Draw(bg); fl.W = W
-dd.text((W / 2, 88), '커뮤니티 댓글 캡처 (일부 흐림 처리)', font=ImageFont.truetype(fl.FM, 30), fill=(170, 170, 178), anchor='ms')
+dd.text((W / 2, 88), '커뮤니티 댓글 캡처', font=ImageFont.truetype(fl.FM, 30), fill=(170, 170, 178), anchor='ms')
 bg.save(f'{T}/comment.png')
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-i', f'{T}/comment.png', '-t', f'{CUT:.3f}', '-filter_complex',
                 f"[0:v]scale=2160:-1,zoompan=z='1+0.00012*on':x='iw/2-(iw/zoom/2)':y='ih*0.3-(ih/zoom*0.3)':d=1:s={W}x{VH}:fps=30,format=yuv420p",
