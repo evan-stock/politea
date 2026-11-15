@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(ROOT, 'scripts', 'feed_reel'))
 import feedlib as fl, shorts_reel as sr
 from PIL import Image, ImageDraw, ImageFont
 
-W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.08; INTRO = 0.2
+W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.04; INTRO = 0.2
 T = '/tmp/cheat2'; os.makedirs(T, exist_ok=True); SRC = '/tmp/taxsrc'; SFX = os.path.join(ROOT, 'assets', 'sfx')
 SC = [  # (화면 자막, 장면)
     (["세무사 시험 수석", "결국 [경찰 자수]"], ('vid', 16.8, 'wide')),
@@ -25,6 +25,12 @@ SC = [  # (화면 자막, 장면)
     (["시험장 전자기기 검사", "[이대로 괜찮을까?]"], ('vid', 166, 'wide')),
 ]
 TTS = [os.path.join(HERE, 'tts2', f'l{i:02d}.mp3') for i in range(1, 10)] + [os.path.join(HERE, 'tts3', f'l{i:02d}.mp3') for i in range(1, 4)] + [os.path.join(HERE, 'tts2', 'l10.mp3')]
+def trim(f, k):  # 문장 앞뒤 무음 잘라 텀 줄이기
+    o = f'{T}/t{k:02d}.wav'
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f, '-af',
+                    'silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse,apad=pad_dur=0.02',
+                    o], check=True); return o
+TTS = [trim(f, k) for k, f in enumerate(TTS)]
 dur = [float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f],
                             capture_output=True, text=True).stdout) for f in TTS]
 starts = []; t = INTRO
