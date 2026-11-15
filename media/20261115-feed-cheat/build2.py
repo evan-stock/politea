@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(ROOT, 'scripts', 'feed_reel'))
 import feedlib as fl, shorts_reel as sr
 from PIL import Image, ImageDraw, ImageFont
 
-W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.04; INTRO = 0.2
+W, H, BAND = 1080, 1920, 440; VH = H - BAND; GAP = 0.1; INTRO = 0.2
 T = '/tmp/cheat2'; os.makedirs(T, exist_ok=True); SRC = '/tmp/taxsrc'; SFX = os.path.join(ROOT, 'assets', 'sfx')
 SC = [  # (화면 자막, 장면)
     (["세무사 시험 수석", "결국 [경찰 자수]"], ('vid', 16.8, 'wide')),
