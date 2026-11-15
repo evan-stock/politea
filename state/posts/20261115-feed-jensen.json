@@ -1,0 +1,23 @@
+{
+ "id": "20261115-feed-jensen",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "approved",
+ "format": "reel",
+ "created_at": "2026-11-15T11:19:36.752570+09:00",
+ "publish_at": "2026-11-15T11:19:36.752611+09:00",
+ "topic": "[더피드 숏츠형 첫 릴스] 젠슨 황 '그래픽카드 인절미' AI 영상(밈)",
+ "category": "밈",
+ "core": "AI 패러디 영상",
+ "risk": "실존 인물 AI 합성 영상 — 캡션 첫 줄에 'AI 생성 영상' 표기. 원본 제작자 미상(사용자 제공 파일).",
+ "sources": [],
+ "caption_full": "※ AI 생성 영상입니다\n\n젠슨 황이 절구에 RTX 5080을 넣고 떡메로 쳐서 '그래픽카드 인절미'를 만드는 AI 영상이 돌고 있습니다. 마지막은 빨간 콩고물 위 오성홍기 무늬까지ㅋㅋ\n\n엔비디아 CEO 자리에서 물러난 뒤 '중국' 논란까지 겹치자 이런 패러디까지 나왔네요. 여러분은 이 인절미 드시겠어요?\n\n#젠슨황 #엔비디아 #AI영상 #밈 #이슈",
+ "credits": [],
+ "manual": true,
+ "files": [
+  "media/20261115-feed-jensen/reel.mp4"
+ ],
+ "cover": "media/20261115-feed-jensen/reel_cover.jpg",
+ "decided_at": "2026-11-15T11:19:36.752613+09:00",
+ "tg_msg": 652
+}
