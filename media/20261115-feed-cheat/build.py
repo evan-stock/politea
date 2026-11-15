@@ -28,7 +28,7 @@ CAPS = [["얼마 전 한 커뮤니티 댓글"],
 TTS = [os.path.join(HERE, 'tts', f'l{i:02d}.mp3') for i in range(1, 9)]
 dur = [float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f],
                             capture_output=True, text=True).stdout) for f in TTS]
-INTRO = 0.55  # 두둥 + 화면 퉁 뒤에 내레이션 시작
+INTRO = 0.22  # 두둥 + 화면 퉁 뒤에 내레이션 시작
 starts = []; t = INTRO
 for d in dur:
     starts.append(t); t += d + GAP
@@ -76,7 +76,7 @@ for i in range(len(CAPS)):
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
 # 소리: 문장 mp3를 시작 시각에 놓기
 SFX = os.path.join(ROOT, 'assets', 'sfx')
-ains = sum((['-i', f] for f in TTS), []) + ['-i', f'{SFX}/dundun.mp3', '-i', f'{SFX}/whoosh2.mp3']
+ains = sum((['-i', f] for f in TTS), []) + ['-i', f'{SFX}/boom.mp3', '-i', f'{SFX}/whoosh2.mp3']
 n0 = 2 + len(CAPS)
 fc += ';' + ';'.join(f'[{n0 + i}:a]adelay={int(starts[i] * 1000)}|{int(starts[i] * 1000)}[a{i}]' for i in range(8))
 fc += f';[{n0 + 8}:a]volume=1.3[s1];[{n0 + 9}:a]adelay={int((CUT - 0.35) * 1000)}|{int((CUT - 0.35) * 1000)},volume=1.1[s2]'
