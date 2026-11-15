@@ -1,0 +1,21 @@
+name: gemini-tts
+# drafts/gemini_tts.json → scripts/tts/gemini_lines.py → 문장별 wav (더피드 릴스 내레이션)
+on:
+  push:
+    paths: ["drafts/gemini_tts.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - run: python3 scripts/tts/gemini_lines.py
+      - run: |
+          git config user.name politea-bot; git config user.email politea-bot@users.noreply.github.com
+          git add -A media
+          git diff --cached --quiet || { git commit -m "gemini-tts"; for i in 1 2 3 4 5; do git pull --rebase && git push && break; sleep $((i*7)); done; }
