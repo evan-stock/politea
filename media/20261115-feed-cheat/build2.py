@@ -109,8 +109,12 @@ for i, (rows, sc) in enumerate(SC):
         d.text((W - 40, 500), "영상: 유튜브 '이돈호 변호사'", font=ImageFont.truetype(fl.FM, 28), fill=(235, 235, 235, 255),
                anchor='rs', stroke_width=2, stroke_fill=(0, 0, 0, 255))
     y = 1471 - 100 * (len(rows) - 1) / 2 + 28
-    for k, r in enumerate(rows):
-        fl.line(d, r, y + 100 * k, fb, stroke=9, sf=(0, 0, 0))
+    for k, r in enumerate(rows):  # 자막도 기울임(제목과 같은 0.2)
+        lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); fl.W = W
+        yy = y + 100 * k; fl.line(ImageDraw.Draw(lay), r, yy, fb, stroke=9, sf=(0, 0, 0))
+        yc = yy - fb.size * 0.35
+        im.alpha_composite(lay.transform((W, H), Image.AFFINE, (1, sr.SHEAR, -sr.SHEAR * yc, 0, 1, 0), Image.BICUBIC))
+    d = ImageDraw.Draw(im)
     p = f'{T}/cap{i}.png'; im.save(p); caps.append(p)
 
 inputs = ['-i', f'{T}/body.mp4', '-i', f'{T}/top.png'] + sum((['-i', p] for p in caps), [])
