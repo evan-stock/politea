@@ -178,6 +178,12 @@ def build(d, base, send):
     from .main import SLOT_LABEL, build_caption
     from .render import render
     _check_cover(d)
+    if d.get("final"):  # 채팅에서 이미 완성한 media/<id>/01.jpg·02.mp4… 를 그대로 쓴다(더피드 양식 등)
+        files = sorted(glob.glob(str(base / "[0-9][0-9].jpg")) + glob.glob(str(base / "[0-9][0-9].mp4")))
+        if not files:
+            raise SystemExit("final 캐러셀: media/" + d["id"] + "/ 에 01.jpg… 파일이 없음")
+        slides = [{"t": s.get("t", ""), "b": s.get("b", "")} for s in d.get("slides", [])]
+        return _send_carousel(d, files, slides) if send else None
     imgs = d.get("images", [])
     slides = []
     for k, s0 in enumerate(d["slides"]):
@@ -198,6 +204,11 @@ def build(d, base, send):
             files[k] = out
     if not send:
         return
+    _send_carousel(d, files, slides)
+
+
+def _send_carousel(d, files, slides):
+    from .main import SLOT_LABEL, build_caption
     pid, slot = d["id"], d.get("slot", "evening")
     credits = list(dict.fromkeys(d.get("photo_credits", [])))
     post = {"id": pid, "slot": slot, "slot_label": SLOT_LABEL.get(slot, slot), "status": "pending",
