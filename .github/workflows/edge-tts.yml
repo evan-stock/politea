@@ -1,0 +1,29 @@
+name: edge-tts
+# drafts/edge_tts.json {"out":"media/<id>/tts","voice":"ko-KR-InJoonNeural","rate":"+12%","lines":["문장1","문장2"]}
+# → <out>/l01.mp3, l02.mp3 … (문장마다 한 파일). 더피드 릴스 내레이션용(2026-11-15).
+on:
+  push:
+    paths: ["drafts/edge_tts.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q edge-tts
+      - run: |
+          python3 - <<'PY'
+          import json, os, asyncio, edge_tts
+          c=json.load(open('drafts/edge_tts.json')); out=c['out']; os.makedirs(out,exist_ok=True)
+          async def go():
+              for i,t in enumerate(c['lines'],1):
+                  await edge_tts.Communicate(t, c.get('voice','ko-KR-InJoonNeural'), rate=c.get('rate','+0%'), pitch=c.get('pitch','+0Hz')).save(f'{out}/l{i:02d}.mp3')
+              print(len(c['lines']),'lines')
+          asyncio.run(go())
+          PY
+      - run: |
+          git config user.name politea-bot; git config user.email politea-bot@users.noreply.github.com
+          git add -A media
+          git diff --cached --quiet || { git commit -m "edge-tts"; for i in 1 2 3 4 5; do git pull --rebase && git push && break; sleep $((i*7)); done; }
