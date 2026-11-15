@@ -1,6 +1,6 @@
 """더피드 숏츠형 릴스 v2: 세무사 수석 자수 → '그 방법, 펨코 댓글에 이미 있었다'. 한 문장 = 한 장면(빠른 전환).
 소스: /tmp/taxsrc/v1.mp4(이돈호 변호사 유튜브 쇼츠, 오늘의쓸모 media/20261115-brk/video), note_cover.jpg(블로그 사진·모자이크),
-fm_comment.png(커뮤니티 댓글 캡처). 내레이션 tts2/ (edge-tts 인준 +70% 속도, +25Hz)."""
+fm_comment.png(커뮤니티 댓글 캡처). 내레이션 tts2/ (Gemini TTS Fenrir)."""
 import os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'scripts', 'feed_reel'))
@@ -24,7 +24,7 @@ SC = [  # (화면 자막, 장면)
     (["\"공무원 시험엔 [브로커]까지\"", "(커뮤니티 주장)"], ('card', 'k_chat.png', '커뮤니티 단톡방 캡처')),
     (["시험장 전자기기 검사", "[이대로 괜찮을까?]"], ('vid', 166, 'wide')),
 ]
-TTS = [os.path.join(HERE, 'tts2', f'l{i:02d}.mp3') for i in range(1, 10)] + [os.path.join(HERE, 'tts3', f'l{i:02d}.mp3') for i in range(1, 4)] + [os.path.join(HERE, 'tts2', 'l10.mp3')]
+TTS = [os.path.join(HERE, 'tts4', f'l{i:02d}.wav') for i in range(1, 14)]  # Gemini Fenrir(한 번에 생성 후 문장별로 자름, 1.2배속)
 def trim(f, k):  # 문장 앞뒤 무음 잘라 텀 줄이기
     o = f'{T}/t{k:02d}.wav'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f, '-af',
