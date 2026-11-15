@@ -14,7 +14,14 @@
   "thumb": "mystudio/media/20261115210351-t7u9/thumb.jpg",
   "cover": "mystudio/media/20261115210351-t7u9/thumb.jpg",
   "publish_at": null,
-  "status": "queued",
-  "attempts": 0,
-  "created_at": "2026-11-15T12:03:51.399Z"
+  "status": "done",
+  "attempts": 1,
+  "created_at": "2026-11-15T12:03:51.399Z",
+  "result": {
+    "id": "18117954326093793",
+    "url": "https://www.instagram.com/reel/DfwvPKrE0gF/"
+  },
+  "error": null,
+  "done_at": "2026-11-15T12:05:32.424Z",
+  "updated_at": "2026-11-15T12:05:32.424Z"
 }
