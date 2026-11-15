@@ -28,11 +28,13 @@ CAPS = [["얼마 전 한 커뮤니티 댓글"],
 TTS = [os.path.join(HERE, 'tts', f'l{i:02d}.mp3') for i in range(1, 9)]
 dur = [float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f],
                             capture_output=True, text=True).stdout) for f in TTS]
-starts = []; t = 0.3
+INTRO = 0.55  # 두둥 + 화면 퉁 뒤에 내레이션 시작
+starts = []; t = INTRO
 for d in dur:
     starts.append(t); t += d + GAP
 TOTAL = t + 0.6
-CUT = starts[3]  # 4번째 문장부터 자수 영상
+CUT = starts[3] - 0.1  # 4번째 문장 직전에 자수 영상으로 전환
+XF = 0.32  # 전환 길이
 
 # 1) 댓글 캡처 장면(1080x1480): 어두운 바탕 + 흰 카드, 가격·장치 연결 줄은 흐리게, 천천히 확대
 c = Image.open('/tmp/taxsrc/fm_comment.png').convert('RGB').crop((18, 18, 630, 478))
@@ -41,14 +43,14 @@ bg = Image.new('RGB', (W, VH), (24, 24, 28)); bg.paste(c, ((W - c.width) // 2, 1
 dd = ImageDraw.Draw(bg); fl.W = W
 dd.text((W / 2, 88), '커뮤니티 댓글 캡처', font=ImageFont.truetype(fl.FM, 30), fill=(170, 170, 178), anchor='ms')
 bg.save(f'{T}/comment.png')
-subprocess.run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-i', f'{T}/comment.png', '-t', f'{CUT:.3f}', '-filter_complex',
+subprocess.run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-i', f'{T}/comment.png', '-t', f'{CUT + XF / 2:.3f}', '-filter_complex',
                 f"[0:v]scale=2160:-1,zoompan=z='1+0.00012*on':x='iw/2-(iw/zoom/2)':y='ih*0.3-(ih/zoom*0.3)':d=1:s={W}x{VH}:fps=30,format=yuv420p",
                 '-r', '30', f'{T}/a.mp4'], check=True)
 # 2) 자수 영상(원본 세로 영상 안쪽 화면만, 원본 자막은 아래 우리 자막 띠로 가림)
-subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '26', '-t', f'{TOTAL - CUT:.3f}', '-i', '/tmp/taxsrc/v1.mp4', '-an', '-vf',
+subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '26', '-t', f'{TOTAL - CUT + XF / 2:.3f}', '-i', '/tmp/taxsrc/v1.mp4', '-an', '-vf',
                 f'crop=563:770:78:375,scale={W}:{VH}:flags=lanczos,fps=30,format=yuv420p', f'{T}/b.mp4'], check=True)
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{T}/a.mp4', '-i', f'{T}/b.mp4', '-filter_complex',
-                '[0:v][1:v]concat=n=2:v=1:a=0[v]', '-map', '[v]', '-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', f'{T}/body.mp4'], check=True)
+                f'[0:v][1:v]xfade=transition=smoothleft:duration={XF}:offset={CUT - XF / 2:.3f}[v]', '-map', '[v]', '-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', f'{T}/body.mp4'], check=True)
 
 # 3) 겹칠 그림: 위 제목 띠(기울임)+로고 / 문장별 자막 띠
 sr.overlay(["구라라던 펨코 댓글", "[진짜였다] ㄷㄷ"], f'{T}/top.png')
@@ -73,11 +75,13 @@ for i in range(len(CAPS)):
     a = starts[i] - 0.05; b = starts[i + 1] - 0.05 if i + 1 < len(starts) else TOTAL
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
 # 소리: 문장 mp3를 시작 시각에 놓기
-ains = sum((['-i', f] for f in TTS), [])
+SFX = os.path.join(ROOT, 'assets', 'sfx')
+ains = sum((['-i', f] for f in TTS), []) + ['-i', f'{SFX}/dundun.mp3', '-i', f'{SFX}/whoosh2.mp3']
 n0 = 2 + len(CAPS)
 fc += ';' + ';'.join(f'[{n0 + i}:a]adelay={int(starts[i] * 1000)}|{int(starts[i] * 1000)}[a{i}]' for i in range(8))
-fc += ';' + ''.join(f'[a{i}]' for i in range(8)) + f'amix=inputs=8:normalize=0,apad,atrim=0:{TOTAL:.3f},volume=1.1[aout]'
-fc += f';[{last}]format=yuv420p[vout]'
+fc += f';[{n0 + 8}:a]volume=1.3[s1];[{n0 + 9}:a]adelay={int((CUT - 0.35) * 1000)}|{int((CUT - 0.35) * 1000)},volume=1.1[s2]'
+fc += ';' + ''.join(f'[a{i}]' for i in range(8)) + f'[s1][s2]amix=inputs=10:normalize=0,apad,atrim=0:{TOTAL:.3f},volume=1.1[aout]'
+fc += f";[{last}]scale=w='2*trunc(540*max(1,1+0.18*exp(-t*8)*cos(t*20)))':h=-2:eval=frame,crop={W}:{H},setsar=1,format=yuv420p[vout]"
 out = os.path.join(HERE, 'reel.mp4')
 subprocess.run(['ffmpeg', '-v', 'error', '-y', *inputs, *ains, '-filter_complex', fc, '-map', '[vout]', '-map', '[aout]',
                 '-t', f'{TOTAL:.3f}', '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-c:a', 'aac', '-b:a', '160k',
