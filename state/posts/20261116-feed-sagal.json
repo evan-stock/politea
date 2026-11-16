@@ -2,7 +2,7 @@
  "id": "20261116-feed-sagal",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-16T17:35:51.632090+09:00",
  "publish_at": "2026-11-16T17:35:51.632179+09:00",
@@ -31,5 +31,8 @@
  ],
  "cover": "media/20261116-feed-sagal/reel_cover.jpg",
  "decided_at": "2026-11-16T17:35:51.632181+09:00",
- "tg_msg": 672
+ "tg_msg": 672,
+ "ig_media_id": "18112464773463739",
+ "permalink": "https://www.instagram.com/reel/Dfy8RDFjLiA/",
+ "published_at": "2026-11-16T17:37:40.370151+09:00"
 }
