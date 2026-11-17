@@ -88,7 +88,7 @@ for i in range(len(SC)):
 fc += f";[{last}]setsar=1,format=yuv420p[vout]"  # 첫 화면 흔들림 없음
 n0 = 2 + len(SC)
 ains = sum((['-i', f'{SFX}/{n}.mp3'] for n, _, _ in SFXS), [])
-fc += ';[0:a]loudnorm=I=-16:TP=-1.5[orig]'
+fc += ';[0:a]apad=pad_dur=4,loudnorm=I=-16:TP=-1.5[orig]'  # 2026-11-17: loudnorm이 끝 몇 초를 삼켜 apad로 여유
 for k, (n, sci, db) in enumerate(SFXS):
     ms = int(max(0, starts[sci] - 0.05) * 1000); fc += f';[{n0 + k}:a]adelay={ms}|{ms},volume={db}dB[x{k}]'
 fc += ';[orig]' + ''.join(f'[x{k}]' for k in range(len(SFXS))) + f'amix=inputs={1 + len(SFXS)}:normalize=0,alimiter=limit=0.95,apad,atrim=0:{TOTAL:.3f}[aout]'
