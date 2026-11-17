@@ -37,7 +37,7 @@ SC = [  # (자막, (원본, 시작, 길이)) — 자막 하나 = 장면 하나
 ]
 TITLE = ["리트 만점자 과거 인터뷰", "[모아 보니] ㄷㄷ"]
 SFXS = [('chills', 1, -8), ('swoosh_short', 5, -8), ('smack', 9, -7), ('dudung', 13, -6)]  # (효과음, 장면 번호, dB)
-PUNCH = "scale=w='2*trunc(540*max(1,1+0.07*exp(-t*14)))':h=-2:eval=frame,crop={W}:{VH},setsar=1"
+PUNCH = "scale={W}:{VH},setsar=1"  # 2026-11-17 사용자 "움직이는 모션 빼줘": 장면 펀치 확대 없음
 ENC = ['-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', '-r', '30']
 AENC = ['-c:a', 'aac', '-ar', '44100', '-ac', '2', '-b:a', '160k']
 
@@ -58,7 +58,7 @@ for i, (_, sc) in enumerate(SC):
     out = f'{T}/s{i:02d}.mp4'
     if sc[0] == 'quote':
         d = sc[3]; img = quote_card(sc[1], i, sc[2])
-        vf = (f"scale=2160:-1,zoompan=z='1+0.0008*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{VH}:fps=30,{PUNCH.format(W=W, VH=VH)}")
+        vf = f"scale={W}:{VH},fps=30,setsar=1"  # 카드도 천천히 확대 없음
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30', '-t', f'{d:.3f}', '-i', img, '-f', 'lavfi', '-t', f'{d:.3f}',
                         '-i', 'anullsrc=r=44100:cl=stereo', '-vf', vf, '-map', '0:v', '-map', '1:a', *ENC, *AENC, '-shortest', out], check=True)
     else:
@@ -93,7 +93,7 @@ last = 's1'
 for i in range(len(SC)):
     a = 0 if i == 0 else starts[i] - 0.02; b = ends[i] - 0.02
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
-fc += f";[{last}]scale=w='2*trunc(540*max(1,1+0.18*exp(-t*8)*cos(t*20)))':h=-2:eval=frame,crop={W}:{H},setsar=1,format=yuv420p[vout]"
+fc += f";[{last}]setsar=1,format=yuv420p[vout]"  # 첫 화면 흔들림 없음
 n0 = 2 + len(SC)
 ains = sum((['-i', f'{SFX}/{n}.mp3'] for n, _, _ in SFXS), [])
 fc += ';[0:a]loudnorm=I=-16:TP=-1.5[orig]'
