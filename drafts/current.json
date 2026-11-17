@@ -34,5 +34,6 @@
   "이슈"
  ],
  "photo_credits": [],
- "publish_now": true
+ "publish_now": true,
+ "retry": 2
 }

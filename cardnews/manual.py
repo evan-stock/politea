@@ -137,7 +137,12 @@ def build_reel(d, base, send):
             "files": [out], "cover": os.path.relpath(cover, ROOT)}
     _schedule(post, d)
     from . import telegram_bot as tg
-    post["tg_msg"] = tg.send_preview(post, cover=cover)
+    try:
+        post["tg_msg"] = tg.send_preview(post, cover=cover)
+    except Exception as e:  # 2026-11-18: 텔레그램 영상 전송 504로 바로 게시까지 막힘 → 바로 게시는 미리보기 없이 저장
+        if post.get("status") != "approved":
+            raise
+        print("텔레그램 미리보기 실패(바로 게시라 계속):", e)
     post["files"] = [os.path.relpath(out, ROOT)]
     save_post(post)
 
