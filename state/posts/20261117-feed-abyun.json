@@ -2,7 +2,7 @@
  "id": "20261117-feed-abyun",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-17T21:54:05.128552+09:00",
  "publish_at": "2026-11-17T21:54:05.128617+09:00",
@@ -32,5 +32,8 @@
  ],
  "cover": "media/20261117-feed-abyun/reel_cover.jpg",
  "decided_at": "2026-11-17T21:54:05.128620+09:00",
- "tg_msg": 687
+ "tg_msg": 687,
+ "ig_media_id": "17910850941599456",
+ "permalink": "https://www.instagram.com/reel/Df1-nFwnCm2/",
+ "published_at": "2026-11-17T21:55:19.099830+09:00"
 }
