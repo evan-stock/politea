@@ -2,7 +2,7 @@
  "id": "20261118-feed-cheat3d",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-18T22:23:11.114629+09:00",
  "publish_at": "2026-11-18T21:00:00+09:00",
@@ -30,5 +30,8 @@
  ],
  "cover": "media/20261118-feed-cheat3d/reel_cover.jpg",
  "tg_msg": 703,
- "decided_at": "2026-11-18T22:24:45.360042+09:00"
+ "decided_at": "2026-11-18T22:24:45.360042+09:00",
+ "ig_media_id": "18141091555631207",
+ "permalink": "https://www.instagram.com/reel/Df4m2SVgP34/",
+ "published_at": "2026-11-18T22:25:27.663007+09:00"
 }
