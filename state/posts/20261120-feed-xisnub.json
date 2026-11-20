@@ -2,7 +2,7 @@
  "id": "20261120-feed-xisnub",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-20T13:20:32.768716+09:00",
  "publish_at": "2026-11-20T13:20:32.768785+09:00",
@@ -44,5 +44,8 @@
  ],
  "cover": "media/20261120-feed-xisnub/reel_cover.jpg",
  "decided_at": "2026-11-20T13:20:32.768788+09:00",
- "tg_msg": 709
+ "tg_msg": 709,
+ "ig_media_id": "18133904359839510",
+ "permalink": "https://www.instagram.com/reel/Df8yUGfgApW/",
+ "published_at": "2026-11-20T13:22:45.802331+09:00"
 }
