@@ -2,7 +2,7 @@
  "id": "20261121-feed-trumpcity",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-21T11:43:33.024338+09:00",
  "publish_at": "2026-11-21T13:00:00+09:00",
@@ -24,5 +24,8 @@
  ],
  "cover": "media/20261121-feed-trumpcity/reel_cover.jpg",
  "tg_msg": 731,
- "decided_at": "2026-11-21T11:44:33+09:00"
+ "decided_at": "2026-11-21T11:44:33+09:00",
+ "ig_media_id": "18652410673062878",
+ "permalink": "https://www.instagram.com/reel/Df_UoHUlFqO/",
+ "published_at": "2026-11-21T13:00:56.151955+09:00"
 }
