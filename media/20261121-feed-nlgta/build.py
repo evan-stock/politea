@@ -56,12 +56,11 @@ def quote_card(lines, label, i):
 clips = []
 for i, (_, sc) in enumerate(SC):
     out = f'{T}/s{i:02d}.mp4'; d = seg[i] + 0.05
-    if sc[0] == 'vid':
+    if sc[0] == 'vid':  # 띠형: 원본 16:9 전체(좌상단 참가자 화면 포함)를 가로 꽉 채워 위쪽에, 뒤는 같은 영상 흐림
         _, fn, ss, xc = sc
-        vf = (f"scale={W}*max(iw/ih/({W}/{VH})\\,1):{VH}*max(({W}/{VH})/(iw/ih)\\,1):flags=lanczos,"
-              f"crop={W}:{VH}:'max(0\\,min(iw-{W}\\,iw*{xc}-{W}/2))':'(ih-{VH})/2',fps=30,"
-              + ("split[m][b];[b]crop=W:240:0:1170,boxblur=24:2[bl];[m][bl]overlay=0:1170,".replace('W', str(W)) if fn == 'air.mp4' else '')
-              + PUNCH.format(W=W, VH=VH))
+        BY = 210
+        vf = (f"split[a][b];[a]scale=-2:{VH},crop={W}:{VH},boxblur=30:3,eq=brightness=-0.25[bg];"
+              f"[b]scale={W}:-2:flags=lanczos[fg];[bg][fg]overlay=0:{BY},fps=30,{PUNCH.format(W=W, VH=VH)}")
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(ss), '-t', f'{d:.3f}', '-i', f'{SRC}/{fn}', '-filter_complex', vf, *ENC, out], check=True)
     else:
         if sc[0] == 'img':
