@@ -4,7 +4,7 @@
  "slot_label": "저녁",
  "status": "pending",
  "format": "reel",
- "created_at": "2026-11-21T11:38:30.524933+09:00",
+ "created_at": "2026-11-21T11:43:33.024338+09:00",
  "publish_at": "2026-11-21T21:00:00+09:00",
  "topic": "[더피드 영상 릴스, 원본 소리] 트럼프 '미국 도시는 역겹다, 중국 선전은 티끌 하나 없다'(백악관 브리핑)",
  "category": "국제",
@@ -23,5 +23,5 @@
   "media/20261121-feed-trumpcity/reel.mp4"
  ],
  "cover": "media/20261121-feed-trumpcity/reel_cover.jpg",
- "tg_msg": 727
+ "tg_msg": 731
 }
