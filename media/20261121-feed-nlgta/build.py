@@ -38,7 +38,7 @@ for d in dur:
 TOTAL = t + 0.5
 ends = starts[1:] + [TOTAL]; seg = [ends[i] - (starts[i] if i else 0) for i in range(len(SC))]
 
-PUNCH = "scale=w='2*trunc(540*max(1,1+0.07*exp(-t*14)))':h=-2:eval=frame,crop={W}:{VH},setsar=1"
+PUNCH = "crop={W}:{VH},setsar=1"  # 장면 전환 효과 없음(사용자 요청: 컷만)
 ENC = ['-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', '-r', '30', '-an']
 
 
@@ -99,7 +99,7 @@ last = 's1'
 for i in range(len(SC)):
     a = 0 if i == 0 else starts[i] - 0.02; b = ends[i] - 0.02
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
-fc += f";[{last}]scale=w='2*trunc(540*max(1,1+0.18*exp(-t*8)*cos(t*20)))':h=-2:eval=frame,crop={W}:{H},setsar=1,format=yuv420p[vout]"
+fc += f";[{last}]setsar=1,format=yuv420p[vout]"
 n0 = 2 + len(SC); N = len(SC)
 # 효과음: (파일, 장면, 볼륨) — 장면 바뀔 때 하나씩
 FX = [('boom.mp3', 0, 1.1), ('dudung.mp3', 1, 0.5), ('swoosh_short.mp3', 3, 0.5), ('chills.mp3', 4, 0.5),
