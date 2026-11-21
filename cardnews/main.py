@@ -239,7 +239,11 @@ def main():
         tick()
         prune()
     elif a.cmd == "publish":
-        do_publish(load_post(a.id), force=True)
+        p = load_post(a.id)
+        if p.get("status") in ("published", "publishing"):  # 2026-11-21: watch가 이미 올리는 중인데 수동 publish가 또 올려 중복 게시됨
+            print("이미 게시(중)이라 건너뜀:", a.id, p.get("status"), p.get("permalink"))
+        else:
+            do_publish(p, force=True)
     elif a.cmd == "chat-id":
         chat_id_helper()
     elif a.cmd == "refresh-token":
