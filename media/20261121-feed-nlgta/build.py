@@ -56,11 +56,10 @@ def quote_card(lines, label, i):
 clips = []
 for i, (_, sc) in enumerate(SC):
     out = f'{T}/s{i:02d}.mp4'; d = seg[i] + 0.05
-    if sc[0] == 'vid':  # 띠형: 원본 16:9 전체(좌상단 참가자 화면 포함)를 가로 꽉 채워 위쪽에, 뒤는 같은 영상 흐림
+    if sc[0] == 'vid':  # 띠형: 원본 16:9 전체(좌상단 참가자 화면 포함)를 가로 꽉 채워 위쪽에, 위아래는 검정
         _, fn, ss, xc = sc
         BY = 210
-        vf = (f"split[a][b];[a]scale=-2:{VH},crop={W}:{VH},boxblur=30:3,eq=brightness=-0.25[bg];"
-              f"[b]scale={W}:-2:flags=lanczos[fg];[bg][fg]overlay=0:{BY},fps=30,{PUNCH.format(W=W, VH=VH)}")
+        vf = (f"scale={W}:-2:flags=lanczos,pad={W}:{VH}:0:{BY}:color=black,fps=30,{PUNCH.format(W=W, VH=VH)}")  # 위아래 검정(흐림 없음)
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', str(ss), '-t', f'{d:.3f}', '-i', f'{SRC}/{fn}', '-filter_complex', vf, *ENC, out], check=True)
     else:
         if sc[0] == 'img':
@@ -94,7 +93,7 @@ for i, (rows, sc) in enumerate(SC):
     p = f'{T}/cap{i}.png'; im.save(p); caps.append(p)
 
 inputs = ['-i', f'{T}/body.mp4', '-i', f'{T}/top.png'] + sum((['-i', p] for p in caps), [])
-fc = f'color=c=0x08080a:s={W}x{H}:r=30:d={TOTAL:.3f}[bg];[bg][0:v]overlay=0:{BAND}:shortest=1[s0];[s0][1:v]overlay=0:0[s1]'
+fc = f'color=c=black:s={W}x{H}:r=30:d={TOTAL:.3f}[bg];[bg][0:v]overlay=0:{BAND}:shortest=1[s0];[s0][1:v]overlay=0:0[s1]'
 last = 's1'
 for i in range(len(SC)):
     a = 0 if i == 0 else starts[i] - 0.02; b = ends[i] - 0.02
