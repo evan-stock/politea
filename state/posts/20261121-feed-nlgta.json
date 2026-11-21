@@ -2,7 +2,7 @@
  "id": "20261121-feed-nlgta",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-21T11:35:26.051059+09:00",
  "publish_at": "2026-11-21T11:35:26.051121+09:00",
@@ -26,5 +26,8 @@
  ],
  "cover": "media/20261121-feed-nlgta/reel_cover.jpg",
  "decided_at": "2026-11-21T11:35:26.051124+09:00",
- "tg_msg": 722
+ "tg_msg": 722,
+ "ig_media_id": "18267981223307593",
+ "permalink": "https://www.instagram.com/reel/Df_K-5qjDB1/",
+ "published_at": "2026-11-21T11:36:39.592504+09:00"
 }
