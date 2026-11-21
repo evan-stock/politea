@@ -5,7 +5,7 @@
  "status": "approved",
  "format": "reel",
  "created_at": "2026-11-21T10:43:51.542463+09:00",
- "publish_at": "2026-11-21T21:00:00+09:00",
+ "publish_at": "2026-11-21T10:53:28+09:00",
  "topic": "[더피드 영상 릴스, 원본 소리] AI 아바타에게 거울 보여줬더니 — 내 말 따라 하고, 이틀 전 대화를 기억(X @teddywang86)",
  "category": "테크",
  "core": "영상통화 AI 아바타 노라·에마 대화(받아쓰기 확인)",
@@ -24,5 +24,5 @@
  ],
  "cover": "media/20261121-feed-aimirror/reel_cover.jpg",
  "tg_msg": 715,
- "decided_at": "2026-11-21T10:46:22.819853+09:00"
+ "decided_at": "2026-11-21T10:53:28+09:00"
 }
