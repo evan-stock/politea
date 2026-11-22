@@ -2,7 +2,7 @@
  "id": "20261123-feed-runner",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-23T01:57:58.286704+09:00",
  "publish_at": "2026-11-23T01:57:58.286757+09:00",
@@ -28,5 +28,8 @@
  ],
  "cover": "media/20261123-feed-runner/reel_cover.jpg",
  "decided_at": "2026-11-23T01:57:58.286759+09:00",
- "tg_msg": 736
+ "tg_msg": 736,
+ "ig_media_id": "18123357521066621",
+ "permalink": "https://www.instagram.com/reel/DgDSjyoFd1o/",
+ "published_at": "2026-11-23T01:59:57.029393+09:00"
 }
