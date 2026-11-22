@@ -2,7 +2,7 @@
  "id": "20261123-feed-gwajup",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-23T02:09:30.807233+09:00",
  "publish_at": "2026-11-23T02:09:30.807285+09:00",
@@ -24,5 +24,8 @@
  ],
  "cover": "media/20261123-feed-gwajup/reel_cover.jpg",
  "decided_at": "2026-11-23T02:09:30.807286+09:00",
- "tg_msg": 741
+ "tg_msg": 741,
+ "ig_media_id": "18661971037013689",
+ "permalink": "https://www.instagram.com/reel/DgDTz-qkQZ5/",
+ "published_at": "2026-11-23T02:11:15.750804+09:00"
 }
