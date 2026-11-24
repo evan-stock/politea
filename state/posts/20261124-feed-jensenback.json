@@ -1,0 +1,28 @@
+{
+ "id": "20261124-feed-jensenback",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "approved",
+ "format": "reel",
+ "created_at": "2026-11-24T13:03:24.027892+09:00",
+ "publish_at": "2026-11-24T13:03:24.027946+09:00",
+ "topic": "[더피드 영상 릴스, 원본 소리] 젠슨 황 11일 만에 엔비디아 복귀 — 본사 직원 환호·\"더 나은 CEO 되겠다\"",
+ "category": "",
+ "core": "X @SawyerMerritt 영상 2개(환호 32초·발언 11초), TTS 없음",
+ "risk": "v1 대사 받아쓰기 확인, v2 발언은 게시글 원문 인용. 오늘의쓸모(jensenhq)와 같은 영상이라 더피드 틀·구성으로.",
+ "sources": [
+  {
+   "publisher": "X @SawyerMerritt",
+   "date": "2026.11.23"
+  }
+ ],
+ "caption_full": "엔비디아 젠슨 황이 물러난 지 11일 만에 CEO로 돌아왔습니다.\n\n복귀 첫날 본사에서는 3개 층을 가득 채운 직원들이 \"사랑해요\", \"돌아온 걸 환영해요\"를 외쳤고, 젠슨 황은 \"두 번째 기회에 모두 고맙다, 두 번째엔 더 나은 CEO가 되겠다\"고 말했습니다.\n\n직원들이 이렇게 반기는 CEO, 흔치 않죠?\n\n🎥 X @SawyerMerritt\n\n#젠슨황 #엔비디아 #복귀 #CEO #이슈\n\n출처: X @SawyerMerritt 2026.11.23\n\n#젠슨황 #엔비디아 #복귀 #CEO #이슈",
+ "credits": [],
+ "manual": true,
+ "files": [
+  "media/20261124-feed-jensenback/reel.mp4"
+ ],
+ "cover": "media/20261124-feed-jensenback/reel_cover.jpg",
+ "decided_at": "2026-11-24T13:03:24.027948+09:00",
+ "tg_msg": 746
+}
