@@ -2,7 +2,7 @@
  "id": "20261124-feed-jensenback",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-24T13:03:24.027892+09:00",
  "publish_at": "2026-11-24T13:03:24.027946+09:00",
@@ -24,5 +24,8 @@
  ],
  "cover": "media/20261124-feed-jensenback/reel_cover.jpg",
  "decided_at": "2026-11-24T13:03:24.027948+09:00",
- "tg_msg": 746
+ "tg_msg": 746,
+ "ig_media_id": "18236773186333426",
+ "permalink": "https://www.instagram.com/reel/DgHDcLOgiCo/",
+ "published_at": "2026-11-24T13:05:05.352644+09:00"
 }
