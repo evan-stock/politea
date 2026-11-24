@@ -2,7 +2,7 @@
  "id": "20261124-feed-dailyshow",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-24T18:39:54.366760+09:00",
  "publish_at": "2026-11-24T18:39:54.366806+09:00",
@@ -28,5 +28,8 @@
  ],
  "cover": "media/20261124-feed-dailyshow/reel_cover.jpg",
  "decided_at": "2026-11-24T18:39:54.366808+09:00",
- "tg_msg": 752
+ "tg_msg": 752,
+ "ig_media_id": "17908881519344495",
+ "permalink": "https://www.instagram.com/reel/DgHp87unZY0/",
+ "published_at": "2026-11-24T18:41:11.710935+09:00"
 }
