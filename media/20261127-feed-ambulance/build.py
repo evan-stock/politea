@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 SRC = os.path.join(HERE, 'video/v1.mp4')
 STRIP = (0, 300, 720, 490)          # x, y, w, h (세로 원본에서 도로 부분)
-TITLE = ["사이렌 울리는 구급차 앞", "[그냥 달린 마라톤] ㄷㄷ"]
+TITLE = ["119 구급차 길까지 막은", "[민폐 마라톤] 실화냐"]
 SH = round(W * STRIP[3] / STRIP[2] / 2) * 2   # 띠 높이(1080 폭 기준) ≈ 542
 SY = 560                                        # 띠 위치(위 끝)
 
