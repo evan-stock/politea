@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
-      - run: pip install -r requirements.txt && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt && sudo apt-get update -qq && sudo apt-get install -y -qq --fix-missing ffmpeg
       - name: 렌더
         id: run
         run: python -m cardnews.manual drafts/current.json 2>&1 | tee /tmp/manual.log; exit ${PIPESTATUS[0]}
