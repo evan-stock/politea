@@ -2,7 +2,7 @@
  "id": "20261128-feed-gimseontae",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "publishing",
+ "status": "published",
  "format": "reel",
  "created_at": "2026-11-28T15:12:40.479809+09:00",
  "publish_at": "2026-11-28T15:12:40.479882+09:00",
@@ -24,5 +24,8 @@
  ],
  "cover": "media/20261128-feed-gimseontae/reel_cover.jpg",
  "decided_at": "2026-11-28T15:12:40.479884+09:00",
- "tg_msg": 762
+ "tg_msg": 762,
+ "ig_media_id": "18291871876291727",
+ "permalink": "https://www.instagram.com/reel/DgRlZQZJf2P/",
+ "published_at": "2026-11-28T15:13:44.828004+09:00"
 }
