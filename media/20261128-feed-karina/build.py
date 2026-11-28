@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1080, 1920
 V = os.path.join(HERE, 'video')
-TITLE = ["에스파 팬미팅 드레스코드", "[산타 카리나] 실물 ㄷㄷ"]
+TITLE = ["에스파 팬미팅 드레스코드", "[레전드 찍은] 산타 카리나"]
 SRC_LABEL = "영상: 인스타그램 @bythepulse"
 BGM, BGM_START = os.path.join(V, 'jingle_bells.mp3'), 65.0
 USE_BGM = False  # 2026-11-28 사용자: '원본 사운드 사용' → 원본에 소리가 없어 무음 트랙(인스타 앱에서 음악 붙이기용)
