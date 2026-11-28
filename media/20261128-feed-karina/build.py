@@ -1,7 +1,7 @@
 """더피드 숏츠형 릴스 — 에스파 6주년 팬미팅 산타복 카리나 (TTS 없음)
 원본: 인스타 @bythepulse 게시물 DgSZifJo3v3 (영상 5개 묶음, 영상에 소리 없음)
       cardnews drafts/video.json 으로 받음 → video/item3~7.mp4 (880x1100, item7 은 560x700 저화질이라 안 씀)
-소리: 원본이 무음이라 브금 Kevin MacLeod 'Jingle Bells'(incompetech, CC BY 4.0 → 캡션에 표기) 65초부터.
+소리: 원본이 무음(인스타 묶음 영상 5개 모두 오디오 트랙 없음) → USE_BGM=False 면 무음 트랙. True 면 브금 Kevin MacLeod 'Jingle Bells'(incompetech, CC BY 4.0 → 캡션에 표기) 65초부터.
 화면: 원본 자막 없음 → 인물 쪽으로 꽉 채워 자름(검정 띠 없음, 흐림 없음). 대사가 없어 해설 자막만.
 """
 import os, sys, subprocess, tempfile
@@ -16,6 +16,7 @@ V = os.path.join(HERE, 'video')
 TITLE = ["에스파 팬미팅 드레스코드", "[산타 카리나] 실물 ㄷㄷ"]
 SRC_LABEL = "영상: 인스타그램 @bythepulse"
 BGM, BGM_START = os.path.join(V, 'jingle_bells.mp3'), 65.0
+USE_BGM = False  # 2026-11-28 사용자: '원본 사운드 사용' → 원본에 소리가 없어 무음 트랙(인스타 앱에서 음악 붙이기용)
 
 SEG = [
     ('item3', 0.0, 4.0, "에스파 데뷔 6주년 팬미팅"),
@@ -66,7 +67,7 @@ def build():
     for i, (_, s, e, txt) in enumerate(SEG):
         sub_png(txt, os.path.join(tmp, f's{i:02d}.png')); times.append((t, t + e - s)); t += e - s
     ins = ['-i', ov, '-i', os.path.join(tmp, 'src.png')] + sum([['-i', os.path.join(tmp, f's{i:02d}.png')] for i in range(len(SEG))], [])
-    ins += ['-ss', f'{BGM_START}', '-t', f'{t:.2f}', '-i', BGM]
+    ins += (['-ss', f'{BGM_START}', '-t', f'{t:.2f}', '-i', BGM] if USE_BGM else ['-f', 'lavfi', '-t', f'{t:.2f}', '-i', 'anullsrc=r=48000:cl=stereo'])
     ai = len(SEG) + 3
     fc = (f'color=c=0x08080a:s={W}x{H}:r=30[bg];[bg][0:v]overlay=0:{sr.BAND}:shortest=1[a1];'
           f'[a1][1:v]overlay=0:0[a2];[a2][2:v]overlay=0:0[b0]')
@@ -74,7 +75,7 @@ def build():
     for i, (s, e) in enumerate(times):
         fc += f";[{last}][{i + 3}:v]overlay=0:0:enable='gte(t,{s:.2f})*lt(t,{e:.2f})'[c{i}]"
         last = f'c{i}'
-    fc += (f';[{last}]format=yuv420p[o];[{ai}:a]afade=t=in:d=0.3,afade=t=out:st={t - 1.2:.2f}:d=1.2,'
+    fc += (f';[{last}]format=yuv420p[o];[{ai}:a]anull[au]' if not USE_BGM else f';[{last}]format=yuv420p[o];[{ai}:a]afade=t=in:d=0.3,afade=t=out:st={t - 1.2:.2f}:d=1.2,'
            f'loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[au]')
     out = os.path.join(HERE, 'reel.mp4')
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', cat, *ins, '-filter_complex', fc, '-map', '[o]', '-map', '[au]',
